@@ -259,9 +259,18 @@ sudo pacman -S netease-cloud-music # 网易云音乐
 sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件
 sudo pacman -S simplescreenrecorder # 录屏软件
+yay -S dropbox
+
+# Wechat
+yay -S deepin-wine-wechat
+yay -S deepin.com.wechat2
+sudo pacman -S electronic-wechat-git
+sudo pacman -S electron-wechat
+yay -S wechat-devtools
+# QQ & TIM
+yay -S deepin-wine-tim
+yay -S deepin-wine-qq
 ```
-
-
 
 ## 疑难问题
 ---

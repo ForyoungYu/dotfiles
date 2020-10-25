@@ -235,7 +235,7 @@ sudo apt install zsh # ubuntu
 ```
 修改默认bash为zsh
 ```bash
-chsh -s which zsh
+chsh -s /usr/bin/zsh
 ```
 
 安装oh-my-zsh

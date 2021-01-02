@@ -1,8 +1,8 @@
-From f699934b8c8a9c15988ad359bf8fedd6c55abd53 Mon Sep 17 00:00:00 2001
-From: Thomas Oltmann <thomas.oltmann.hhg@gmail.com>
-Date: Wed, 13 Jun 2018 19:46:26 +0200
-Subject: [PATCH] Allow dwm to have translucent bars, while keeping all the
- text on it opaque, just like the alpha-patch for st. Updated for b69c870.
+From 51f9c34480b984e261a738e5295f518b42c2f29c Mon Sep 17 00:00:00 2001
+From: Petrus Karell <pk@petruskarell.fi>
+Date: Mon, 19 Oct 2020 19:15:24 +0300
+Subject: [PATCH] Allow dwm to have translucent bars, while keeping all
+ the  text on it opaque, just like the alpha-patch for st. Updated for 61bb8b2
 
 ---
  config.def.h |  7 ++++++
@@ -36,7 +36,7 @@ index 1c0b587..4f68fe8 100644
  /* tagging */
  static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 diff --git a/config.mk b/config.mk
-index 25e2685..bef8de0 100644
+index 7084c33..21b5404 100644
 --- a/config.mk
 +++ b/config.mk
 @@ -22,7 +22,7 @@ FREETYPEINC = /usr/include/freetype2
@@ -47,9 +47,9 @@ index 25e2685..bef8de0 100644
 +LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS} -lXrender
  
  # flags
- CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=2 -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}
+ CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}
 diff --git a/drw.c b/drw.c
-index c638323..77fc113 100644
+index 4cdbcbe..fe3aadd 100644
 --- a/drw.c
 +++ b/drw.c
 @@ -61,7 +61,7 @@ utf8decode(const char *c, long *u, size_t clen)
@@ -84,7 +84,7 @@ index c638323..77fc113 100644
  }
  
  void
-@@ -180,21 +183,22 @@ drw_fontset_free(Fnt *font)
+@@ -194,21 +197,22 @@ drw_fontset_free(Fnt *font)
  }
  
  void
@@ -111,7 +111,7 @@ index c638323..77fc113 100644
  {
  	size_t i;
  	Clr *ret;
-@@ -204,7 +208,7 @@ drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
+@@ -218,7 +222,7 @@ drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
  		return NULL;
  
  	for (i = 0; i < clrcount; i++)
@@ -120,7 +120,7 @@ index c638323..77fc113 100644
  	return ret;
  }
  
-@@ -260,9 +264,7 @@ drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned int lp
+@@ -274,9 +278,7 @@ drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned int lp
  	} else {
  		XSetForeground(drw->dpy, drw->gc, drw->scheme[invert ? ColFg : ColBg].pixel);
  		XFillRectangle(drw->dpy, drw->drawable, drw->gc, x, y, w, h);
@@ -166,7 +166,7 @@ index 4bcd5ad..a56f523 100644
  /* Cursor abstraction */
  Cur *drw_cur_create(Drw *drw, int shape);
 diff --git a/dwm.c b/dwm.c
-index 4465af1..20f8309 100644
+index 664c527..d8005c7 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -57,6 +57,8 @@
@@ -178,7 +178,7 @@ index 4465af1..20f8309 100644
  /* enums */
  enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
  enum { SchemeNorm, SchemeSel }; /* color schemes */
-@@ -232,6 +234,7 @@ static Monitor *wintomon(Window w);
+@@ -233,6 +235,7 @@ static Monitor *wintomon(Window w);
  static int xerror(Display *dpy, XErrorEvent *ee);
  static int xerrordummy(Display *dpy, XErrorEvent *ee);
  static int xerrorstart(Display *dpy, XErrorEvent *ee);
@@ -186,7 +186,7 @@ index 4465af1..20f8309 100644
  static void zoom(const Arg *arg);
  
  /* variables */
-@@ -268,6 +271,11 @@ static Drw *drw;
+@@ -269,6 +272,11 @@ static Drw *drw;
  static Monitor *mons, *selmon;
  static Window root, wmcheckwin;
  
@@ -198,7 +198,7 @@ index 4465af1..20f8309 100644
  /* configuration, allows nested code to access above variables */
  #include "config.h"
  
-@@ -1541,7 +1549,8 @@ setup(void)
+@@ -1542,7 +1550,8 @@ setup(void)
  	sw = DisplayWidth(dpy, screen);
  	sh = DisplayHeight(dpy, screen);
  	root = RootWindow(dpy, screen);
@@ -208,7 +208,7 @@ index 4465af1..20f8309 100644
  	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
  		die("no fonts could be loaded.");
  	lrpad = drw->fonts->h;
-@@ -1569,7 +1578,7 @@ setup(void)
+@@ -1570,7 +1579,7 @@ setup(void)
  	/* init appearance */
  	scheme = ecalloc(LENGTH(colors), sizeof(Clr *));
  	for (i = 0; i < LENGTH(colors); i++)
@@ -217,7 +217,7 @@ index 4465af1..20f8309 100644
  	/* init bars */
  	updatebars();
  	updatestatus();
-@@ -1804,16 +1813,18 @@ updatebars(void)
+@@ -1807,16 +1816,18 @@ updatebars(void)
  	Monitor *m;
  	XSetWindowAttributes wa = {
  		.override_redirect = True,
@@ -240,7 +240,7 @@ index 4465af1..20f8309 100644
  		XDefineCursor(dpy, m->barwin, cursor[CurNormal]->cursor);
  		XMapRaised(dpy, m->barwin);
  		XSetClassHint(dpy, m->barwin, &ch);
-@@ -2110,6 +2121,43 @@ xerrorstart(Display *dpy, XErrorEvent *ee)
+@@ -2113,6 +2124,43 @@ xerrorstart(Display *dpy, XErrorEvent *ee)
  	return -1;
  }
  
@@ -285,5 +285,5 @@ index 4465af1..20f8309 100644
  zoom(const Arg *arg)
  {
 -- 
-2.17.0
+2.28.0
 

@@ -51,7 +51,7 @@ map S :w<CR>
 map Q :q<CR> 
 map R :search $MYVIMRC<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
-noremap = nzz
+
 noremap - Nzz
 
 "=========== Plugs========================
@@ -64,14 +64,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " MarkdownPreview
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
+" Plug 'iamcco/mathjax-support-for-mkdp'
+" Plug 'iamcco/markdown-preview.vim'
 
 " snazzy theme
 "Plug 'connorholyday/vim-snazzy'
 
 " Vimtex
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 " neoformat
 Plug 'sbdchd/neoformat'

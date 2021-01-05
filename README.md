@@ -31,7 +31,6 @@
     - [Gnome美化](#gnome美化)
     - [KDE Plasma美化](#kde-plasma美化)
   - [Linux必安装的依赖以及应用](#linux必安装的依赖以及应用)
-  - [疑难问题](#疑难问题)
 
 
 ## 基本配置
@@ -65,10 +64,12 @@ sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
 sudo pacman -S fcitx-googlepinyin
 sudo pacman -S fcitx-rime
+sudo pacman -S rime-double-pinyin
 sudo pacman -S kcm-fcitx # KDE Config Module for Fcitx
 ```
+然后将`default.custom.yaml`文件复制到`~/.config/fcitx/rime/`目录下。
 
-在家目录下创建文件.xprofile，写入以下内容：
+在家目录下创建文件`.xprofile`，写入以下内容：
 ```bash
 export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
@@ -176,9 +177,11 @@ pip -V　　
 
 ### Conda
 
-[Miniconda下载网页](https://docs.conda.io/en/latest/miniconda.html)  
+[Anaconda官网](https://www.anaconda.com/)  
+[Anaconda下载地址](https://www.anaconda.com/products/individual#Downloads)  
+[Miniconda下载地址](https://docs.conda.io/en/latest/miniconda.html)  
 
-运行  
+或运行：
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
@@ -318,6 +321,7 @@ sudo pacman -S chrome-gnome-shell # 用chromium配置gnome的工具
 sudo pacman -S latte-dock # kde dock
 yay -S compiz 
 ```
+之后运行`latte-dock`
 
 ## Linux必安装的依赖以及应用
 
@@ -371,9 +375,3 @@ yay -S wechat-devtools
 yay -S deepin-wine-tim
 yay -S deepin-wine-qq
 ```
-
-## 疑难问题
-
----
-
-暂无。

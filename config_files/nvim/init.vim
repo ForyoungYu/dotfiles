@@ -1,4 +1,4 @@
-set fileencoding=utf-8
+
 set termencoding=utf-8
 set encoding=utf-8
 
@@ -117,13 +117,18 @@ set foldmethod=syntax
 set nofoldenable
 
 " 键位绑定
-map W :w<CR>
+map S :w<CR>
 map Q :q<CR>
 map R :search $MYVIMRC<CR>
+noremap <C-u> <esc>
 noremap <LEADER><CR> :nohlesearch<CR>
 noremap - Nzz
 noremap = nzz
 
+" 运行，编译，调试
+nnoremap <F5>   <Esc>:w<CR>:!g++ -std=c++11 % -o /tmp/a.out && /tmp/a.out<CR>
+nnoremap <F7>   <Esc>:w<CR>:!g++ -std=c++11 %<CR>
+nnoremap <C-F5> <Esc>:w<CR>:!g++ -std=c++11 -g % -o /tmp/a.out && gdb /tmp/a.out<CR>
 " ===========插件安装开始位置==========
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'

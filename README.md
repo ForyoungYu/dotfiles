@@ -30,6 +30,12 @@
   - [美化](#美化)
     - [Gnome美化](#gnome美化)
     - [KDE Plasma美化](#kde-plasma美化)
+      - [Dock](#dock)
+      - [主题](#主题)
+      - [Plasma样式](#plasma样式)
+      - [图标](#图标)
+      - [光标](#光标)
+      - [欢迎屏幕](#欢迎屏幕)
   - [Linux必安装的依赖以及应用](#linux必安装的依赖以及应用)
 
 
@@ -233,7 +239,7 @@ pip3 install pynvim --upgrade
 
 安装zsh
 ```bash
-sudo pacmen -S zsh # arch
+sudo pacman -S zsh # arch
 sudo apt install zsh # ubuntu
 ```
 修改默认bash为zsh
@@ -274,9 +280,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # autojump
-git clone git://github.com/wting/autojump.git ~/Github/autojump
-cd ~/Github/autojump
-./install.py
+git clone git://github.com/wting/autojump.git ~/autojump && ./autojump/install.py
 ```
 ### ranger配置
 包括的插件和命令有：
@@ -317,11 +321,48 @@ sudo pacman -S chrome-gnome-shell # 用chromium配置gnome的工具
 
 ### KDE Plasma美化
 
+#### Dock
 ```bash
 sudo pacman -S latte-dock # kde dock
+sudo pacman -S plank # plank dock
 yay -S compiz 
 ```
-之后运行`latte-dock`
+之后运行`latte-dock`或`plank`开启。
+这两种Dock会默认自启动。
+
+#### 主题
+
+
+
+#### Plasma样式
+
+- brease2
+- brease2 Dark
+- McMojave
+- cherry
+- Qogir-dark
+- ChromeOS
+
+#### 图标
+
+- Tela
+- Tela Dark
+
+#### 光标
+
+- Breeze 微风
+- Breeze 微风亮色
+- DeepinDark Cursors
+- DeepinWhite Cursors
+
+#### 欢迎屏幕
+
+- BeautifulTreeAnimation
+- Harmaony
+- McMojave
+- QuarksSplashDark
+- QuarksSplashDarkLight
+
 
 ## Linux必安装的依赖以及应用
 

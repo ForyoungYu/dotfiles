@@ -100,13 +100,6 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 ```
 
-### 配置文件
-
-克隆配置文件到Github文件夹：
-```bash
-cp -r ~/Github/config/home_files/.* ~
-cp -r ~/Github/config/config_files/* ~/.config
-```
 
 ### NVIDIA显卡配置
 
@@ -141,17 +134,12 @@ EndSection
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 ```
-
-### 字体&壁纸
+## 安装lazygit
 
 ```bash
-# 中文字体
-sudo pacman -S wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-ukai ttf-arphic-uming adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts noto-fonts-cjk
-
-git clone https://gitee.com/foryoungyu/fonts.git ~/.local/share/fonts
-
-# wallpapers
-git clone https://gitee.com/foryoungyu/wallpaper.git ~/Pictures/wallpapers
+git clone https://github.com/jesseduffield/lazygit.git
+cd lazygit
+go install
 ```
 
 ## Python的安装及配置
@@ -189,11 +177,17 @@ pip -V　　
 
 或运行：
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
-bash Miniconda3-latest-Linux-x86_64.sh
+sudo pacman -S anaconda
 ```
 添加conda源，将.condarc文件复制到用户目录下。
+
+### lazygit安装
+
+这里推荐conda安装，yay安装比较慢
+
+```bash
+conda install -c conda-forge lazygit
+```
 
 ### setuptools
 
@@ -387,6 +381,8 @@ sudo pacman -S make cmake # 编译工具
 
 # ======================应用程序==========================
 # Arch / Manjaro
+sudo pacman -S dolphin 
+sudo pacman -S nmtui 
 sudo pacman -S zsh
 sudo pacman -S fish
 sudo pacman -S git

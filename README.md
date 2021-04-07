@@ -6,25 +6,30 @@
 > 如发现错误，欢迎指正
 
 ## 目录
- 
+
 ---
+
 - [Linux系统配置指南](#linux系统配置指南)
   - [目录](#目录)
   - [基本配置](#基本配置)
-    - [软件源配置](#软件源配置)
-    - [安装输入法](#安装输入法)
+    - [软件源](#软件源)
+      - [pacman](#pacman)
+      - [yay](#yay)
+    - [时间](#时间)
+    - [输入法](#输入法)
       - [fcitx](#fcitx)
-      - [ibus(gnome桌面)](#ibusgnome桌面)
-    - [配置文件](#配置文件)
-    - [NVIDIA显卡配置](#nvidia显卡配置)
-    - [字体&壁纸](#字体壁纸)
-  - [Python的安装及配置](#python的安装及配置)
-    - [pip](#pip)
-    - [Conda](#conda)
-    - [setuptools](#setuptools)
-  - [软件配置](#软件配置)
+      - [ibus](#ibus)
+  - [环境搭建](#环境搭建)
+    - [Python](#python)
+      - [pip](#pip)
+      - [Anaconda](#anaconda)
+    - [Go](#go)
+    - [Latex](#latex)
+  - [工具及终端配置](#工具及终端配置)
     - [vim/neovim配置](#vimneovim配置)
     - [zsh配置](#zsh配置)
+      - [安装zsh](#安装zsh)
+      - [安装oh-my-zsh](#安装oh-my-zsh)
     - [ranger配置](#ranger配置)
   - [st & dwm](#st--dwm)
   - [美化](#美化)
@@ -37,34 +42,68 @@
       - [光标](#光标)
       - [欢迎屏幕](#欢迎屏幕)
   - [Linux必安装的依赖以及应用](#linux必安装的依赖以及应用)
-
+  - [常见问题](#常见问题)
+    - [Alacritty终端模拟器](#alacritty终端模拟器)
+    - [在Gnome中使用fxitx](#在gnome中使用fxitx)
+    - [manjaro系统编译LaTeX生成的PDF无法显示中文](#manjaro系统编译latex生成的pdf无法显示中文)
 
 ## 基本配置
 
-----
+---
 
-### 软件源配置 
+### 软件源
 
+#### pacman
 切换到中国源(Manjaro)
+
 ```bash
-sudo pacman-mirrors -c China
+sudo pacman-mirrors -i -c China -m rank 
 ```
 
-在 /etc/pacman.conf文件末尾添加以下内容：
+选择速度最快的一个软件源
+
+然后在`/etc/pacman.conf`文件末尾添加以下内容：
+
 ```bash
 [archlinuxcn]
 SigLevel = Never
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
-运行
+
+运行以下命令可以更新软件源并更新软件
+
 ```bash
-sudo pacman -Syu
+sudo pacman -Syyu
 ```
-### 安装输入法
+
+#### yay
+
+```bash
+yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
+```
+
+修改的配置文件位于 ~/.config/yay/config.json ，还可通过以下命令查看修改过的配置：
+
+```bash
+yay -P -g
+```
+
+### 时间
+
+在windows和linux双系统的情况下会出现linux系统时间比当地时间快8小时的情况
+
+**解决：**
+
+```bash
+sudo timedatectl set-local-rtc true
+```
+
+### 输入法
 
 #### fcitx
 
 安装fcitx框架及输入法：
+
 ```bash
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
@@ -73,9 +112,11 @@ sudo pacman -S fcitx-rime
 sudo pacman -S rime-double-pinyin
 sudo pacman -S kcm-fcitx # KDE Config Module for Fcitx
 ```
+
 然后将`default.custom.yaml`文件复制到`~/.config/fcitx/rime/`目录下。
 
 在家目录下创建文件`.xprofile`，写入以下内容：
+
 ```bash
 export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
@@ -84,7 +125,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 ```
 
-#### ibus(gnome桌面)
+#### ibus
 
 ```bash
 sudo pacman -S ibus-fime
@@ -92,6 +133,7 @@ sudo pacman -S ibus-pinyin
 ```
 
 在家目录下创建文件.xprofile，写入以下内容：
+
 ```bash
 export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
@@ -100,63 +142,18 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 ```
 
-
-### NVIDIA显卡配置
-
-首先安装驱动程序：
-```bash
-sudo pacman -S nvidia 
-```
-hoquxmkaPCI地址：
-```bash
-lspci | grep -E "VGA|3D"
-# 例输出如下
-00:02.0 VGA compatible controller: Intel Corporation HD Graphics 530 (rev 06)
-01:00.0 3D controller: NVIDIA Corporation GM107 [GeForce 940MX] (rev a2)
-```
-转换示例：将第二行的01:00.0转换为1:0:0
-打开/etc/X11/xorg.conf（如果没有就新建一个），输入：
-```bash
-Section "Module"
-    Load "modesetting"
-EndSection
-
-Section "Device"
-    Identifier  "nvidia"
-    Driver      "nvidia"
-    BusID       "1:0:0"
-    Option      "AllowEmptyInitialConfiguration"
-EndSection
-```
-
-配置/usr/share/sddm/scripts/Xsetup文件，追加：
-```bash
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
-```
-## 安装lazygit
-
-```bash
-git clone https://github.com/jesseduffield/lazygit.git
-cd lazygit
-go install
-```
-
-## Python的安装及配置
+## 环境搭建
 
 ---
 
-### pip
+### Python
 
-> 可以安装 Python 软件包的 PyPA 工具。 
+
+#### pip
+
+> 可以安装 Python 软件包的 PyPA 工具。
 
 ``` bash
-# 从文件安装
-wget https://bootstrap.pypa.io/get-pip.py 
-# or
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py 
-
 # Ubuntu
 sudo apt install python3-pip 
 
@@ -169,44 +166,92 @@ pip -V　　
 
 添加pip源：复制.pip/文件夹到家目录。
 
-### Conda
+#### Anaconda
 
 [Anaconda官网](https://www.anaconda.com/)  
+
 [Anaconda下载地址](https://www.anaconda.com/products/individual#Downloads)  
+
 [Miniconda下载地址](https://docs.conda.io/en/latest/miniconda.html)  
 
-或运行：
-```bash
-sudo pacman -S anaconda
-```
-添加conda源，将.condarc文件复制到用户目录下。
+[Anaconda清华源](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh)
 
-### lazygit安装
-
-这里推荐conda安装，yay安装比较慢
+或者运行：
 
 ```bash
-conda install -c conda-forge lazygit
+# 以下安装方式不推荐，配置起来会很麻烦
+sudo pacman -S anaconda 
 ```
 
-### setuptools
-
-> 可以简化 Python 软件包的下载、编译、安装、升级和卸载。  
+添加conda源，将以下内容复制到`.condarc`文件下。
 
 ```bash
-sudo pacman -S python-setuptools # arch
+
+channels:
+  - defaults
+show_channel_urls: true
+channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+
+```
+conda的相关应用
+
+```bash
+# lazygit
+conda install -c conda-forge lazygit 
 ```
 
-## 软件配置
+### Go
+
+安装Golang的命令：
+
+```bash
+# 安装Golang
+sudo pacman -S go
+# 设置`GOPROXY`
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+设置Go语言环境，需要添加`GOPATH`和`GOROOT`到环境变量。
+
+```bash
+export GOPATH=$HOME/Go/bin
+export GOROOT=/usr/lib/go # Golang的安装目录
+```
+### Latex
+
+TeX Live 是一个完整、功能强大的 TeX 发布版本，包含了主要的 Tex 相关程序、宏和字体，官方软件仓库收录了它。 老的(停止开发) teTeX 发布版本位于 AUR
+
+[TexLive ArchWiki](https://wiki.archlinux.org/index.php/TeX_Live_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
+```bash
+sudo pacman -S texlive-most
+```
+
+## 工具及终端配置
 
 ---
 
 ### vim/neovim配置
 
-复制config/nvim到～/.config目录下  
+vim：只需将配置文件`.vim`放到家目录即可（配置文件名为`.vimrc`）  
+neovim：须将其配置文件放到`~/.config/nvim/`目录下（配置文件名为`init.vim`）
+
 vim-plug安装
 > 在安装vim-plug之前确保python以及相关库已经安装  
-> [Jump to Python的安装及配置](#Python的安装及配置)  
+> [Jump to Python的环境搭建](#Python)  
 
 ```bash
 # vim
@@ -217,42 +262,53 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# 如果拒绝连接，打开该文件
-sudo vim /etc/hosts
-# 添加
-199.232.28.133 raw.githubusercontent.com
+# 如果拒绝连接，编辑/etc/hosts文件
+sudo echo 199.232.28.133 raw.githubusercontent.com >> /etc/hosts
+
 # 安装插件的依赖库
-pip3 install pynvim --upgrade 
+pip install pynvim --upgrade 
+sudo pacman -S nodejs
+sudo pacman -S npm
+
 # 最后打开neovim执行命令
 :PlugInstall
+
 # 如果打开.py文件报错，执行
 :UpdateRemotePlugins
 ```
 
 ### zsh配置
 
-安装zsh
+#### 安装zsh
+
 ```bash
-sudo pacman -S zsh # arch
-sudo apt install zsh # ubuntu
+# Arch
+sudo pacman -S zsh
+
+# Ubuntu
+sudo apt install zsh
 ```
-修改默认bash为zsh
+
+修改默认Shell为zsh
+
 ```bash
 chsh -s /usr/bin/zsh
 ```
 
-安装oh-my-zsh
-```bash
-curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sh install.sh
+#### 安装oh-my-zsh
 
-# gitee
+```bash
+curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && sh install.sh
+
+# Gitee
 sh -c "$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)"
+
 # or
 sh -c "$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)"
 ```
 
 [oh-my-zsh皮肤](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+
 ```bash
 # typewritten
 git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
@@ -262,10 +318,12 @@ ln -s "$ZSH_CUSTOM/themes/typewritten/typewritten.zsh-theme" "$ZSH_CUSTOM/themes
 # powerlever10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# 配置powerlever10k
+# 配置powerlever10k命令
 p10k configure
 ```
+
 oh-my-zsh插件
+
 ```bash
 # zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -276,14 +334,20 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # autojump
 git clone git://github.com/wting/autojump.git ~/autojump && ./autojump/install.py
 ```
-### ranger配置
-包括的插件和命令有：
-+ ranger-devicons
-+ :extracter <paths>
-+ :extracterhere
-+ :compress
 
-复制ranger目录到～/.config/目录下
+### ranger配置
+
+[ranger的Github页面](https://github.com/ranger/ranger)
+
+包括的插件和命令有：
+
+- ranger-devicons
+- extracter <paths>
+- extracterhere
+- compress
+
+复制ranger目录到`～/.config/`目录下
+
 ```bash
 # 生成ranger配置文件命令
 ranger --copy-config=all
@@ -291,42 +355,75 @@ ranger --copy-config=all
 # 修改默认编辑器命令
 select-editor # Ubuntu
 ```
+
 ## st & dwm
 
 ---
 
-分别进入两个目录下，输入以下命令：
+[suckless官网](https://suckless.org/)
+
+分别进入两个目录下，输入以下命令可完成编译及安装：
+
 ```bash
 make
 sudo make clean install
 ```
 
-其中，dwm需复制dwm.desktop文件到/usr/share/xsessions目录下，并将.screpts目录复制到家目录中。
+其中，dwm需复制`dwm.desktop`文件到`/usr/share/xsessions`目录下，并将`.dwm`目录复制到家目录中。
+
+**DWM依赖**
+
+```bash
+sudo pacman -S xorg xorg-server # xsetroot命令
+sudo pacman -S feh # 壁纸管理
+sudo pacman -S picom # 淡入淡出、半透明、阴影等视觉效果
+sudo pacman -S trayer # 系统托盘
+sudo pacman -S dmenu 
+```
 
 ## 美化
 
 ---
 
 ### Gnome美化
+
 ```bash
-sudo pacman -S gnome-tweak-tool # gnome美化面板
-sudo pacman -S chrome-gnome-shell # 用chromium配置gnome的工具
+# gnome美化面板
+sudo pacman -S gnome-tweak-tool
+
+# 用chromium配置gnome的工具
+sudo pacman -S chrome-gnome-shell
 ```
+
+**插件推荐**
+
+- Dash to Dock
+- Dash to Panel
+- ArcMenu
+- Application Menu
+- User Themes
+- Pop Shell
+- Open Weather
 
 ### KDE Plasma美化
 
 #### Dock
+
 ```bash
-sudo pacman -S latte-dock # kde dock
-sudo pacman -S plank # plank dock
-yay -S compiz 
+# kde dock
+sudo pacman -S latte-dock
+
+# plank dock
+sudo pacman -S plank
+
+# 基于 OpenGL的混合型窗口管理器
+sudo pacman -S compiz 
 ```
+
 之后运行`latte-dock`或`plank`开启。
 这两种Dock会默认自启动。
 
 #### 主题
-
-
 
 #### Plasma样式
 
@@ -357,13 +454,12 @@ yay -S compiz
 - QuarksSplashDark
 - QuarksSplashDarkLight
 
-
 ## Linux必安装的依赖以及应用
 
 ---
 
 ```bash
-# ===================基础依赖===========================
+# ======================基础依赖===========================
 
 # 设备驱动
 sudo pacman -S net-tools
@@ -382,24 +478,43 @@ sudo pacman -S make cmake # 编译工具
 # ======================应用程序==========================
 # Arch / Manjaro
 sudo pacman -S dolphin 
-sudo pacman -S nmtui 
+sudo pacman -S nmtui # 修改静态IP地址
 sudo pacman -S zsh
 sudo pacman -S fish
 sudo pacman -S git
 sudo pacman -S yay # Arch的AUR
+
+# 终端模拟器
+sudo pamcan -S gnome-terminal # Gnome默认终端
+sudo pacman -S kconsole # KDE默认终端
 sudo pacman -S alacritty
+sudo pacman -S yakuake
+sudo pacman -S tilda
+
+# 终端应用
 sudo pacman -S htop
 sudo pacman -S ranger
+sudo pacman -S lazygit
+
+# 窗口管理器
 sudo pacman -S i3
 sudo pacman -S polybar
 
 sudo pacman -S code # vscode
+sudo pacman -S visual-studio-code-bin # vscode可同步版
 sudo pacman -S netease-cloud-music # 网易云音乐
 sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件
 sudo pacman -S simplescreenrecorder # 录屏软件
 sudo pacman -S libreoffice-fresh-zh-cn # 中文版libreoffice
-yay -S dropbox
+
+# PDF浏览器
+sudo pacman -S okular
+sudo pacman -S evince
+
+# Latex编辑器
+sudo pacman -S texstudio
+sudo pacman -S texworks
 
 # Wechat
 yay -S deepin-wine-wechat
@@ -408,7 +523,56 @@ sudo pacman -S electronic-wechat-git
 sudo pacman -S electron-wechat
 yay -S wechat-devtools
 
+# LaTex suit
+sudo pacman -S texlive-core texlive-langchinese texlive-latexextra
+
 # QQ & TIM
 yay -S deepin-wine-tim
 yay -S deepin-wine-qq
 ```
+
+## 常见问题
+
+### Alacritty终端模拟器
+
+**问题：**
+
+当输入clear时出现`'alacritty': unknown terminal type.`时
+
+**解决办法：**
+
+修改环境变量，在/etc/profile中添加如下：
+
+$ export TERMINFO=/usr/share/terminfo
+重启系统生效。
+
+### 在Gnome中使用fxitx
+
+**问题：**
+
+将ibus卸载后安装fcitx后无法打字
+
+**解决办法：**
+
+在`/etc/environment`文件中输入以下内容:
+
+```bash
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS="@im=fcitx"
+```
+
+### manjaro系统编译LaTeX生成的PDF无法显示中文
+
+**问题：**
+
+manjaro系统编译LaTeX生成的PDF无法显示中文
+
+**解决办法：**
+
+原因是okular软件使用软件包poppler-data解析pdf中的中文
+
+```bash
+sudo pacman -S poppler-data
+```
+

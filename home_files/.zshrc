@@ -6,8 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/anaconda3/bin:$PATH
+export GOPATH=$HOME/Go/bin
+export GOROOT=/usr/lib/go
+export PATH=$GOROOT/bin:$GOPATH:$HOME/bin:/usr/local/bin:$HOME/anaconda3/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -129,6 +130,7 @@ alias c='clear'
 alias lg='lazygit'
 alias ra='ranger'
 alias rm='rm -i'
+
 # auto jump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
@@ -136,3 +138,5 @@ alias rm='rm -i'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. /home/salt/anaconda3/etc/profile.d/conda.sh

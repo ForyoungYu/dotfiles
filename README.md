@@ -461,7 +461,7 @@ sudo pacman -S compiz
 ```bash
 # ======================基础依赖===========================
 
-# 设备驱动
+sudo pacman -S base-devel # 基础开发包
 sudo pacman -S net-tools
 sudo pacman -S xorg xorg-server
 sudo pacman -S xf86-input-synaptics # 触摸板驱动
@@ -507,6 +507,7 @@ sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件
 sudo pacman -S simplescreenrecorder # 录屏软件
 sudo pacman -S libreoffice-fresh-zh-cn # 中文版libreoffice
+yay -S wechat-devtools # 微信开发者工具
 
 # PDF浏览器
 sudo pacman -S okular
@@ -522,9 +523,6 @@ yay -S deepin.com.wechat2
 sudo pacman -S electronic-wechat-git
 sudo pacman -S electron-wechat
 yay -S wechat-devtools
-
-# LaTex suit
-sudo pacman -S texlive-core texlive-langchinese texlive-latexextra
 
 # QQ & TIM
 yay -S deepin-wine-tim

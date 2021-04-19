@@ -140,3 +140,4 @@ alias rm='rm -i'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . /home/salt/anaconda3/etc/profile.d/conda.sh
+export TERMINFO=/usr/share/terminfo

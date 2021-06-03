@@ -22,7 +22,7 @@
   - [环境搭建](#环境搭建)
     - [Python](#python)
       - [pip](#pip)
-      - [Anaconda](#anaconda)
+      - [Conda](#conda)
     - [Go](#go)
     - [Latex](#latex)
   - [工具及终端配置](#工具及终端配置)
@@ -166,36 +166,27 @@ pip -V　　
 
 添加pip源：复制.pip/文件夹到家目录。
 
-#### Anaconda
+#### Conda
 
-[Anaconda官网](https://www.anaconda.com/)  
+**Anaconda 镜像使用帮助**
 
-[Anaconda下载地址](https://www.anaconda.com/products/individual#Downloads)  
+Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux, Mac, Windows, 包含了众多流行的科学计算、数据分析的 Python 包。
 
-[Miniconda下载地址](https://docs.conda.io/en/latest/miniconda.html)  
+[Anaconda3-5.3.1-MacOSX-x86_64 下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh)
 
-[Anaconda清华源](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh)
+TUNA 还提供了 Anaconda 仓库与第三方源（conda-forge、msys2、pytorch等，查看完整列表）的镜像，各系统都可以通过修改用户目录下的 `.condarc` 文件。Windows 用户无法直接创建名为 `.condarc` 的文件，可先执行 `conda config --set show_channel_urls yes` 生成该文件之后再修改。
 
-或者运行：
-
-```bash
-# 以下安装方式不推荐，配置起来会很麻烦
-sudo pacman -S anaconda 
-```
+注：由于更新过快难以同步，我们不同步pytorch-nightly, pytorch-nightly-cpu, ignite-nightly这三个包。
 
 添加conda源，将以下内容复制到`.condarc`文件下。
 
 ```bash
-
 channels:
   - defaults
 show_channel_urls: true
-channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
 default_channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
 custom_channels:
   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
@@ -204,15 +195,19 @@ custom_channels:
   menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-
-```
-conda的相关应用
-
-```bash
-# lazygit
-conda install -c conda-forge lazygit 
 ```
 
+即可添加 Anaconda Python 免费仓库。
+
+运行 `conda clean -i` 清除索引缓存，保证用的是镜像站提供的索引。
+
+运行 `conda create -n myenv numpy` 测试一下吧。
+
+**Miniconda 镜像使用帮助**
+
+Miniconda 是一个 Anaconda 的轻量级替代，默认只包含了 python 和 conda，但是可以通过 pip 和 conda 来安装所需要的包。
+
+Miniconda 安装包可以到 https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 下载。
 ### Go
 
 安装Golang的命令：
@@ -461,7 +456,7 @@ sudo pacman -S compiz
 ```bash
 # ======================基础依赖===========================
 
-sudo pacman -S base-devel # 基础开发包
+# 设备驱动
 sudo pacman -S net-tools
 sudo pacman -S xorg xorg-server
 sudo pacman -S xf86-input-synaptics # 触摸板驱动
@@ -507,7 +502,6 @@ sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件
 sudo pacman -S simplescreenrecorder # 录屏软件
 sudo pacman -S libreoffice-fresh-zh-cn # 中文版libreoffice
-yay -S wechat-devtools # 微信开发者工具
 
 # PDF浏览器
 sudo pacman -S okular

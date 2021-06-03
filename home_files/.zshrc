@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export GOPATH=$HOME/Go/bin
+export GOPATH=$HOME/Go
 export GOROOT=/usr/lib/go
 export PATH=$GOROOT/bin:$GOPATH:$HOME/bin:/usr/local/bin:$HOME/anaconda3/bin:$PATH
 
@@ -140,4 +140,3 @@ alias rm='rm -i'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . /home/salt/anaconda3/etc/profile.d/conda.sh
-export TERMINFO=/usr/share/terminfo

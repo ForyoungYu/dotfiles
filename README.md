@@ -1,7 +1,7 @@
 # Linux系统配置指南
 
 > Linux的配置指南  
-> 包括的Linux系统有Arch系（Arch、Manjaro）和Debian系（Ubuntu、deepin）  
+> 包括的Linux系统有Arch系（Arch、Manjaro）和Debian系（Ubuntu、deepin、Mint）  
 > 本仅提供常见Linux OS的配置方法，不提供系统的安装方法  
 > 如发现错误，欢迎指正
 
@@ -15,6 +15,9 @@
     - [软件源](#软件源)
       - [pacman](#pacman)
       - [yay](#yay)
+      - [apt](#apt)
+        - [Ubuntu](#ubuntu)
+        - [Mint](#mint)
     - [时间](#时间)
     - [输入法](#输入法)
       - [fcitx](#fcitx)
@@ -54,27 +57,39 @@
 ### 软件源
 
 #### pacman
-切换到中国源(Manjaro)
+
+**Manjaro切换到中国源**
 
 ```bash
+# manjaro
 sudo pacman-mirrors -i -c China -m rank 
 ```
 
 选择速度最快的一个软件源
 
-然后在`/etc/pacman.conf`文件末尾添加以下内容：
+**Arch Linux 软件仓库**
+
+编辑 `/etc/pacman.d/mirrorlist`， 在文件的最顶端添加：
+
+```bash
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+```
+
+更新软件包缓存：
+
+```bash
+sudo pacman -Syy
+```
+**ArchlinuxCN 镜像**
+
+在 `/etc/pacman.conf` 文件末尾添加以下两行：
 
 ```bash
 [archlinuxcn]
-SigLevel = Never
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
-运行以下命令可以更新软件源并更新软件
-
-```bash
-sudo pacman -Syyu
-```
+之后安装 archlinuxcn-keyring 包导入 GPG key。
 
 #### yay
 
@@ -87,6 +102,40 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 ```bash
 yay -P -g
 ```
+
+#### apt
+
+##### Ubuntu
+Ubuntu 的软件源配置文件是 `/etc/apt/sources.list`。将系统自带的该文件做个备份，将该文件替换为下面内容，即可使用 TUNA 的软件源镜像。
+
+```bash
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+```
+
+##### Mint
+
+Linux Mint 也采用 apt 作为包管理器，与 Ubuntu 和 Debian 类似，你需要编辑 `/etc/apt/sources.list` 和 `/etc/apt/sources.list.d/*` 中的路径。对于来自 Ubuntu 的部分源，可以参考 Ubuntu 镜像使用帮助进行修改。
+
+以 sonya 为例，需要修改 `/etc/apt/sources.list.d/mint.list`，把 `packages.linuxmint.com` 替换为 `mirrors.tuna.tsinghua.edu.cn/linuxmint` ：
+
+```bash
+deb http://mirrors.tuna.tsinghua.edu.cn/linuxmint/ sonya main upstream import backport
+```
+
+然后运行 apt update 即可。
+
 
 ### 时间
 
@@ -105,12 +154,18 @@ sudo timedatectl set-local-rtc true
 安装fcitx框架及输入法：
 
 ```bash
+# arch
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
 sudo pacman -S fcitx-googlepinyin
 sudo pacman -S fcitx-rime
 sudo pacman -S rime-double-pinyin
 sudo pacman -S kcm-fcitx # KDE Config Module for Fcitx
+
+# ubuntu
+sudo apt install fcitx-rime
+sudo apt install ibus-rime
+sudo apt install librime-data-double-pinyin # rime双拼
 ```
 
 然后将`default.custom.yaml`文件复制到`~/.config/fcitx/rime/`目录下。
@@ -232,7 +287,11 @@ TeX Live 是一个完整、功能强大的 TeX 发布版本，包含了主要的
 [TexLive ArchWiki](https://wiki.archlinux.org/index.php/TeX_Live_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 ```bash
+# arch
 sudo pacman -S texlive-most
+
+# ubuntu
+sudo apt install texlive-full
 ```
 
 ## 工具及终端配置

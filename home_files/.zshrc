@@ -130,6 +130,7 @@ alias c='clear'
 alias lg='lazygit'
 alias ra='ranger'
 alias rm='rm -i'
+alias vim='nvim'
 
 # auto jump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
@@ -140,3 +141,5 @@ alias rm='rm -i'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . /home/salt/anaconda3/etc/profile.d/conda.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

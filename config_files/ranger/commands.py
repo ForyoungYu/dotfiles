@@ -62,7 +62,6 @@ class my_edit(Command):
         # content of the current directory.
         return self._tab_directory_content()
 
-# 解压缩
 # 下面的命令实现了复制(yy)一个或多个存档文件，然后执行 ":extracthere" 解压到需要的目录。
 class extracthere(Command):
     def execute(self):
@@ -96,6 +95,7 @@ class extracthere(Command):
         self.fm.loader.add(obj)
 
 # 对于使用 7z 的用户, 可以在添加以下命令后, 选中压缩包然后执行 ":extract" 或通过绑定的快捷键来解压
+# 快捷键：
 class extract(Command):
     """:extract <paths>
     
@@ -151,3 +151,152 @@ class compress(Command):
 
         extension = ['.zip', '.tar.gz', '.rar', '.7z']
         return ['compress ' + os.path.basename(self.fm.thisdir.path) + ext for ext in extension]
+
+# mkcd (mkdir + cd)
+# 快捷键：mk
+class mkcd(Command):
+    """
+    :mkcd <dirname>
+
+    Creates a directory with the name <dirname> and enters it.
+    """
+
+    def execute(self):
+        from os.path import join, expanduser, lexists
+        from os import makedirs
+        import re
+
+        dirname = join(self.fm.thisdir.path, expanduser(self.rest(1)))
+        if not lexists(dirname):
+            makedirs(dirname)
+
+            match = re.search('^/|^~[^/]*/', dirname)
+            if match:
+                self.fm.cd(match.group(0))
+                dirname = dirname[match.end(0):]
+
+            for m in re.finditer('[^/]+', dirname):
+                s = m.group(0)
+                if s == '..' or (s.startswith('.') and not self.fm.settings['show_hidden']):
+                    self.fm.cd(s)
+                else:
+                    ## We force ranger to load content before calling `scout`.
+                    self.fm.thisdir.load_content(schedule=False)
+                    self.fm.execute_console('scout -ae ^{}$'.format(s))
+        else:
+            self.fm.notify("file/directory exists!", bad=True)
+
+class toggle_flat(Command):
+    """
+    :toggle_flat
+
+    Flattens or unflattens the directory view.
+    """
+
+    def execute(self):
+        if self.fm.thisdir.flat == 0:
+            self.fm.thisdir.unload()
+            self.fm.thisdir.flat = -1
+            self.fm.thisdir.load_content()
+        else:
+            self.fm.thisdir.unload()
+            self.fm.thisdir.flat = 0
+            self.fm.thisdir.load_content()
+
+# This command may be used for quickly uploading a file to a server via scp.
+class up(Command):
+    def execute(self):
+        if self.arg(1):
+            scpcmd = ["scp", "-r"]
+            scpcmd.extend([f.realpath for f in self.fm.thistab.get_selection()])
+            scpcmd.append(self.arg(1))
+            self.fm.execute_command(scpcmd)
+            self.fm.notify("Uploaded!")
+
+
+    def tab(self, tabnum):
+        import os.path
+        try:
+            import paramiko
+        except ImportError:
+            """paramiko not installed"""
+            return
+
+        try:
+            with open(os.path.expanduser("~/.ssh/config")) as file:
+                paraconf = paramiko.SSHConfig()
+                paraconf.parse(file)
+        except IOError:
+            """cant open ssh config"""
+            return
+
+        hosts = sorted(list(paraconf.get_hostnames()))
+        # remove any wildcard host settings since they're not real servers
+        hosts.remove("*")
+        query = self.arg(1) or ''
+        matching_hosts = []
+        for host in hosts:
+            if host.startswith(query):
+                matching_hosts.append(host)
+        return (self.start(1) + host + ":" for host in matching_hosts)
+
+# 快捷键：cf
+class fzf_select(Command):
+    """
+    :fzf_select
+    Find a file using fzf.
+    With a prefix argument to select only directories.
+
+    See: https://github.com/junegunn/fzf
+    """
+
+    def execute(self):
+        import subprocess
+        from ranger.ext.get_executables import get_executables
+
+        if 'fzf' not in get_executables():
+            self.fm.notify('Could not find fzf in the PATH.', bad=True)
+            return
+
+        fd = None
+        if 'fdfind' in get_executables():
+            fd = 'fdfind'
+        elif 'fd' in get_executables():
+            fd = 'fd'
+
+        if fd is not None:
+            hidden = ('--hidden' if self.fm.settings.show_hidden else '')
+            exclude = "--no-ignore-vcs --exclude '.git' --exclude '*.py[co]' --exclude '__pycache__'"
+            only_directories = ('--type directory' if self.quantifier else '')
+            fzf_default_command = '{} --follow {} {} {} --color=always'.format(
+                fd, hidden, exclude, only_directories
+            )
+        else:
+            hidden = ('-false' if self.fm.settings.show_hidden else r"-path '*/\.*' -prune")
+            exclude = r"\( -name '\.git' -o -iname '\.*py[co]' -o -fstype 'dev' -o -fstype 'proc' \) -prune"
+            only_directories = ('-type d' if self.quantifier else '')
+            fzf_default_command = 'find -L . -mindepth 1 {} -o {} -o {} -print | cut -b3-'.format(
+                hidden, exclude, only_directories
+            )
+
+        env = os.environ.copy()
+        env['FZF_DEFAULT_COMMAND'] = fzf_default_command
+        env['FZF_DEFAULT_OPTS'] = '--height=40% --layout=reverse --ansi --preview="{}"'.format('''
+            (
+                batcat --color=always {} ||
+                bat --color=always {} ||
+                cat {} ||
+                tree -ahpCL 3 -I '.git' -I '*.py[co]' -I '__pycache__' {}
+            ) 2>/dev/null | head -n 100
+        ''')
+
+        fzf = self.fm.execute_command('fzf --no-multi', env=env,
+                                      universal_newlines=True, stdout=subprocess.PIPE)
+        stdout, _ = fzf.communicate()
+        if fzf.returncode == 0:
+            selected = os.path.abspath(stdout.strip())
+            if os.path.isdir(selected):
+                self.fm.cd(selected)
+            else:
+                self.fm.select_file(selected)
+

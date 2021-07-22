@@ -1,0 +1,10 @@
+[user]
+	email = foryoung_yu@outlook.com
+	name = Foryoung Yu
+[core]
+	editor = nvim
+[alias]
+	ci = commit
+	co = checkout
+    br = branch
+    st = status

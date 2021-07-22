@@ -33,6 +33,8 @@
     - [zsh配置](#zsh配置)
       - [安装zsh](#安装zsh)
       - [安装oh-my-zsh](#安装oh-my-zsh)
+    - [autojump](#autojump)
+    - [fzf](#fzf)
     - [ranger配置](#ranger配置)
   - [st & dwm](#st--dwm)
   - [美化](#美化)
@@ -49,6 +51,7 @@
     - [Alacritty终端模拟器](#alacritty终端模拟器)
     - [在Gnome中使用fxitx](#在gnome中使用fxitx)
     - [manjaro系统编译LaTeX生成的PDF无法显示中文](#manjaro系统编译latex生成的pdf无法显示中文)
+    - [Gnome40无法使用dash-to-dock](#gnome40无法使用dash-to-dock)
 
 ## 基本配置
 
@@ -183,8 +186,8 @@ export XMODIFIERS="@im=fcitx"
 #### ibus
 
 ```bash
-sudo pacman -S ibus-fime
-sudo pacman -S ibus-pinyin
+sudo pacman -S ibus ibus-rime ibus-pinyin
+sudo pacman -S rime-double-pinyin rime-emoji
 ```
 
 在家目录下创建文件.xprofile，写入以下内容：
@@ -313,16 +316,15 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # 如果拒绝连接，编辑/etc/hosts文件
 sudo echo 199.232.28.133 raw.githubusercontent.com >> /etc/hosts
 
 # 安装插件的依赖库
 pip install pynvim --upgrade 
-sudo pacman -S nodejs
-sudo pacman -S npm
+sudo pacman -S nodejs npm
 
 # 最后打开neovim执行命令
 :PlugInstall
@@ -384,23 +386,78 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+### autojump
 
-# autojump
-git clone git://github.com/wting/autojump.git ~/autojump && ./autojump/install.py
+```bash
+git clone git://github.com/wting/autojump.git
+cd autojump
+./install.py 
+#or 
+./uninstall.py
+```
+
+### fzf
+
+fzf is a general-purpose command-line fuzzy finder.
+
+输入如下命令安装fzf:
+
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 ```
 
 ### ranger配置
 
 [ranger的Github页面](https://github.com/ranger/ranger)
 
-包括的插件和命令有：
+ranger的主要配置文件及其作用如下：
 
+> `commands.py `用于配置自定义命令
+> 
+> `rc.conf`用于配置ranger的按键操作
+> 
+> `plugins`文件夹用于添加插件
+
+目前已经添加的插件、命令以及快捷键如下：
+
+插件（plugins目录中）：
 - ranger-devicons
-- extracter <paths>
+- ranger-autojump
+
+安装插件命令：
+```bash
+# ranger-autojump
+git clone https://github.com/fdw/ranger-autojump.git ~/.config/ranger/plugins/ranger-autojump
+
+cp ~/.config/ranger/plugins/ranger-autojump/autojump.py ~/.config/ranger/plugins
+
+# ranger-devicons
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+```
+
+
+在`commands.py`中已添加的功能(参考[custom commands](https://github.com/ranger/ranger/wiki/Custom-Commands))：
+
+- my_edit
+- extract <paths>
 - extracterhere
 - compress
+- mkcd
+- fzf_select
+- up
+- toggle_flat
+  
+在`rc.conf`中已添加的快捷键(参考[Keybindings](https://github.com/ranger/ranger/wiki/Keybindings))：
 
-复制ranger目录到`～/.config/`目录下
+- `<A-f>`：打开fzf(需安装[fzf](#fzf))
+- `cj`:autojump插件命令(需要安装[autojump](#autojump))
+- `mk`：mkcd命令
+- `C`:compress
+- `X`:extracthere
+
+ranger相关命令：
 
 ```bash
 # 生成ranger配置文件命令
@@ -409,6 +466,7 @@ ranger --copy-config=all
 # 修改默认编辑器命令
 select-editor # Ubuntu
 ```
+
 
 ## st & dwm
 
@@ -452,7 +510,7 @@ sudo pacman -S chrome-gnome-shell
 **插件推荐**
 
 - Dash to Dock
-- Dash to Panel
+- IBus Tweaker
 - ArcMenu
 - Application Menu
 - User Themes
@@ -549,6 +607,7 @@ sudo pacman -S tilda
 sudo pacman -S htop
 sudo pacman -S ranger
 sudo pacman -S lazygit
+sudo pacman -S clash  # Clash代理
 
 # 窗口管理器
 sudo pacman -S i3
@@ -626,4 +685,27 @@ manjaro系统编译LaTeX生成的PDF无法显示中文
 ```bash
 sudo pacman -S poppler-data
 ```
+### Gnome40无法使用dash-to-dock
 
+>[参考dash-to-dock/gnome40分支](https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40)
+> [](https://github.com/micheleg/dash-to-dock/pull/1402#issuecomment-814937395)
+>[YouTobe教程](https://www.youtube.com/watch?v=hhhNy7mY0nI&ab_channel=JulianGonzalez)
+
+```bash
+# 依赖sassc
+npm install sass
+sudo pacman -S sassc
+
+git clone https://github.com/ewlsh/dash-to-dock/
+cd dash-to-dock
+git checkout ewlsh/gnome-40
+make
+make install
+```
+
+更新仓库：
+```bash
+git pull
+make
+make install
+```

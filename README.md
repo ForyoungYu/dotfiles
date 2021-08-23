@@ -70,7 +70,7 @@ sudo pacman-mirrors -i -c China -m rank
 
 选择速度最快的一个软件源
 
-**Arch Linux 软件仓库**
+**Arch Linux 软件仓库镜像**
 
 编辑 `/etc/pacman.d/mirrorlist`， 在文件的最顶端添加：
 
@@ -83,12 +83,14 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 ```bash
 sudo pacman -Syy
 ```
+
 **ArchlinuxCN 镜像**
 
 在 `/etc/pacman.conf` 文件末尾添加以下两行：
 
 ```bash
 [archlinuxcn]
+SigLevel = Never
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
@@ -230,7 +232,9 @@ pip -V　　
 
 Anaconda 是一个用于科学计算的 Python 发行版，支持 Linux, Mac, Windows, 包含了众多流行的科学计算、数据分析的 Python 包。
 
-[Anaconda3-5.3.1-MacOSX-x86_64 下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-MacOSX-x86_64.sh)
+[Anaconda 下载界面](https://www.anaconda.com/products/individual#Downloads)
+
+[Anaconda3-2021.05-Linux-x86_64 下载地址](https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh)
 
 TUNA 还提供了 Anaconda 仓库与第三方源（conda-forge、msys2、pytorch等，查看完整列表）的镜像，各系统都可以通过修改用户目录下的 `.condarc` 文件。Windows 用户无法直接创建名为 `.condarc` 的文件，可先执行 `conda config --set show_channel_urls yes` 生成该文件之后再修改。
 
@@ -407,6 +411,11 @@ fzf is a general-purpose command-line fuzzy finder.
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
+或者直接安装fzf：
+
+```bash
+sudo pacman -S fzf
+```
 
 ### ranger配置
 
@@ -434,7 +443,7 @@ git clone https://github.com/fdw/ranger-autojump.git ~/.config/ranger/plugins/ra
 cp ~/.config/ranger/plugins/ranger-autojump/autojump.py ~/.config/ranger/plugins
 
 # ranger-devicons
-git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+git clone https://github.com/ForyoungYu/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
 
 
@@ -615,6 +624,7 @@ sudo pacman -S polybar
 
 sudo pacman -S code # vscode
 sudo pacman -S visual-studio-code-bin # vscode可同步版
+sudo pacman -S google-chrome # Google Chrome
 sudo pacman -S netease-cloud-music # 网易云音乐
 sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件

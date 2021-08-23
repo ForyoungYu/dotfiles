@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 export GOPATH=$HOME/Go
 export GOROOT=/usr/lib/go
@@ -131,15 +124,3 @@ alias lg='lazygit'
 alias ra='ranger'
 alias rm='rm -i'
 alias vim='nvim'
-
-# auto jump
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
-
-# source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-. /home/salt/anaconda3/etc/profile.d/conda.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

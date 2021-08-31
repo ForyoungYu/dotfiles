@@ -124,8 +124,7 @@ sudo timedatectl set-local-rtc true
 sudo pacman -S fcitx-im fcitx-configtool
 
 # 输入法
-sudo pacman -S fcitx-rime
-sudo pacman -S rime-double-pinyin
+sudo pacman -S fcitx-rime rime-double-pinyin
 sudo pacman -S kcm-fcitx # KDE Config Module for Fcitx
 ```
 
@@ -155,14 +154,17 @@ Fcitx5 是继 Fcitx 后的新一代输入法框架。
 
 ```bash
 # fcitx5框架
-sudo pacman -S fcitx5-im fcitx5-configtool 
+sudo pacman -S fcitx5 fcitx5-im fcitx5-configtool 
 
 # 输入法
-sudo pacman -S fcitx5-rime rime-double-pinyin
+sudo pacman -S fcitx5-rime rime-double-pinyin # 中州韵输入法及其双拼输入法
+sudo pacman -S fcitx5-lua # 一些额外的插件。例如对 时间和日期 的候选
+sudo pacman -S fcitx5-chinese-addons # 包含了大量中文输入方式：拼音、双拼、五笔拼音、自然码、仓颉、冰蟾全息、二笔等
 
 # Themes
 sudo pacman -S fcitx5-nord fcitx5-material-color 
 ```
+
 欲在程序中正常启用 Fcitx5, 须设置以下环境变量，并重新登陆：
 
 ```bash
@@ -631,14 +633,15 @@ sudo pacman -S chrome-gnome-shell
 - Dash to Dock
 - IBus Tweaker
 - Coverflow Alt-Tab
-- Lunar Calendar 农历
-- NetSpeed
+- OpenWeather
+- User Themes
+- Net speed Simplified
 - GSConnect
 - ArcMenu
 - Application Menu
-- User Themes
 - Pop Shell
-- Open Weather
+- ~~Lunar Calendar 农历~~
+- ~~ray Icons~~
 
 ### 5.2 KDE Plasma美化
 

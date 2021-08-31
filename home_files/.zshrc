@@ -124,3 +124,5 @@ alias lg='lazygit'
 alias ra='ranger'
 alias rm='rm -i'
 alias vim='nvim'
+alias pc='proxychains4'
+

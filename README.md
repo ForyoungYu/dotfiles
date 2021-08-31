@@ -5,53 +5,6 @@
 > 本仅提供常见Linux OS的配置方法，不提供系统的安装方法  
 > 如发现错误，欢迎指正
 
-## 目录
-
----
-
-- [Linux系统配置指南](#linux系统配置指南)
-  - [目录](#目录)
-  - [基本配置](#基本配置)
-    - [软件源](#软件源)
-      - [pacman](#pacman)
-      - [yay](#yay)
-      - [apt](#apt)
-        - [Ubuntu](#ubuntu)
-        - [Mint](#mint)
-    - [时间](#时间)
-    - [输入法](#输入法)
-      - [fcitx](#fcitx)
-      - [ibus](#ibus)
-  - [环境搭建](#环境搭建)
-    - [Python](#python)
-      - [pip](#pip)
-      - [Conda](#conda)
-    - [Go](#go)
-    - [Latex](#latex)
-  - [工具及终端配置](#工具及终端配置)
-    - [vim/neovim配置](#vimneovim配置)
-    - [zsh配置](#zsh配置)
-      - [安装zsh](#安装zsh)
-      - [安装oh-my-zsh](#安装oh-my-zsh)
-    - [autojump](#autojump)
-    - [fzf](#fzf)
-    - [ranger配置](#ranger配置)
-  - [st & dwm](#st--dwm)
-  - [美化](#美化)
-    - [Gnome美化](#gnome美化)
-    - [KDE Plasma美化](#kde-plasma美化)
-      - [Dock](#dock)
-      - [主题](#主题)
-      - [Plasma样式](#plasma样式)
-      - [图标](#图标)
-      - [光标](#光标)
-      - [欢迎屏幕](#欢迎屏幕)
-  - [Linux必安装的依赖以及应用](#linux必安装的依赖以及应用)
-  - [常见问题](#常见问题)
-    - [Alacritty终端模拟器](#alacritty终端模拟器)
-    - [在Gnome中使用fxitx](#在gnome中使用fxitx)
-    - [manjaro系统编译LaTeX生成的PDF无法显示中文](#manjaro系统编译latex生成的pdf无法显示中文)
-    - [Gnome40无法使用dash-to-dock](#gnome40无法使用dash-to-dock)
 
 ## 基本配置
 
@@ -160,9 +113,10 @@ sudo timedatectl set-local-rtc true
 
 ```bash
 # arch
-sudo pacman -S fcitx-im
-sudo pacman -S fcitx-configtool
-sudo pacman -S fcitx-googlepinyin
+# 框架
+sudo pacman -S fcitx-im fcitx-configtool
+
+# 输入法
 sudo pacman -S fcitx-rime
 sudo pacman -S rime-double-pinyin
 sudo pacman -S kcm-fcitx # KDE Config Module for Fcitx
@@ -184,7 +138,20 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 ```
+#### fcitx5
 
+Fcitx5 是继 Fcitx 后的新一代输入法框架。
+
+```bash
+# 框架
+sudo pacman -S fcitx5-im fcitx5-configtool 
+
+# 输入法
+sudo pacman -S fcitx5-rime rime-double-pinyin
+
+# Themes
+sudo pacman -S fcitx5-nord fcitx5-material-color 
+```
 #### ibus
 
 ```bash
@@ -520,6 +487,10 @@ sudo pacman -S chrome-gnome-shell
 
 - Dash to Dock
 - IBus Tweaker
+- Coverflow Alt-Tab
+- Lunar Calendar 农历
+- NetSpeed
+- GSConnect
 - ArcMenu
 - Application Menu
 - User Themes
@@ -622,13 +593,15 @@ sudo pacman -S clash  # Clash代理
 sudo pacman -S i3
 sudo pacman -S polybar
 
-sudo pacman -S code # vscode
-sudo pacman -S visual-studio-code-bin # vscode可同步版
+# 应用软件
+sudo pacman -S visual-studio-code-bin # VSCode
 sudo pacman -S google-chrome # Google Chrome
 sudo pacman -S netease-cloud-music # 网易云音乐
 sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件
+sudo pacman -S inkscape # 矢量图制作软件
 sudo pacman -S simplescreenrecorder # 录屏软件
+sudo pacman -s obs-studio
 sudo pacman -S libreoffice-fresh-zh-cn # 中文版libreoffice
 
 # PDF浏览器
@@ -640,6 +613,7 @@ sudo pacman -S texstudio
 sudo pacman -S texworks
 
 # Wechat
+yay -S wechat-uos # 统信 UOS 魔改版
 yay -S deepin-wine-wechat
 yay -S deepin.com.wechat2
 sudo pacman -S electronic-wechat-git

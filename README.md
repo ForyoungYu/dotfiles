@@ -5,59 +5,12 @@
 > 本仅提供常见Linux OS的配置方法，不提供系统的安装方法  
 > 如发现错误，欢迎指正
 
-## 目录
+
+## 1 基本配置
 
 ---
 
-- [Linux系统配置指南](#linux系统配置指南)
-  - [目录](#目录)
-  - [基本配置](#基本配置)
-    - [软件源](#软件源)
-      - [pacman](#pacman)
-      - [yay](#yay)
-      - [apt](#apt)
-        - [Ubuntu](#ubuntu)
-        - [Mint](#mint)
-    - [时间](#时间)
-    - [输入法](#输入法)
-      - [fcitx](#fcitx)
-      - [ibus](#ibus)
-  - [环境搭建](#环境搭建)
-    - [Python](#python)
-      - [pip](#pip)
-      - [Conda](#conda)
-    - [Go](#go)
-    - [Latex](#latex)
-  - [工具及终端配置](#工具及终端配置)
-    - [vim/neovim配置](#vimneovim配置)
-    - [zsh配置](#zsh配置)
-      - [安装zsh](#安装zsh)
-      - [安装oh-my-zsh](#安装oh-my-zsh)
-    - [autojump](#autojump)
-    - [fzf](#fzf)
-    - [ranger配置](#ranger配置)
-  - [st & dwm](#st--dwm)
-  - [美化](#美化)
-    - [Gnome美化](#gnome美化)
-    - [KDE Plasma美化](#kde-plasma美化)
-      - [Dock](#dock)
-      - [主题](#主题)
-      - [Plasma样式](#plasma样式)
-      - [图标](#图标)
-      - [光标](#光标)
-      - [欢迎屏幕](#欢迎屏幕)
-  - [Linux必安装的依赖以及应用](#linux必安装的依赖以及应用)
-  - [常见问题](#常见问题)
-    - [Alacritty终端模拟器](#alacritty终端模拟器)
-    - [在Gnome中使用fxitx](#在gnome中使用fxitx)
-    - [manjaro系统编译LaTeX生成的PDF无法显示中文](#manjaro系统编译latex生成的pdf无法显示中文)
-    - [Gnome40无法使用dash-to-dock](#gnome40无法使用dash-to-dock)
-
-## 基本配置
-
----
-
-### 软件源
+### 1.1 软件源配置
 
 #### pacman
 
@@ -68,17 +21,17 @@
 sudo pacman-mirrors -i -c China -m rank 
 ```
 
-选择速度最快的一个软件源
+选择速度最快的一个软件源，manjaro所做的这一步相当于切换软件仓库镜像（所指下一部分）
 
 **Arch Linux 软件仓库镜像**
 
-编辑 `/etc/pacman.d/mirrorlist`， 在文件的最顶端添加：
+编辑 `/etc/pacman.d/mirrorlist`， 在文件的最顶端添加如下行（清华源）：
 
 ```bash
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 ```
 
-更新软件包缓存：
+之后更新软件包缓存：
 
 ```bash
 sudo pacman -Syy
@@ -97,6 +50,14 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 之后安装 archlinuxcn-keyring 包导入 GPG key。
 
 #### yay
+
+首先安装yay：
+
+```bash
+sudo pacman -S yay
+```
+
+给AUR添加中国源：
 
 ```bash
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
@@ -142,7 +103,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/linuxmint/ sonya main upstream import ba
 然后运行 apt update 即可。
 
 
-### 时间
+### 1.2 时间
 
 在windows和linux双系统的情况下会出现linux系统时间比当地时间快8小时的情况
 
@@ -152,44 +113,79 @@ deb http://mirrors.tuna.tsinghua.edu.cn/linuxmint/ sonya main upstream import ba
 sudo timedatectl set-local-rtc true
 ```
 
-### 输入法
+### 1.3 输入法
 
 #### fcitx
 
-安装fcitx框架及输入法：
+**ArchLinux系统**
 
 ```bash
-# arch
-sudo pacman -S fcitx-im
-sudo pacman -S fcitx-configtool
-sudo pacman -S fcitx-googlepinyin
+# fcitx框架
+sudo pacman -S fcitx-im fcitx-configtool
+
+# 输入法
 sudo pacman -S fcitx-rime
 sudo pacman -S rime-double-pinyin
 sudo pacman -S kcm-fcitx # KDE Config Module for Fcitx
+```
 
-# ubuntu
+**Ubuntu系统**
+
+```bash
 sudo apt install fcitx-rime
 sudo apt install ibus-rime
 sudo apt install librime-data-double-pinyin # rime双拼
 ```
 
-然后将`default.custom.yaml`文件复制到`~/.config/fcitx/rime/`目录下。
+系统安装完以上软件后将`config_files/default.custom.yaml`文件复制到`~/.config/fcitx/rime/`目录下。
 
 在家目录下创建文件`.xprofile`，写入以下内容：
 
 ```bash
+# ~/.xprofile
 export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 ```
+#### fcitx5
+
+Fcitx5 是继 Fcitx 后的新一代输入法框架。
+
+```bash
+# fcitx5框架
+sudo pacman -S fcitx5-im fcitx5-configtool 
+
+# 输入法
+sudo pacman -S fcitx5-rime rime-double-pinyin
+
+# Themes
+sudo pacman -S fcitx5-nord fcitx5-material-color 
+```
+欲在程序中正常启用 Fcitx5, 须设置以下环境变量，并重新登陆：
+
+```bash
+# ~/.pam_environment
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=@im=fcitx
+INPUT_METHOD  DEFAULT=fcitx
+SDL_IM_MODULE DEFAULT=fcitx
+```
+
+最后那行 SDL_IM_MODULE 是为了让一些使用特定版本 SDL2 库的游戏，比如 Dota2 能正常使用输入法。
+
+fcitx5的配置文件与fcitx位置不同，它的配置文件在`~/.local/share/fcitx5/`目录下，rime的配置文件也在其中。
 
 #### ibus
 
 ```bash
-sudo pacman -S ibus ibus-rime ibus-pinyin
-sudo pacman -S rime-double-pinyin rime-emoji
+# ibus框架
+sudo pacman -S ibus ibus-rime
+
+# 输入法
+sudo pacman -S rime-double-pinyin ibus-pinyin rime-emoji
 ```
 
 在家目录下创建文件.xprofile，写入以下内容：
@@ -202,11 +198,123 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 ```
 
-## 环境搭建
+### 1.4 代理
+
+<img src="images/windows-cfw-1.png" alt="Clash" style="zoom: 80%;" />
+
+**Clash** 是由 Dreamacro 开发的，是一个使用 [Go](https://zh.wikipedia.org/wiki/Go) 开发的、基于规则的隧道。
+
+**Clash**本身没有[图形界面](https://zh.wikipedia.org/wiki/图形界面)，仅提供[HTTP](https://zh.wikipedia.org/wiki/HTTP) [RESTful](https://zh.wikipedia.org/wiki/RESTful) [API](https://zh.wikipedia.org/wiki/API)。社区开发了 Clash for Android、Clash for Windows、ClashX（ MacOS 平台 ）等工具，处理到Clash的指令，用户从而可以直接在图形界面下控制其行为。
+
+1. 首先下载**Clash客户端**（推荐）：
+
+```bash
+sudo pacman -S clash
+```
+
+或者去[Clash的Github下载页面](https://github.com/Dreamacro/clash/releases)下载最新的压缩文件。
+
+2. 进入到clash的目录`~/.config/clash`,运行下面的命令下载配置文件：
+
+```bash
+wget -O config.yaml https://stc-spadesdns.com/link/Nz5QuF88lZftTOlf?clash=2&log-level=info
+```
+
+![命令](images/2021-08-31%2020-23-30%20的屏幕截图.png))
+
+3. 然后打开系统设置，找到**网络**，选择**手动**，填写 HTTP 和 HTTPS 代理为 `127.0.0.1:7890`，填写 Socks 主机为 `127.0.0.1:7891`，即可启用系统代理。
+
+![设置](images/linux-clash-5.jpg)
+
+4. 接着访问[Clash Dashboard](http://clash.razord.top/)可以进行切换节点、测试延迟等操作。
+![网站](images/linux-clash-4.jpg)
+
+### 1.5 终端代理
+
+#### 方法一
+
+有时候代理搭建好了，但是在终端中却无法使用代理，这就需要用到另一个工具：**proxychains**
+
+ProxyChains是Linux和其他Unix下的代理工具。 它可以使任何程序通过代理上网， 允许TCP和DNS通过代理隧道， 支持HTTP、 SOCKS4和SOCKS5类型的代理服务器， 并且可配置多个代理。 ProxyChains通过一个用户定义的代理列表强制连接指定的应用程序， 直接断开接收方和发送方的连接。
+
+**安装：**
+
+```bash
+sudo pacman -S proxychains-ng
+```
+
+ProxyChains 的配置文件位于` /etc/proxychains.conf` ，打开后你需要在末尾添加你使用的代理。例如：
+
+```bash
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+
+socks5  127.0.0.1 7891
+```
+
+**使用：**
+
+ProxyChains 的使用方式非常简单，直接在应用程序前加上 proxychains4 即可。例如
+
+```bash
+proxychains4 curl www.httpbin.org/ip
+```
+
+这个命令可以测试当前的公网IP，分别用ProxyChains测试一下看看IP地址是否改变。
+
+#### 方法二
+
+在终端中直接运行：
+
+```bash
+export http_proxy=http://proxyAddress:port
+```
+
+如果你是SSR,并且走的http的代理端口是12333，想执行wget或者curl来下载国外的东西，可以使用如下命令：
+
+```bash
+export http_proxy=http://127.0.0.1:12333
+```
+
+如果是https那么就经过如下命令：
+
+```bash
+export https_proxy=http://127.0.0.1:12333
+```
+
+或者把代理服务器地址写入shell配置文件.bashrc或者.zshrc 直接在.bashrc或者.zshrc添加下面内容
+
+```bash
+export http_proxy="http://localhost:port"
+export https_proxy="http://localhost:port"
+```
+
+或者走socket5协议（ss,ssr）的话，代理端口是1080
+
+```bash
+export http_proxy="socks5://127.0.0.1:7891"
+export https_proxy="socks5://127.0.0.1:7891"
+```
+
+或者干脆直接设置ALL_PROXY
+
+```bash
+export ALL_PROXY=socks5://127.0.0.1:7891
+```
+
+最后在执行如下命令应用设置
+
+```bash
+source ~/.bashrc
+```
+
+## 2 环境搭建
 
 ---
 
-### Python
+### 2.1 Python环境
 
 
 #### pip
@@ -226,7 +334,7 @@ pip -V　　
 
 添加pip源：复制.pip/文件夹到家目录。
 
-#### Conda
+#### Conda（推荐）
 
 **Anaconda 镜像使用帮助**
 
@@ -270,7 +378,7 @@ custom_channels:
 Miniconda 是一个 Anaconda 的轻量级替代，默认只包含了 python 和 conda，但是可以通过 pip 和 conda 来安装所需要的包。
 
 Miniconda 安装包可以到 https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 下载。
-### Go
+### 2.2 Go环境
 
 安装Golang的命令：
 
@@ -287,32 +395,32 @@ go env -w GOPROXY=https://goproxy.cn,direct
 export GOPATH=$HOME/Go/bin
 export GOROOT=/usr/lib/go # Golang的安装目录
 ```
-### Latex
+### 2.3 Latex
 
 TeX Live 是一个完整、功能强大的 TeX 发布版本，包含了主要的 Tex 相关程序、宏和字体，官方软件仓库收录了它。 老的(停止开发) teTeX 发布版本位于 AUR
 
 [TexLive ArchWiki](https://wiki.archlinux.org/index.php/TeX_Live_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 ```bash
-# arch
+# Arch
 sudo pacman -S texlive-most
 
-# ubuntu
+# Ubuntu
 sudo apt install texlive-full
 ```
 
-## 工具及终端配置
+## 3 工具及终端配置
 
 ---
 
-### vim/neovim配置
+### 3.1 vim/neovim配置
 
 vim：只需将配置文件`.vim`放到家目录即可（配置文件名为`.vimrc`）  
 neovim：须将其配置文件放到`~/.config/nvim/`目录下（配置文件名为`init.vim`）
 
 vim-plug安装
 > 在安装vim-plug之前确保python以及相关库已经安装  
-> [Jump to Python的环境搭建](#Python)  
+> [Jump to Python的环境搭建](#Python环境)  
 
 ```bash
 # vim
@@ -337,7 +445,7 @@ sudo pacman -S nodejs npm
 :UpdateRemotePlugins
 ```
 
-### zsh配置
+### 3.2 zsh配置
 
 #### 安装zsh
 
@@ -367,7 +475,7 @@ sh -c "$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/in
 sh -c "$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)"
 ```
 
-[oh-my-zsh皮肤](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+提供一些[oh-my-zsh皮肤](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)，下面的是我常用的一些皮肤：
 
 ```bash
 # typewritten
@@ -382,7 +490,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 p10k configure
 ```
 
-oh-my-zsh插件
+**oh-my-zsh插件**
 
 ```bash
 # zsh-autosuggestions
@@ -391,17 +499,18 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
-### autojump
+### 3.3 autojump
 
 ```bash
 git clone git://github.com/wting/autojump.git
 cd autojump
 ./install.py 
-#or 
+
+#卸载
 ./uninstall.py
 ```
 
-### fzf
+### 3.4 fzf
 
 fzf is a general-purpose command-line fuzzy finder.
 
@@ -417,7 +526,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo pacman -S fzf
 ```
 
-### ranger配置
+### 3.5 ranger配置
 
 [ranger的Github页面](https://github.com/ranger/ranger)
 
@@ -458,6 +567,7 @@ git clone https://github.com/ForyoungYu/ranger_devicons ~/.config/ranger/plugins
 - up
 - toggle_flat
   
+
 在`rc.conf`中已添加的快捷键(参考[Keybindings](https://github.com/ranger/ranger/wiki/Keybindings))：
 
 - `<A-f>`：打开fzf(需安装[fzf](#fzf))
@@ -477,7 +587,7 @@ select-editor # Ubuntu
 ```
 
 
-## st & dwm
+## 4 st & dwm
 
 ---
 
@@ -502,11 +612,11 @@ sudo pacman -S trayer # 系统托盘
 sudo pacman -S dmenu 
 ```
 
-## 美化
+## 5 美化
 
 ---
 
-### Gnome美化
+### 5.1 Gnome美化
 
 ```bash
 # gnome美化面板
@@ -520,13 +630,17 @@ sudo pacman -S chrome-gnome-shell
 
 - Dash to Dock
 - IBus Tweaker
+- Coverflow Alt-Tab
+- Lunar Calendar 农历
+- NetSpeed
+- GSConnect
 - ArcMenu
 - Application Menu
 - User Themes
 - Pop Shell
 - Open Weather
 
-### KDE Plasma美化
+### 5.2 KDE Plasma美化
 
 #### Dock
 
@@ -575,7 +689,7 @@ sudo pacman -S compiz
 - QuarksSplashDark
 - QuarksSplashDarkLight
 
-## Linux必安装的依赖以及应用
+## 6 Linux必安装的依赖以及应用
 
 ---
 
@@ -622,13 +736,15 @@ sudo pacman -S clash  # Clash代理
 sudo pacman -S i3
 sudo pacman -S polybar
 
-sudo pacman -S code # vscode
-sudo pacman -S visual-studio-code-bin # vscode可同步版
+# 应用软件
+sudo pacman -S visual-studio-code-bin # VSCode
 sudo pacman -S google-chrome # Google Chrome
 sudo pacman -S netease-cloud-music # 网易云音乐
 sudo pacman -S kdenlive # 视频剪辑软件
 sudo pacman -S gimp # 修图软件
+sudo pacman -S inkscape # 矢量图制作软件
 sudo pacman -S simplescreenrecorder # 录屏软件
+sudo pacman -s obs-studio
 sudo pacman -S libreoffice-fresh-zh-cn # 中文版libreoffice
 
 # PDF浏览器
@@ -640,6 +756,7 @@ sudo pacman -S texstudio
 sudo pacman -S texworks
 
 # Wechat
+yay -S wechat-uos # 统信 UOS 魔改版
 yay -S deepin-wine-wechat
 yay -S deepin.com.wechat2
 sudo pacman -S electronic-wechat-git
@@ -651,7 +768,7 @@ yay -S deepin-wine-tim
 yay -S deepin-wine-qq
 ```
 
-## 常见问题
+## 7 常见问题
 
 ### Alacritty终端模拟器
 
@@ -698,7 +815,7 @@ sudo pacman -S poppler-data
 ### Gnome40无法使用dash-to-dock
 
 >[参考dash-to-dock/gnome40分支](https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40)
-> [](https://github.com/micheleg/dash-to-dock/pull/1402#issuecomment-814937395)
+>[issue问题](https://github.com/micheleg/dash-to-dock/pull/1402#issuecomment-814937395)
 >[YouTobe教程](https://www.youtube.com/watch?v=hhhNy7mY0nI&ab_channel=JulianGonzalez)
 
 ```bash

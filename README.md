@@ -178,6 +178,16 @@ SDL_IM_MODULE DEFAULT=fcitx
 
 fcitx5的配置文件与fcitx位置不同，它的配置文件在`~/.local/share/fcitx5/`目录下，rime的配置文件也在其中。
 
+```bash
+# 框架
+sudo pacman -S fcitx5-im fcitx5-configtool 
+
+# 输入法
+sudo pacman -S fcitx5-rime rime-double-pinyin
+
+# Themes
+sudo pacman -S fcitx5-nord fcitx5-material-color 
+```
 #### ibus
 
 ```bash

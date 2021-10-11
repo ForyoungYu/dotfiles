@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export GOPATH=$HOME/Go
+export GOPATH=$HOME/go
 export GOROOT=/usr/lib/go
 export PATH=$GOROOT/bin:$GOPATH:$HOME/bin:/usr/local/bin:$HOME/anaconda3/bin:$PATH
 

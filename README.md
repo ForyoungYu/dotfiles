@@ -385,6 +385,22 @@ custom_channels:
 
 运行 `conda create -n myenv numpy` 测试一下吧。
 
+**利用conda升级Anaconda及其包**
+
+升级conda(升级Anaconda前需要先升级conda)：`conda update conda`
+
+升级anaconda：`conda update anaconda`
+
+升级spyder：`conda update spyder`
+
+更新所有包：`conda update --all`
+
+安装包：`conda install package`
+
+更新包：`conda update package`
+
+查询某个conda指令使用-h后缀，如`conda update -h`
+
 **Miniconda 镜像使用帮助**
 
 Miniconda 是一个 Anaconda 的轻量级替代，默认只包含了 python 和 conda，但是可以通过 pip 和 conda 来安装所需要的包。
@@ -415,7 +431,7 @@ TeX Live 是一个完整、功能强大的 TeX 发布版本，包含了主要的
 
 ```bash
 # Arch
-sudo pacman -S texlive-most
+sudo pacman -S texlive-most texlive-langchinese
 
 # Ubuntu
 sudo apt install texlive-full
@@ -448,7 +464,7 @@ sudo echo 199.232.28.133 raw.githubusercontent.com >> /etc/hosts
 
 # 安装插件的依赖库
 pip install pynvim --upgrade 
-sudo pacman -S nodejs npm
+sudo pacman -S nodejs npm yarn
 
 # 最后打开neovim执行命令
 :PlugInstall
@@ -456,6 +472,7 @@ sudo pacman -S nodejs npm
 # 如果打开.py文件报错，执行
 :UpdateRemotePlugins
 ```
+**PS:** 在安装插件的过程中，如果遇到coc.nvim安装失败的情况，需要进入到nvim的插件安装目录`.vim`下的`coc.nvim`目录下运行`yarn install`即可。
 
 ### 3.2 zsh配置
 
@@ -731,6 +748,10 @@ sudo pacman -S zsh
 sudo pacman -S fish
 sudo pacman -S git
 sudo pacman -S yay # Arch的AUR
+
+# 语言相关
+sudo pacman -S g++ clang gdb
+sudo pacman -S go
 
 # 终端模拟器
 sudo pamcan -S gnome-terminal # Gnome默认终端

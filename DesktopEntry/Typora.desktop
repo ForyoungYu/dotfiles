@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Typora
+Exec=/home/salt/ProgramFiles/Typora-linux-x64/Typora
+Terminal=false
+Type=Application
+Icon=/home/salt/ProgramFiles/Typora-linux-x64/resources/assets/icon/icon_256x256.png
+StartupNotify=true
+Categories=Development

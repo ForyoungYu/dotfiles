@@ -6,6 +6,21 @@
 > 如发现错误，欢迎指正
 
 
+## 系统跳转
+
+[Arch Linux](os/arch.md)
+
+[Manjaro Linux](os/manjaro.md)
+
+[Mint Linux](os/mint.md)
+
+[Ubuntu](os/ubuntu.md)
+
+[Fedora](os/fedora.md)
+
+[OpenSUSE](os/opensuse.md)
+
+
 ## 1 基本配置
 
 ---

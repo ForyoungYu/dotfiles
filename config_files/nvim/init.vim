@@ -154,7 +154,7 @@ Plug 'junegunn/fzf' " FZF模糊文件查找
 "Plug 'ncm2/ncm2'
 
 " LaTex
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 "let g:tex_flavor='latex'
 "let g:vimtex_view_method='zathura'
 "let g:vimtex_quickfix_mode=0

@@ -15,6 +15,9 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ```
+## SnapCraft
+
+参考[Installing snap on openSUSE](https://snapcraft.io/docs/installing-snap-on-opensuse)
 
 ## Nvidia显卡驱动
 

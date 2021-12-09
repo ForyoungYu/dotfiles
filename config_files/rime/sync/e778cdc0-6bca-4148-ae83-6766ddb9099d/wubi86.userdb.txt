@@ -1,0 +1,20 @@
+# Rime user dictionary
+#@/db_name	wubi86
+#@/db_type	userdb
+#@/rime_version	1.7.3
+#@/tick	48
+#@/user_id	e778cdc0-6bca-4148-ae83-6766ddb9099d
+ddkk 	大骂	c=1 d=0.891366 t=48
+f 	地	c=1 d=0.794534 t=48
+g 	一	c=1 d=0.790571 t=48
+gd 	天	c=1 d=0.843665 t=48
+gef 	青	c=2 d=1.67056 t=48
+gghg 	五	c=2 d=1.99501 t=48
+lsi 	困	c=1 d=0.847894 t=48
+r 	的	c=1 d=0.852144 t=48
+samw 	横	c=1 d=0.810584 t=48
+wqvb 	你好	c=1 d=0.865022 t=48
+encgdls 	天困	c=0 d=0.0847894 t=48
+encgegd 	青天	c=0 d=0.0843665 t=48
+encggfb 	一地	c=0 d=0.0794534 t=48
+encggls 	青天困	c=0 d=0.0847894 t=48

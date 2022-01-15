@@ -1,5 +1,3 @@
-! 将CapsLock修改为Control，将Shift+CapsLock修改为CapsLock
 clear lock
-clear control
-add control = Caps_Lock Control_L Control_R
-keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+keycode 66 = Escape Caps_Lock Escape
+!add lock = Caps_Lock

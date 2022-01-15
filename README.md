@@ -5,8 +5,9 @@
 > 本仅提供常见Linux OS的配置方法，不提供系统的安装方法  
 > 如发现错误，欢迎指正
 
-
 ## 系统跳转
+
+一些个别的系统需要特殊配置，以下列出了常见Linux系统的配置方法。
 
 [Arch Linux](os/arch.md)
 
@@ -20,8 +21,7 @@
 
 [OpenSUSE](os/opensuse.md)
 
-
-## 1 基本配置
+## Linux通用配置
 
 ---
 
@@ -87,6 +87,7 @@ yay -P -g
 #### apt
 
 ##### Ubuntu
+
 Ubuntu 的软件源配置文件是 `/etc/apt/sources.list`。将系统自带的该文件做个备份，将该文件替换为下面内容，即可使用 TUNA 的软件源镜像。
 
 ```bash
@@ -117,12 +118,9 @@ deb http://mirrors.tuna.tsinghua.edu.cn/linuxmint/ sonya main upstream import ba
 
 然后运行 apt update 即可。
 
-
 ### 1.2 时间
 
 在windows和linux双系统的情况下会出现linux系统时间比当地时间快8小时的情况
-
-**解决：**
 
 ```bash
 sudo timedatectl set-local-rtc true
@@ -163,6 +161,7 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 ```
+
 #### fcitx5
 
 Fcitx5 是继 Fcitx 后的新一代输入法框架。
@@ -205,6 +204,7 @@ sudo pacman -S fcitx5-rime rime-double-pinyin
 # Themes
 sudo pacman -S fcitx5-nord fcitx5-material-color 
 ```
+
 #### ibus
 
 ```bash
@@ -270,7 +270,7 @@ ProxyChains是Linux和其他Unix下的代理工具。 它可以使任何程序�
 sudo pacman -S proxychains-ng
 ```
 
-ProxyChains 的配置文件位于` /etc/proxychains.conf` ，打开后你需要在末尾添加你使用的代理。例如：
+ProxyChains 的配置文件位于`/etc/proxychains.conf` ，打开后你需要在末尾添加你使用的代理。例如：
 
 ```bash
 [ProxyList]
@@ -343,7 +343,6 @@ source ~/.bashrc
 
 ### 2.1 Python环境
 
-
 #### pip
 
 > 可以安装 Python 软件包的 PyPA 工具。
@@ -356,7 +355,7 @@ sudo apt install python3-pip
 sudo pacman -S python-pip
 
 #查看pip版本
-pip -V　　
+pip -V
 ```
 
 添加pip源：复制.pip/文件夹到家目录。
@@ -420,7 +419,8 @@ custom_channels:
 
 Miniconda 是一个 Anaconda 的轻量级替代，默认只包含了 python 和 conda，但是可以通过 pip 和 conda 来安装所需要的包。
 
-Miniconda 安装包可以到 https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 下载。
+Miniconda 安装包可以到 <https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/> 下载。
+
 ### 2.2 Go环境
 
 安装Golang的命令：
@@ -438,6 +438,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 export GOPATH=$HOME/Go/bin
 export GOROOT=/usr/lib/go # Golang的安装目录
 ```
+
 ### 2.3 Latex
 
 TeX Live 是一个完整、功能强大的 TeX 发布版本，包含了主要的 Tex 相关程序、宏和字体，官方软件仓库收录了它。 老的(停止开发) teTeX 发布版本位于 AUR
@@ -487,6 +488,7 @@ sudo pacman -S nodejs npm yarn
 # 如果打开.py文件报错，执行
 :UpdateRemotePlugins
 ```
+
 **PS:** 在安装插件的过程中，如果遇到coc.nvim安装失败的情况，需要进入到nvim的插件安装目录`.vim`下的`coc.nvim`目录下运行`yarn install`即可。
 
 ### 3.2 zsh配置
@@ -543,6 +545,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
+
 ### 3.3 autojump
 
 ```bash
@@ -564,6 +567,7 @@ fzf is a general-purpose command-line fuzzy finder.
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
+
 或者直接安装fzf：
 
 ```bash
@@ -576,19 +580,21 @@ sudo pacman -S fzf
 
 ranger的主要配置文件及其作用如下：
 
-> `commands.py `用于配置自定义命令
-> 
+> `commands.py`用于配置自定义命令
+>
 > `rc.conf`用于配置ranger的按键操作
-> 
+>
 > `plugins`文件夹用于添加插件
 
 目前已经添加的插件、命令以及快捷键如下：
 
 插件（plugins目录中）：
+
 - ranger-devicons
 - ranger-autojump
 
 安装插件命令：
+
 ```bash
 # ranger-autojump
 git clone https://github.com/fdw/ranger-autojump.git ~/.config/ranger/plugins/ranger-autojump
@@ -598,7 +604,6 @@ cp ~/.config/ranger/plugins/ranger-autojump/autojump.py ~/.config/ranger/plugins
 # ranger-devicons
 git clone https://github.com/ForyoungYu/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
-
 
 在`commands.py`中已添加的功能(参考[custom commands](https://github.com/ranger/ranger/wiki/Custom-Commands))：
 
@@ -610,7 +615,6 @@ git clone https://github.com/ForyoungYu/ranger_devicons ~/.config/ranger/plugins
 - fzf_select
 - up
 - toggle_flat
-  
 
 在`rc.conf`中已添加的快捷键(参考[Keybindings](https://github.com/ranger/ranger/wiki/Keybindings))：
 
@@ -629,7 +633,6 @@ ranger --copy-config=all
 # 修改默认编辑器命令
 select-editor # Ubuntu
 ```
-
 
 ## 4 st & dwm
 
@@ -826,6 +829,7 @@ yay -S deepin-wine-qq
 当输入clear时出现`'alacritty': unknown terminal type.`时
 
 **解决办法：**
+**解决办法：**
 
 修改环境变量，在/etc/profile中添加如下：
 
@@ -861,6 +865,7 @@ manjaro系统编译LaTeX生成的PDF无法显示中文
 ```bash
 sudo pacman -S poppler-data
 ```
+
 ### Gnome40无法使用dash-to-dock
 
 >[参考dash-to-dock/gnome40分支](https://github.com/ewlsh/dash-to-dock/tree/ewlsh/gnome-40)
@@ -880,8 +885,10 @@ make install
 ```
 
 更新仓库：
+
 ```bash
 git pull
 make
 make install
 ```
+

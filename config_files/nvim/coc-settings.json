@@ -1,69 +1,108 @@
 {
-    "coc.preferences.extensionUpdateCheck": "daily",
-    "suggest.noselect": true,
-    "suggest.enablePreview": false,
-    "suggest.completionItemKindLabels": {
-        "class": "\uf0e8",
-        "color": "\ue22b",
-        "constant": "\uf8fe",
-        "default": "\uf29c",
-        "enum": "\uf435",
-        "enumMember": "\uf02b",
-        "event": "\ufacd",
-        "field": "\uf93d",
-        "file": "\uf723",
-        "folder": "\uf115",
-        "function": "\u0192",
-        "interface": "\uf417",
-        "keyword": "\uf1de",
-        "method": "\uf6a6",
-        "module": "\uf40d",
-        "operator": "\uf915",
-        "property": "\ue624",
-        "reference": "\ufa46",
-        "snippet": "\ue60b",
-        "struct": "\ufb44",
-        "text": "\ue612",
-        "typeParameter": "\uf728",
-        "unit": "\uf475",
-        "value": "\uf89f",
-        "variable": "\ue71b"
-    },
-    "diagnostic.signOffset": 1,
-    "diagnostic.errorSign": "\uf467",
-    "diagnostic.warningSign": "\uf071",
-    "diagnostic.infoSign": "\uf129",
-    "diagnostic.hintSign": "\uf864",
-    "diagnostic.displayByAle": false,
-    "diagnostic.refreshOnInsertMode": false,
-    "diagnostic.refreshAfterSave": false,
-    "diagnostic.checkCurrentLine": true,
-    "diagnostic.virtualTextPrefix": " ❯❯❯ ",
-    "diagnostic.virtualText": true,
-    "codeLens.enable": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "javascript",
-        "typescript",
-        "html",
-        "css",
-        "json",
-        "python",
-        "vue",
-        "svelte",
-        "c",
-        "prisma",
-        "markdown"
-    ],
-    "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.mod"
-            ],
-            "trace.server": "verbose",
-            "filetypes": [
-                "go"
-            ]
-        }
-    }
+	"coc.preferences.extensionUpdateCheck": "daily",
+	"coc.preferences.colorSupport": true,
+	"suggest.noselect": true,
+	"suggest.enablePreselect": false,
+	"suggest.completionItemKindLabels": {
+		"class": "\uf0e8",
+		"color": "\ue22b",
+		"constant": "\uf8fe",
+		"default": "\uf29c",
+		"enum": "\uf435",
+		"enumMember": "\uf02b",
+		"event": "\ufacd",
+		"field": "\uf93d",
+		"file": "\uf723",
+		"folder": "\uf115",
+		"function": "\u0192",
+		"interface": "\uf417",
+		"keyword": "\uf1de",
+		"method": "\uf6a6",
+		"module": "\uf40d",
+		"operator": "\uf915",
+		"property": "\ue624",
+		"reference": "\ufa46",
+		"snippet": "\ue60b",
+		"struct": "\ufb44",
+		"text": "\ue612",
+		"typeParameter": "\uf728",
+		"unit": "\uf475",
+		"value": "\uf89f",
+		"variable": "\ue71b"
+	},
+	"list.previousKeymap": "<C-k>",
+	"list.nextKeymap": "<C-j>",
+	"json.enable": true,
+	"json.format.enable": true,
+	"json.schemas": [],
+	"json.trace.server": "verbose",
+	"diagnostic.signLevel": "hint",
+	"diagnostic.errorSign": "\uf467",
+	"diagnostic.warningSign": "\uf071",
+	"diagnostic.infoSign": "\uf129",
+	"diagnostic.hintSign": "\uf864",
+	"diagnostic.displayByAle": false,
+	"diagnostic.refreshOnInsertMode": false,
+	"diagnostic.checkCurrentLine": true,
+	"diagnostic.virtualTextPrefix": " ❯❯❯ ",
+	"diagnostic.virtualText": true,
+	"markdownlint.onOpen": true,
+	"markdownlint.onSave": true,
+	"markdownlint.onChange": true,
+	"markdownlint.config": {
+		"default": true,
+		"line-length": true
+	},
+	"snippets.ultisnips.enable": true,
+	"snippets.snipmate.enable": true,
+	"snippets.ultisnips.directories": [
+		"UltiSnips",
+		"$HOME/.config/nvim/UltiSnips",
+		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips"
+	],
+	"translator.toLang": "en",
+	"translator.enableHover": true,
+	"translator.engines": ["youdao", "bing", "google", "haici"],
+	"explorer.file.column.indent.indentLine": true,
+	"explorer.file.showHiddenFiles": true,
+	"explorer.icon.enableNerdfont": true,
+	"prettier.useTabs": true,
+	"codeLens.enable": true,
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"typescript",
+		"html",
+		"css",
+		"json",
+		"python",
+		"vue",
+		"svelte",
+		"c",
+		"go",
+		"prisma",
+		"markdown"
+	],
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+			"trace.server": "verbose",
+			"initializationOptions": {
+				"cache": {
+					"directory": "/tmp/ccls"
+				}
+			}
+		},
+		"bash": {
+			"command": "zsh",
+			"args": ["start"],
+			"filetypes": ["sh"]
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"filetypes": ["go"]
+		}
+	}
 }

@@ -1,246 +1,196 @@
+" __  ____   __  _   ___     _____ __  __ ____   ____
+"|  \/  \ \ / / | \ | \ \   / /_ _|  \/  |  _ \ / ___|
+"| |\/| |\ V /  |  \| |\ \ / / | || |\/| | |_) | |
+"| |  | | | |   | |\  | \ V /  | || |  | |  _ <| |___
+"|_|  |_| |_|   |_| \_|  \_/  |___|_|  |_|_| \_\\____|
+"
+" Author: @Foryoung Yu
+" Email: foryoung_yu@outlook.com
 
-set termencoding=utf-8
-set encoding=utf-8
+" ===
+" === Editor behavior
+" ===
 
-" 定义快捷键的前缀，即<Leader>
-let mapleader=";"
-
-" 开启文件类型侦测
-filetype on
-
-" 根据侦测到的不同类型加载对应的插件
-filetype plugin on
-
-" 定义快捷键到行首和行尾
-nmap LB 0
-nmap LE $
-" 设置快捷键将选中文本块复制至系统剪贴板
-vnoremap <Leader>y "+y
-" 设置快捷键将系统剪贴板内容粘贴至 vim
-nmap <Leader>p "+p
-" 定义快捷键关闭当前分割窗口
-nmap <Leader>q :q<CR>
-" 定义快捷键保存当前窗口内容
-nmap <Leader>w :w<CR>
-" 定义快捷键保存所有窗口内容并退出 vim
-nmap <Leader>WQ :wa<CR>:q<CR>
-" 不做任何保存，直接退出 vim
-nmap <Leader>Q :qa!<CR>
-" 依次遍历子窗口
-nnoremap nw <C-W><C-W>
-" 跳转至右方的窗口
-nnoremap <Leader>lw <C-W>l
-" 跳转至左方的窗口
-nnoremap <Leader>hw <C-W>h
-" 跳转至上方的子窗口
-nnoremap <Leader>kw <C-W>k
-" 跳转至下方的子窗口
-nnoremap <Leader>jw <C-W>j
-" 定义快捷键在结对符之间跳转
-nmap <Leader>M %
-" 让配置变更立即生效
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
-" 开启实时搜索功能
-set incsearch
-" 搜索时大小写不敏感
-set ignorecase
-" 关闭兼容模式
-set nocompatible
-" vim 自身命令行模式智能补全
-set wildmenu
-" 启用鼠标
+syntax on
+syntax enable
+set encoding=UTF-8
 set mouse=a
-set selection=exclusive
-set selectmode=mouse,key
-" 设置行号
 set number
-" 突出显示当前行
-set cursorline
-" 显示括号匹配
-set showmatch
-
-" 专注模式
-
-" 禁止光标闪烁
-"set gcr=a:block-blinkon0
-"" 禁止显示滚动条
-"set guioptions-=l
-"set guioptions-=L
-"set guioptions-=r
-"set guioptions-=R
-"" 禁止显示菜单和工具条
-"set guioptions-=m
-"set guioptions-=T
-
-" 总是显示状态栏
-set laststatus=2
-" 显示光标当前位置
-set ruler
-" 开启行号显示
-set number
-" 高亮显示当前行/列
+set relativenumber
 set cursorline
 "set cursorcolumn
-" 高亮显示搜索结果
+set conceallevel=1
+set ruler
+set showcmd
+set showmode
+set list
+" Opension: "»\ ", "↲", "·", "›", "‹", "␣", "\|\ "
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+
+"set matchpairs
+set ignorecase
 set hlsearch
+set wrapscan
+set incsearch
+let g:mapleader=" "
 
-" 开启语法高亮功能
-syntax enable
-" 允许用指定语法高亮配色方案替换默认方案
-syntax on
+" ===
+" === Basic Mappings
+" === Save & Quit
+noremap ; :
+
+nnoremap S :w<CR>
+nnoremap Q :q<CR>
+
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>s :split<CR>
+nnoremap <leader><space> :nohlsearch<CR>
+
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+
+noremap <leader>rc :e $HOME/.config/nvim/init.vim<CR>
+inoremap <C-a> <Esc>A
+inoremap <C-o> <Esc>o
+inoremap <C-k> <Esc>O
+
+" split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
+"noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+"noremap sj :set splitbelow<CR>:split<CR>
+"noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+"noremap sl :set splitright<CR>:vsplit<CR>
+
+" Resize splits with arrow keys
+noremap <up> :res +5<CR>
+noremap <down> :res -5<CR>
+noremap <left> :vertical resize-5<CR>
+noremap <right> :vertical resize+5<CR>
+
+" Place the two screens up and down
+noremap sh <C-w>t<C-w>K
+" Place the two screens side by side
+noremap sv <C-w>t<C-w>H
+
+" Rotate screens
+noremap srh <C-w>b<C-w>K
+noremap srv <C-w>b<C-w>H
+
+" Press <SPACE> + q to close the window below the current window
+noremap <LEADER>q <C-w>j:q<CR>
 
 
-" 自适应不同语言的智能缩进
-filetype indent on
-" 将制表符扩展为空格
-set expandtab
-" 设置编辑时制表符占用空格数
-set tabstop=4
-" 设置格式化时制表符占用空格数
-set shiftwidth=4
-" 让 vim 把连续数量的空格视为一个制表符
-set softtabstop=4
+" ===
+" === Tab management
+" ===
+" Create a new tab with tu
+noremap tu :tabe<CR>
+noremap tU :tab split <CR>
+" Move around tabs with tl and th
+noremap tl :+tabnext<CR>
+noremap th :-tabnext<CR>
+" Move the tabs with tml and tmh
+noremap tml :+tabmove<CR>
+noremap tmh :-tabnext<CR>
 
-" 随 vim 自启动
-let g:indent_guides_enable_on_vim_startup=1
-" 从第二层开始可视化显示缩进
-let g:indent_guides_start_level=2
-" 色块宽度
-let g:indent_guides_guide_size=1
-" 快捷键 i 开/关缩进可视化
-:nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+" ===
+" === Markdown Settings
+" ===
+" Snippets
+"source $XDG_CONFIG_HOME/nvim/md-snippets.vim
+" auto spell
+"autocmd BufRead,BufNewFile *.md setlocal spell
 
-" 基于缩进或语法进行代码折叠
-"set foldmethod=indent
-set foldmethod=syntax
-" 启动 vim 时关闭折叠代码
-set nofoldenable
 
-" 键位绑定
-map W :w<CR>
-map Q :q<CR>
-map R :search $MYVIMRC<CR>
-"noremap <C-u> <esc>
-noremap <LEADER><CR> :nohlesearch<CR>
-noremap - Nzz
-noremap = nzz
+" ==
+" == Install Plugins with Vim-Plug
+" ==
+call plug#begin('~/.config/nvim/plugged')
 
-" 运行，编译，调试
-nnoremap <F5>   <Esc>:w<CR>:!g++ -std=c++11 % -o /tmp/a.out && /tmp/a.out<CR>
-nnoremap <F7>   <Esc>:w<CR>:!g++ -std=c++11 %<CR>
-nnoremap <C-F5> <Esc>:w<CR>:!g++ -std=c++11 -g % -o /tmp/a.out && gdb /tmp/a.out<CR>
-
-" ===============================插件安装开始位置================================
-call plug#begin('~/.vim/plugged_neovim')
-" Airline
-Plug 'vim-airline/vim-airline' 
-Plug 'vim-airline/vim-airline-themes'
-
-" 主题
-Plug 'connorholyday/vim-snazzy'
-"Plug 'altercation/vim-colors-solarized'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " 代码补全框架
-Plug 'junegunn/vim-github-dashboard' " 起始页
-"Plug 'shougo/defx.nvim' " 文件浏览器
-"Plug 'junegunn/vim-easy-align' " 快速对齐
-Plug 'junegunn/fzf' " FZF模糊文件查找
-"Plug 'anyakichi/vim-surround'
-"Plug 'gcmt/wildfire.vim' 
-"Plug 'mg979/vim-visual-multi' " 多光标
-"Plug 'jiangmiao/auto-pairs' " 括号自动补全
-"Plug 'scrooloose/nerdcommenter' "代码快注释
-"Plug 'preservim/nerdtree'
-"Plug 'ncm2/ncm2'
-
-" LaTex
-"Plug 'lervag/vimtex'
-"let g:tex_flavor='latex'
-"let g:vimtex_view_method='zathura'
-"let g:vimtex_quickfix_mode=0
-"set conceallevel=1
-"let g:tex_conceal='abdmg'
-
-Plug 'sirver/ultisnips'
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-
-Plug 'xuhdev/vim-latex-live-preview'
-let g:livepreview_previewer = 'evince'
-let g:livepreview_engine = 'xelatex'
-
-" MarkDown
+" Languange supports
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'plasticboy/vim-markdown'
-Plug 'joker1007/vim-markdown-quote-syntax' " MarkDowm代码块高亮
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'lervag/vimtex'
 
-"Plug 'sbdchd/neoformat'
-"Plug 'puremourning/vimspector'
 
-" 语言类 
-Plug 'fatih/vim-go', {'for':'go'}
+" Snippets in VIM
+"Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
+
+" Statusline/Tabline plugin
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'itchyny/lightline.vim'
+
+
+" Themes/Icons
+Plug 'joshdick/onedark.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
+Plug 'connorholyday/vim-snazzy'
+Plug 'ryanoasis/vim-devicons'
+
+
+" Chinese Help
+Plug 'yianwillis/vimcdoc'
+
+
+" Other tools
+Plug 'airblade/vim-gitgutter'
+Plug 'kdheepak/lazygit.vim'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+"Plug 'skywind3000/vim-keysound'
+Plug 'sheerun/vim-polyglot'
+
+
 call plug#end()
 
-" ===============================插件设置==================================
+" =============================== Start of Plugin Setting ===============================
 
-" vim-airline
-let g:airline_powerline_fonts = 1 " Nerd-Fonts 显示尖角
-let g:airline#extensions#tabline#enabled = 1 " 显示tab和buffer
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
-nnoremap <C-N> :bn<CR> " 切换Buffer
-nnoremap <C-P> :bp<CR>
-
-" vim-airline-themes
-let g:airline_theme='bubblegum'
-let g:SnazzyTransparent = 1 " 透明背景
-
-" vim-snazzy
-colorscheme snazzy
-
-" vim-markdown
-let g:vim_markdown_math = 1
-
-" =============================== coc.vim ====================================
-let g:coc_global_extensions = ['coc-marketplace']
-" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
-" unicode characters in the file autoload/float.vim
-set encoding=utf-8
-
-" TextEdit might fail if hidden is not set.
+" ===
+" === coc.nvim
+" === https://github.com/neoclide/coc.nvim/wiki
 set hidden
-
-" Some servers have issues with backup files, see #649.
+set updatetime=300
+set shortmess+=c
 set nobackup
 set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+let g:coc_global_extensions = [
+	\ 'coc-css',
+	\ 'coc-explorer',
+	\ 'coc-emmet',
+	\ 'coc-go',
+	\ 'coc-highlight',
+	\ 'coc-html',
+	\ 'coc-java',
+	\ 'coc-lists',
+	\ 'coc-markdownlint',
+	\ 'coc-markdown-preview-enhanced',
+	\ 'coc-marketplace',
+	\ 'coc-pairs',
+	\ 'coc-prettier',
+	\ 'coc-pyright',
+	\ 'coc-python',
+	\ 'coc-snippets',
+	\ 'coc-translator',
+	\ 'coc-tsserver',
+	\ 'coc-webview',
+	\ 'coc-vimlsp',
+	\ 'coc-xml',
+	\ 'coc-yaml']
 
 " Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+		\ pumvisible() ? "\<C-n>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -249,16 +199,9 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+								\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -271,21 +214,16 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
+		execute 'h '.expand('<cword>')
   elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
+		call CocActionAsync('doHover')
   else
-    execute '!' . &keywordprg . " " . expand('<cword>')
+		execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -311,6 +249,9 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -342,10 +283,10 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Format :call CocAction('format')
 
 " Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR   :call CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -354,18 +295,258 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>ld  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <leader>le  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <leader>lo  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <leader>ls  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>p  :<C-u>CocListResume<CR>
+
+
+" ===
+" === coc-configs
+" ===
+
+" To enable highlight current symbol on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" coc-snippets
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+" Use <leader>x for convert visual selected code to snippet
+"xmap <leader>x  <Plug>(coc-convert-snippet)
+let g:snips_author = 'Foryoung Yu'
+
+" coc-translator
+nmap <Leader>t <Plug>(coc-translator-p)
+vmap <Leader>t <Plug>(coc-translator-pv)
+" echo
+nmap <Leader>e <Plug>(coc-translator-e)
+vmap <Leader>e <Plug>(coc-translator-ev)
+" replace
+nmap <Leader>r <Plug>(coc-translator-r)
+vmap <Leader>r <Plug>(coc-translator-rv)
+
+" coc-explorer
+nnoremap tt :CocCommand explorer<CR>
+
+" coc-markdown-preview-enhanced
+nnoremap <leader>m :CocCommand markdown-preview-enhanced.openPreview<CR>
+
+" ===
+" === Themes
+" ===
+set t_Co=256
+set background=dark
+let g:gruvbox_bold='1'
+let g:gruvbox_italic='1'
+let g:gruvbox_transparent_bg='1'
+let g:gruvbox_underline='1'
+let g:gruvbox_undercurl='1'
+let g:gruvbox_termcolors='256'
+"let g:gruvbox_hls_cursor='green'
+"let g:gruvbox_number_column='green'
+"let g:gruvbox_sign_column='bg1'
+"let g:gruvbox_color_column='green'
+let g:gruvbox_vert_split='gray'
+let g:onedark_hide_endofbuffer='1'
+let g:onedark_termcolors='256'
+let g:onedark_terminal_italics='1'
+let g:molokai_original = 1
+let g:rehash256 = 1
+" Options: snazzy, gruvbox, molokai, onehalfdark, onehalflight, onedark
+colorscheme gruvbox
+
+
+" ===
+" === vimtex
+" ===
+filetype plugin on
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_quickfix_mode=0
+let g:vimtex_compiler_method = 'latexrun'
+let maplocalleader = ","
+let g:tex_conceal='abdmg'
+
+
+" ===
+" === airline
+" ===
+" source ./plugs_config/vim-airline.vim
+" - https://github.com/vim-airline/vim-airline
+let g:airline_theme='onehalfdark'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
+
+"===
+"=== vim-markdown
+"===
+set nofoldenable
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_override_foldtext = 0
+let g:vim_markdown_math = 1
+
+
+" ===
+" === vim-instant-markdown
+" ===
+" let g:instant_markdown_slow = 0
+" let g:instant_markdown_autostart = 0
+" let g:instant_markdown_open_to_the_world = 1
+" let g:instant_markdown_allow_unsafe_content = 1
+" let g:instant_markdown_allow_external_content = 0
+" let g:instant_markdown_mathjax = 1
+" let g:instant_markdown_autoscroll = 1
+
+
+" ===
+" === vim-gitgutter
+" ===
+let g:gitgutter_sign_allow_clobber = 0
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '░'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▒'
+nnoremap <LEADER>gf :GitGutterFold<CR>
+nnoremap H :GitGutterPreviewHunk<CR>
+nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
+nnoremap <LEADER>g= :GitGutterNextHunk<CR>
+
+
+" ===
+" === ultisnips
+" ===
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+
+" ===
+" === vim-keysound
+" ===
+let g:keysound_enable = 1
+"Options: default, typewriter, mario, sword, bubble
+let g:keysound_theme = 'bubble'
+let g:keysound_py_version = 3
+let g:keysound_volume = 500
+
+
+" ===
+" === lazygit.nvim
+" ===
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>gg :LazyGit<CR>
+let g:lazygit_floating_window_winblend = 0 " transparency of floating window
+let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
+let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
+let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
+let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
+
+
+" ===
+" === toggleterm
+" ===
+nnoremap <leader>tt :ToggleTerm<CR>
+let g:toggleterm_terminal_mapping = '<C-t>'
+
+
+" ===
+" === telescope
+" ===
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
+" ===
+" === UltiSnips
+" ===
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsSnippetDirectories=['$HOME/.config/nvim/UltiSnips', 'UltiSnips']
+"let g:UltiSnipsEditSplit="vertical"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Quickly Run
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Compile function
+noremap <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'c'
+		exec "!g++ % -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'cpp'
+		set splitbelow
+		exec "!g++ -std=c++11 % -Wall -o %<"
+		:sp
+		:res -15
+		:term ./%<
+	elseif &filetype == 'cs'
+		set splitbelow
+		silent! exec "!mcs %"
+		:sp
+		:res -5
+		:term mono %<.exe
+	elseif &filetype == 'java'
+		set splitbelow
+		:sp
+		:res -5
+		term javac % && time java %<
+	elseif &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'python'
+		set splitbelow
+		:sp
+		:term python3 %
+	elseif &filetype == 'html'
+		silent! exec "!".g:mkdp_browser." % &"
+	elseif &filetype == 'markdown'
+		exec "InstantMarkdownPreview"
+	elseif &filetype == 'tex'
+		silent! exec "VimtexStop"
+		silent! exec "VimtexCompile"
+	elseif &filetype == 'dart'
+		exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
+		silent! exec "CocCommand flutter.dev.openDevLog"
+	elseif &filetype == 'javascript'
+		set splitbelow
+		:sp
+		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+	elseif &filetype == 'go'
+		set splitbelow
+		:sp
+		:term go run .
+	endif
+endfunc

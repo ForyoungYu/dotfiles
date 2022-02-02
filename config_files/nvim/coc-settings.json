@@ -1,6 +1,8 @@
 {
 	"coc.preferences.extensionUpdateCheck": "daily",
-	"coc.preferences.colorSupport": true,
+	"coc.preferences.snippetStatusText": " Ⓢ ",
+	"coc.source.buffer.enable": false,
+	"coc.source.vimtex.enable": true,
 	"suggest.noselect": true,
 	"suggest.enablePreselect": false,
 	"suggest.completionItemKindLabels": {
@@ -54,55 +56,133 @@
 		"line-length": true
 	},
 	"snippets.ultisnips.enable": true,
-	"snippets.snipmate.enable": true,
+	"snippets.snipmate.enable": false,
 	"snippets.ultisnips.directories": [
-		"UltiSnips",
 		"$HOME/.config/nvim/UltiSnips",
 		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips"
 	],
-	"translator.toLang": "en",
-	"translator.enableHover": true,
-	"translator.engines": ["youdao", "bing", "google", "haici"],
+	"snippets.extends": {
+		"latex": [
+			"tex",
+			"texmath"
+		]
+	},
 	"explorer.file.column.indent.indentLine": true,
 	"explorer.file.showHiddenFiles": true,
 	"explorer.icon.enableNerdfont": true,
+	"explorer.keyMappings.global": {
+		"u": "nodePrev",
+		"e": "nodeNext",
+		"<tab>": "actionMenu",
+		"gl": "expandRecursive",
+		"gh": "collapseRecursive",
+		"i": [
+			"wait",
+			"expandable?",
+			"expand",
+			"open"
+		],
+		"<cr>": [
+			"wait",
+			"expandable?",
+			"cd",
+			"open"
+		],
+		"I": "open:vsplit",
+		"o": [
+			"wait",
+			"expanded?",
+			"collapse",
+			"expand"
+		],
+		"O": "open:tab",
+		"n": "collapse",
+		"yp": "copyFilepath",
+		"yn": "copyFilename",
+		"yy": "copyFile",
+		"dd": "cutFile",
+		"pp": "pasteFile",
+		"dD": "deleteForever",
+		"a": "addFile",
+		"M": "addDirectory",
+		"cw": "rename",
+		".": "toggleHidden",
+		"zh": "toggleHidden",
+		"R": "refresh",
+		"?": "help",
+		"q": "quit",
+		"X": "systemExecute",
+		"gd": "listDrive",
+		"f": "search",
+		"F": "searchRecursive",
+		"B": "gotoSource:file",
+		"b": "gotoSource:buffer",
+		"[[": "sourcePrev",
+		"]]": "sourceNext",
+		"[d": "diagnosticPrev",
+		"]d": "diagnosticNext",
+		"[c": "gitPrev",
+		"]c": "gitNext",
+		"<<": "gitStage",
+		">>": "gitUnstage"
+	},
+	"prettier.printWidth": 80,
+	"prettier.disableLanguages": [],
+	"prettier.formatterPriority": 1,
 	"prettier.useTabs": true,
+	"prettier.trailingComma": "all",
+	"prettier.singleQuote": false,
+	"translator.toLang": "zh_CN",
+	"translator.enableHover": true,
+	"translator.engines": [
+		"youdao",
+		"bing",
+		"google",
+		"haici"
+	],
 	"codeLens.enable": true,
+	"coc.preferences.formatOnType": true,
 	"coc.preferences.formatOnSaveFiletypes": [
+		"json",
 		"javascript",
 		"typescript",
 		"html",
 		"css",
-		"json",
 		"python",
 		"vue",
 		"svelte",
 		"c",
+		"c++",
 		"go",
 		"prisma",
 		"markdown"
 	],
+	"python.linting.pylintEnabled": false,
+	"python.formatting.provider": "yapf",
+	"python.formatting.yapfArgs": [
+		"--style",
+		"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"
+	],
+	"html.format.enable": true,
+	"texlab.path": "$HOME/.config/coc/extensions/coc-texlab-data/texlab",
+	"texlab.build.executable": "latexmk",
+	"texlab.build.args": [
+		"-xelatex",
+		"-interaction=nonstopmode",
+		"-synctex=1",
+		"%f"
+	],
+	"texlab.build.onSave": true,
+	"texlab.latexFormatter": "latexindent",
 	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-			"trace.server": "verbose",
-			"initializationOptions": {
-				"cache": {
-					"directory": "/tmp/ccls"
-				}
-			}
-		},
-		"bash": {
-			"command": "zsh",
-			"args": ["start"],
-			"filetypes": ["sh"]
-		},
 		"golang": {
 			"command": "gopls",
 			"rootPatterns": ["go.mod"],
 			"filetypes": ["go"]
+		},
+		"latex": {
+			"command": "$HOME/.config/coc/extensions/coc-texlab-data/texlab",
+			"filetypes": ["tex", "bib", "plaintex", "context"]
 		}
 	}
 }

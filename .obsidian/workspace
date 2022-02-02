@@ -1,0 +1,106 @@
+{
+  "main": {
+    "id": "3a02da19cb82da41",
+    "type": "split",
+    "children": [
+      {
+        "id": "813c24aa53db4f91",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "vim插件.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "707e877205c97467",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e1088106598c932",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7aabf2569941ad0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b49427ce0953aaf5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "630194ee6dd73d89",
+    "type": "split",
+    "children": [
+      {
+        "id": "40bae0ee46b016de",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77b84d030c2258fb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "vim插件.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "298ac4062df9cc01",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "813c24aa53db4f91",
+  "lastOpenFiles": [
+    "vim插件.md",
+    "zsh.md",
+    "Neovim配置文件.md",
+    "README.md"
+  ]
+}

@@ -16,16 +16,21 @@ syntax enable
 set encoding=UTF-8
 set mouse=a
 set number
+set autoindent
 set relativenumber
 set cursorline
 "set cursorcolumn
 set conceallevel=1
 set ruler
+set smartindent
 set showcmd
 set showmode
+set splitright
+set splitbelow
 set list
 " Opension: "»\ ", "↲", "·", "›", "‹", "␣", "\|\ "
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+"set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+set listchars=tab:\|\ ,trail:·
 
 "set matchpairs
 set ignorecase
@@ -33,66 +38,79 @@ set hlsearch
 set wrapscan
 set incsearch
 let g:mapleader=" "
+let g:mkdp_browser="google-chrome"
 
 " ===
 " === Basic Mappings
-" === Save & Quit
+" ===
 noremap ; :
 
 nnoremap S :w<CR>
 nnoremap Q :q<CR>
 
-nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>s :split<CR>
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap > >>
+nnoremap < <<
 
+nnoremap <leader><space> :nohlsearch<CR>
+noremap <leader>rc :e $HOME/.config/nvim/init.vim<CR>
+
+inoremap <C-a> <Esc>A
+inoremap <C-o> <Esc>o
+inoremap <C-y> <Esc>O
+
+" ===
+" === Windows control
+" ===
+"nnoremap <leader>v :vsplit<CR>
+"nnoremap <leader>s :split<CR>
+
+" Only window
+noremap <leader>o <C-w>o
+
+" split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
+noremap <leader>sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap <leader>sj :set splitbelow<CR>:split<CR>
+noremap <leader>sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap <leader>sl :set splitright<CR>:vsplit<CR>
+
+" Jump cursor to other window
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 
-noremap <leader>rc :e $HOME/.config/nvim/init.vim<CR>
-inoremap <C-a> <Esc>A
-inoremap <C-o> <Esc>o
-inoremap <C-k> <Esc>O
-
-" split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
-"noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-"noremap sj :set splitbelow<CR>:split<CR>
-"noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-"noremap sl :set splitright<CR>:vsplit<CR>
+" Move window to side
+noremap <leader>K <C-w>K
+noremap <leader>H <C-w>H
+noremap <leader>J <C-w>J
+noremap <leader>L <C-w>L
 
 " Resize splits with arrow keys
-noremap <up> :res +5<CR>
-noremap <down> :res -5<CR>
-noremap <left> :vertical resize-5<CR>
-noremap <right> :vertical resize+5<CR>
+noremap <A-up> :res +5<CR>
+noremap <A-down> :res -5<CR>
+noremap <A-left> :vertical resize-5<CR>
+noremap <A-right> :vertical resize+5<CR>
 
-" Place the two screens up and down
-noremap sh <C-w>t<C-w>K
-" Place the two screens side by side
-noremap sv <C-w>t<C-w>H
-
-" Rotate screens
-noremap srh <C-w>b<C-w>K
-noremap srv <C-w>b<C-w>H
-
-" Press <SPACE> + q to close the window below the current window
-noremap <LEADER>q <C-w>j:q<CR>
-
+" ===
+" === Buffer management
+" ===
+noremap - :bprevious<CR>
+noremap = :bnext<CR>
+noremap bd :bdelete<CR>
+noremap bu :bunload<CR>
 
 " ===
 " === Tab management
 " ===
 " Create a new tab with tu
 noremap tu :tabe<CR>
-noremap tU :tab split <CR>
+noremap tU :tab split<CR>
 " Move around tabs with tl and th
 noremap tl :+tabnext<CR>
 noremap th :-tabnext<CR>
 " Move the tabs with tml and tmh
 noremap tml :+tabmove<CR>
-noremap tmh :-tabnext<CR>
+noremap tmh :-tabmove<CR>
 
 " ===
 " === Markdown Settings
@@ -103,28 +121,30 @@ noremap tmh :-tabnext<CR>
 "autocmd BufRead,BufNewFile *.md setlocal spell
 
 
-" ==
-" == Install Plugins with Vim-Plug
-" ==
+" source $XDG_CONFIG_HOME/nvim/plug.vim
+" ===
+" === Install Plugins with Vim-Plug
+" ===
 call plug#begin('~/.config/nvim/plugged')
-
 " Languange supports
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'plasticboy/vim-markdown'
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'lervag/vimtex'
+Plug 'plasticboy/vim-markdown'
+" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+" Plug 'puremourning/vimspector'
 
+" Complete
+" Plug 'ycm-core/YouCompleteMe'
 
 " Snippets in VIM
-"Plug 'sirver/ultisnips'
+" Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-
 
 " Statusline/Tabline plugin
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'itchyny/lightline.vim'
-
+" Plug 'mg979/vim-xtabline'
+" Plug 'itchyny/lightline.vim'
 
 " Themes/Icons
 Plug 'joshdick/onedark.vim'
@@ -134,25 +154,29 @@ Plug 'morhetz/gruvbox'
 Plug 'connorholyday/vim-snazzy'
 Plug 'ryanoasis/vim-devicons'
 
-
 " Chinese Help
 Plug 'yianwillis/vimcdoc'
 
+" Formater
+Plug 'sbdchd/neoformat'
 
 " Other tools
+Plug 'preservim/tagbar'
+Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
+Plug 'kevinhwang91/rnvimr'
 Plug 'kdheepak/lazygit.vim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-"Plug 'skywind3000/vim-keysound'
 Plug 'sheerun/vim-polyglot'
-
-
+Plug 'tpope/vim-surround'
+Plug 'kshenoy/vim-signature'
+Plug 'preservim/nerdcommenter'
 call plug#end()
-
-" =============================== Start of Plugin Setting ===============================
 
 " ===
 " === coc.nvim
@@ -162,35 +186,33 @@ set updatetime=300
 set shortmess+=c
 set nobackup
 set nowritebackup
-let g:coc_global_extensions = [
-	\ 'coc-css',
-	\ 'coc-explorer',
-	\ 'coc-emmet',
-	\ 'coc-go',
-	\ 'coc-highlight',
-	\ 'coc-html',
-	\ 'coc-java',
-	\ 'coc-lists',
-	\ 'coc-markdownlint',
-	\ 'coc-markdown-preview-enhanced',
-	\ 'coc-marketplace',
-	\ 'coc-pairs',
-	\ 'coc-prettier',
-	\ 'coc-pyright',
-	\ 'coc-python',
-	\ 'coc-snippets',
-	\ 'coc-translator',
-	\ 'coc-tsserver',
-	\ 'coc-webview',
-	\ 'coc-vimlsp',
-	\ 'coc-xml',
-	\ 'coc-yaml']
+let g:coc_global_extensions =[
+  \ 'coc-clangd',
+  \ 'coc-cmake',
+  \ 'coc-css',
+  \ 'coc-explorer',
+  \ 'coc-emmet',
+  \ 'coc-go',
+  \ 'coc-highlight',
+  \ 'coc-html',
+  \ 'coc-lists',
+  \ 'coc-json',
+  \ 'coc-markdownlint',
+  \ 'coc-markdown-preview-enhanced',
+  \ 'coc-marketplace',
+  \ 'coc-prettier',
+  \ 'coc-pyright',
+  \ 'coc-vimtex',
+  \ 'coc-webview',
+  \ 'coc-xml',
+  \ 'coc-yaml',
+  \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
-		\ pumvisible() ? "\<C-n>" :
-		\ <SID>check_back_space() ? "\<TAB>" :
-		\ coc#refresh()
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -200,8 +222,11 @@ endfunction
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-								\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -217,11 +242,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
-		execute 'h '.expand('<cword>')
+    execute 'h '.expand('<cword>')
   elseif (coc#rpc#ready())
-		call CocActionAsync('doHover')
+    call CocActionAsync('doHover')
   else
-		execute '!' . &keywordprg . " " . expand('<cword>')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
@@ -229,8 +254,8 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -240,53 +265,10 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
-
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-" Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
-
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call CocAction('fold', <f-args>)
-
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -295,21 +277,11 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <leader>ld  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <leader>le  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <leader>lo  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <leader>ls  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <leader>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <leader>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <leader>p  :<C-u>CocListResume<CR>
 
 
 " ===
@@ -335,20 +307,21 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 let g:snips_author = 'Foryoung Yu'
 
 " coc-translator
-nmap <Leader>t <Plug>(coc-translator-p)
-vmap <Leader>t <Plug>(coc-translator-pv)
-" echo
-nmap <Leader>e <Plug>(coc-translator-e)
-vmap <Leader>e <Plug>(coc-translator-ev)
-" replace
-nmap <Leader>r <Plug>(coc-translator-r)
-vmap <Leader>r <Plug>(coc-translator-rv)
+nmap <Leader>tl <Plug>(coc-translator-p)
+vmap <Leader>tl <Plug>(coc-translator-pv)
+"" echo
+nmap <Leader>te <Plug>(coc-translator-e)
+vmap <Leader>te <Plug>(coc-translator-ev)
+"" replace
+"nmap <Leader>r <Plug>(coc-translator-r)
+"vmap <Leader>r <Plug>(coc-translator-rv)
 
 " coc-explorer
 nnoremap tt :CocCommand explorer<CR>
 
 " coc-markdown-preview-enhanced
 nnoremap <leader>m :CocCommand markdown-preview-enhanced.openPreview<CR>
+
 
 " ===
 " === Themes
@@ -376,14 +349,30 @@ colorscheme gruvbox
 
 
 " ===
+" === ultisnips
+" ===
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsSnippetDirectories=[
+"           \ 'UltiSnips',
+"           \ '$XDG_CONFIG_HOME/nvim/UltiSnips',
+"           \ '$xdg_config_home/nvim/plugged/vim-snippets/snippets',
+"           \ '$xdg_config_home/nvim/plugged/vim-snippets/ultisnips']
+let g:UltiSnipsEditSplit="vertical"
+
+" ===
 " === vimtex
 " ===
-filetype plugin on
+filetype plugin indent on
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_quickfix_mode=0
-let g:vimtex_compiler_method = 'latexrun'
+let g:vimtex_quickfix_mode = 0
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
+let g:vimtex_compiler_latexrun_engines={'_':'xelatex'}
 let maplocalleader = ","
 let g:tex_conceal='abdmg'
 
@@ -399,6 +388,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
+
+
+" ===
+" === tagbar
+" ===
+nmap <F8> :TagbarToggle<CR>
 
 
 "===
@@ -434,27 +429,18 @@ let g:gitgutter_sign_removed_first_line = '▔'
 let g:gitgutter_sign_modified_removed = '▒'
 nnoremap <LEADER>gf :GitGutterFold<CR>
 nnoremap H :GitGutterPreviewHunk<CR>
-nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
-nnoremap <LEADER>g= :GitGutterNextHunk<CR>
+nnoremap [h :GitGutterPrevHunk<CR>
+nnoremap ]h :GitGutterNextHunk<CR>
 
 
 " ===
-" === ultisnips
+" === neoformat
 " ===
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
-
-
-" ===
-" === vim-keysound
-" ===
-let g:keysound_enable = 1
-"Options: default, typewriter, mario, sword, bubble
-let g:keysound_theme = 'bubble'
-let g:keysound_py_version = 3
-let g:keysound_volume = 500
+nnoremap <leader>f :Neoformat<CR>
+let g:neoformat_enabled_python = ['yapf', 'autopep8', 'docformatter']
+let g:neoformat_python_yapf = {
+        \ 'exe': 'yapf'
+        \ }
 
 
 " ===
@@ -487,20 +473,100 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 " ===
-" === UltiSnips
+" === rnvimr
 " ===
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"let g:UltiSnipsSnippetDirectories=['$HOME/.config/nvim/UltiSnips', 'UltiSnips']
-"let g:UltiSnipsEditSplit="vertical"
+let g:rnvimr_enable_ex = 1
+let g:rnvimr_enable_picker = 1
+let g:rnvimr_draw_border = 0
+highlight link RnvimrNormal CursorLine
+nnoremap <silent> R :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 1<CR>
+let g:rnvimr_action = {
+            \ '<C-t>': 'NvimEdit tabedit',
+            \ '<C-n>': 'NvimEdit badd',
+            \ '<C-x>': 'NvimEdit split',
+            \ '<C-v>': 'NvimEdit vsplit',
+            \ 'gw': 'JumpNvimCwd',
+            \ 'yw': 'EmitRangerCwd'
+            \ }
+let g:rnvimr_ranger_views = [
+            \ {'minwidth': 75, 'ratio': []},
+            \ {'minwidth': 40, 'maxwidth': 74, 'ratio': [1,1]},
+            \ {'maxwidth': 39, 'ratio': [1]}
+            \ ]
+let g:rnvimr_layout = {
+            \ 'relative': 'editor',
+            \ 'width': float2nr(round(0.7 * &columns)),
+            \ 'height': float2nr(round(0.7 * &lines)),
+            \ 'col': float2nr(round(0.15 * &columns)),
+            \ 'row': float2nr(round(0.15 * &lines)),
+            \ 'style': 'minimal'
+            \ }
+let g:rnvimr_presets = [
+            \ {'width': 0.600, 'height': 0.600},
+            \ {},
+            \ {'width': 0.800, 'height': 0.800},
+            \ {'width': 0.950, 'height': 0.950},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0.5},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0},
+            \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0.5},
+            \ {'width': 0.500, 'height': 1.000, 'col': 0, 'row': 0},
+            \ {'width': 0.500, 'height': 1.000, 'col': 0.5, 'row': 0},
+            \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0},
+            \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0.5}
+            \ ]
+
+" ===
+" === vimspector
+" ===
+let g:vimspector_enable_mappings = 'HUMAN'
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Quickly Run
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ===
+" === FZF
+" ===
+noremap <silent> <c-p> :Files<CR>
+noremap <silent> <C-h> :History<CR>
 
-" Compile function
+" ===
+" === nerdcommenter
+" ===
+" mapping
+" <leader>cc:Comment out the current line or text selected in visual mode.
+" <leader>cu:Uncomments the selected line(s).
+" <leader>ci:Toggles the comment state of the selected line(s) individually.
+" <leader>cs:Comments out the selected lines with a pretty block formatted layout.
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+
+" ===
+" === Quickly Run
+" ===
 noremap <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 	exec "w"
@@ -510,9 +576,18 @@ func! CompileRunGcc()
 	elseif &filetype == 'cpp'
 		set splitbelow
 		exec "!g++ -std=c++11 % -Wall -o %<"
-		:sp
-		:res -15
-		:term ./%<
+		exec "!time ./%<"
+		" :sp
+		" :res -15
+		" :term ./%<
+	elseif &filetype == 'python'
+		set splitbelow
+		exec "!python3 %"
+		" :sp
+		" :term python3 %
+	elseif &filetype == 'lua'
+		set splitbelow
+		exec "!lua %"
 	elseif &filetype == 'cs'
 		set splitbelow
 		silent! exec "!mcs %"
@@ -525,11 +600,7 @@ func! CompileRunGcc()
 		:res -5
 		term javac % && time java %<
 	elseif &filetype == 'sh'
-		:!time bash %
-	elseif &filetype == 'python'
-		set splitbelow
-		:sp
-		:term python3 %
+		exec "!time bash %"
 	elseif &filetype == 'html'
 		silent! exec "!".g:mkdp_browser." % &"
 	elseif &filetype == 'markdown'

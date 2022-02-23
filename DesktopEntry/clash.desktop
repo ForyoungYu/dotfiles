@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Clash for Windows
+Exec=/home/salt/.local/Clash/cfw
+Terminal=false
+Type=Application
+Icon=clash
+StartupNotify=true
+Categories=Development

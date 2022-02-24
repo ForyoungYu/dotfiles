@@ -132,14 +132,6 @@
 	"prettier.useTabs": true,
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": false,
-	"translator.toLang": "zh_CN",
-	"translator.enableHover": true,
-	"translator.engines": [
-		"youdao",
-		"bing",
-		"google",
-		"haici"
-	],
 	"codeLens.enable": true,
 	"coc.preferences.formatOnType": true,
 	"coc.preferences.formatOnSaveFiletypes": [
@@ -148,13 +140,14 @@
 		"typescript",
 		"html",
 		"css",
-		"python",
 		"vue",
 		"svelte",
 		"c",
 		"c++",
 		"go",
+		"latex",
 		"prisma",
+		"python",
 		"markdown"
 	],
 	"python.linting.pylintEnabled": false,

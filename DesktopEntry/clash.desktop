@@ -1,9 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Clash for Windows
-Exec=/home/salt/.local/Clash/cfw
+Comment=A Windows/macOS/Linux GUI based on Clash and Electron.
+Exec=cfw
+Icon=clash
 Terminal=false
 Type=Application
-Icon=clash
+Categories=GNOME;Application;
 StartupNotify=true
-Categories=Development

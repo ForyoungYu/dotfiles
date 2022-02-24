@@ -202,6 +202,8 @@ let g:coc_global_extensions =[
   \ 'coc-marketplace',
   \ 'coc-prettier',
   \ 'coc-pyright',
+  \ 'coc-snippets',
+  \ 'coc-texlab',
   \ 'coc-vimtex',
   \ 'coc-webview',
   \ 'coc-xml',
@@ -437,9 +439,11 @@ nnoremap ]h :GitGutterNextHunk<CR>
 " === neoformat
 " ===
 nnoremap <leader>f :Neoformat<CR>
+let g:shfmt_opt="-ci"
 let g:neoformat_enabled_python = ['yapf', 'autopep8', 'docformatter']
 let g:neoformat_python_yapf = {
-        \ 'exe': 'yapf'
+        \ 'exe': 'yapf',
+        \ 'args': ["--style", "{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"]
         \ }
 
 

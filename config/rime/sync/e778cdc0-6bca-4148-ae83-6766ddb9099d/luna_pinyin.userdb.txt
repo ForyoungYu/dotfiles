@@ -1,0 +1,1486 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin
+#@/db_type	userdb
+#@/rime_version	1.7.3
+#@/tick	2003
+#@/user_id	e778cdc0-6bca-4148-ae83-6766ddb9099d
+a 	啊	c=5 d=2.59854 t=2003
+a a 	啊啊	c=1 d=0.666977 t=2003
+a a a 	啊啊啊	c=1 d=0.67368 t=2003
+a a a a 	啊啊啊啊	c=0 d=0.065377 t=2003
+a wu wu wu wa ao a a a a a a a a a a a a a a a a a a a a 	啊嗚嗚嗚凹凹啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊	c=1 d=0.657047 t=2003
+ai 	愛	c=0 d=0.0351692 t=2003
+ai pin cai hui ying 	愛拼纔會贏	c=1 d=0.353455 t=2003
+an li 	案例	c=1 d=0.0211736 t=2003
+an quan 	安全	c=5 d=3.0503 t=2003
+an quan wen ti 	安全問題	c=1 d=0.985112 t=2003
+an zhuang 	安裝	c=28 d=8.94087 t=2003
+ao 	凹	c=2 d=1.64569 t=2003
+ba 	霸	c=0 d=0.0044601 t=2003
+ba zhou qi 	拔軸器	c=1 d=0.0575558 t=2003
+bai du 	百度	c=2 d=1.3861 t=2003
+bai du wang pan 	百度網盤	c=1 d=0.802519 t=2003
+bai fen hao 	百分號	c=1 d=0.778801 t=2003
+bai ke 	百科	c=1 d=0.93667 t=2003
+bai tiao 	白條	c=0 d=0.00584257 t=2003
+ban 	板	c=0 d=0.0847894 t=2003
+ban ben 	版本	c=1 d=0.71177 t=2003
+ban ji 	班級	c=1 d=0.0675424 t=2003
+bao 	包	c=3 d=2.08752 t=2003
+bao cun 	保存	c=2 d=1.14289 t=2003
+bao cun mo xing 	保存模型	c=1 d=1 t=859
+bao cun wen jian 	保存文件	c=1 d=0.814647 t=2003
+bao cuo 	報錯	c=3 d=0.726149 t=2003
+bao kuo 	包括	c=1 d=0.0317456 t=2003
+ben ke 	本科	c=1 d=0.117068 t=2003
+ben wen 	本文	c=4 d=1.02717 t=2003
+ben zhi 	本質	c=0 d=0.0071719 t=2003
+bi 	必	c=0 d=0.0044601 t=2003
+bi 	比	c=1 d=0.211485 t=2003
+bi hu 	壁虎	c=2 d=1.90284 t=2003
+bi ji 	筆記	c=2 d=1.3086 t=2003
+bi li bi li 	嗶哩嗶哩	c=1 d=0.965605 t=2003
+bi shun 	筆順	c=2 d=1 t=2003
+bi wo 	比我	c=0 d=0.0524663 t=2003
+bi wo na ge 	比我那個	c=1 d=0.527292 t=2003
+bi ying 	必應	c=3 d=0.182432 t=2003
+bi zhang 	避障	c=1 d=0.71177 t=2003
+bian cheng 	編程	c=3 d=0.102519 t=2003
+bian cheng 	變成	c=0 d=0.0955997 t=2003
+bian huan 	變換	c=1 d=1 t=948
+bian ji 	邊際	c=0 d=0.0965605 t=2003
+bian ji qi 	編輯器	c=1 d=0.883171 t=2003
+bian liang 	變量	c=2 d=0.358137 t=2003
+bian ma 	編碼	c=1 d=0.506617 t=2003
+bian mao 	邊貿	c=1 d=0.50409 t=2003
+bian qian 	便籤	c=1 d=0.557106 t=2003
+biao 	標	c=1 d=0.408608 t=2003
+biao da shi 	表達式	c=0 d=0.0618783 t=2003
+biao qian 	標籤	c=2 d=1.28353 t=2003
+biao qing 	表情	c=0 d=0.0315058 t=2003
+biao zhun cha 	標準差	c=1 d=1 t=904
+biao zhun xing 	標準型	c=3 d=2.33061 t=2003
+bie de 	別的	c=0 d=0.0315058 t=2003
+bie de biao qing 	別的表情	c=1 d=0.316637 t=2003
+bing 	並	c=2 d=0.596001 t=2003
+bing 	病	c=0 d=0.0740818 t=2003
+bing bing 	冰冰	c=2 d=0.15384 t=2003
+bing shu qian tou wan mu chun 	病樹前頭萬木春	c=1 d=0.744532 t=2003
+bo fang 	播放	c=1 d=0.436049 t=2003
+bo shu 	帛書	c=1 d=0.0789941 t=2003
+bo shu lao zi 	帛書老子	c=1 d=0.0658748 t=2003
+bu 	不	c=1 d=0.0225956 t=2003
+bu cun zai 	不存在	c=1 d=0.683861 t=2003
+bu cuo 	不錯	c=0 d=0.0111917 t=2003
+bu dui 	不對	c=1 d=0.559898 t=2003
+bu e 	不餓	c=1 d=0.985112 t=2003
+bu hao 	不好	c=1 d=0.477114 t=2003
+bu hui 	不會	c=1 d=0.0977834 t=2003
+bu neng 	不能	c=2 d=1.23876 t=2003
+bu pa 	不怕	c=0 d=0.0251579 t=2003
+bu quan 	補全	c=1 d=0.321208 t=2003
+bu shang 	不上	c=1 d=1 t=767
+bu tai 	不太	c=0 d=0.099005 t=2003
+bu tai leng 	不太冷	c=1 d=0.995012 t=2003
+bu tong 	不同	c=0 d=0.00284388 t=2003
+bu tong de 	不同的	c=2 d=0.0580333 t=2003
+bu tong zhi chu 	不同之處	c=1 d=1 t=754
+bu wen ding 	不穩定	c=0 d=0.00244775 t=2003
+bu wen ding yin su 	不穩定因素	c=1 d=0.0246002 t=2003
+bu zhi 	不知	c=1 d=0.269904 t=2003
+cai gan 	才幹	c=0 d=0.0236928 t=2003
+cai hui 	纔會	c=0 d=0.0351692 t=2003
+cai ji 	採集	c=1 d=0.209088 t=2003
+cai yong 	採用	c=1 d=0.447088 t=2003
+cai yun 	彩雲	c=3 d=1.98355 t=2003
+can kao 	參考	c=1 d=1 t=2003
+can kao wen xian 	參考文獻	c=1 d=0.486752 t=2003
+can shu 	參數	c=6 d=3.98813 t=2003
+cang jie 	倉頡	c=1 d=0.843665 t=2003
+cang tian 	蒼天	c=1 d=0.634448 t=2003
+cao zuo 	操作	c=2 d=0.670264 t=2003
+ce 	側	c=0 d=0.0737123 t=2003
+ce shi 	測試	c=3 d=1.58991 t=2003
+ceng 	層	c=1 d=0.416862 t=2003
+ceng 	曾	c=1 d=0.414783 t=2003
+cha jian 	插件	c=4 d=1.01773 t=2003
+cha kan 	查看	c=1 d=0.818731 t=2003
+cha xun 	查詢	c=2 d=0.782705 t=2003
+cha yi 	差異	c=1 d=0.88692 t=2003
+chan cheng 	禪城	c=1 d=0.826959 t=2003
+chan liang 	產量	c=1 d=0.812707 t=2003
+chan sheng 	產生	c=1 d=0.831104 t=2003
+chang jian 	常見	c=2 d=1.2782 t=2003
+chang jin hu 	長津湖	c=2 d=1.35751 t=2003
+chang jing 	場景	c=1 d=1.04635 t=2003
+chang jing liu 	場景流	c=2 d=0.955997 t=2003
+chang lin 	長林	c=0 d=0.019593 t=2003
+chao ding 	超定	c=1 d=0.453845 t=2003
+chao lian jie 	超鏈接	c=1 d=0.559898 t=2003
+che 	車	c=1 d=0.67368 t=2003
+che dao 	車道	c=1 d=0.715338 t=2003
+che dao jian ce 	車道檢測	c=1 d=0.145148 t=2003
+che ju 	車距	c=1 d=1 t=2003
+che ju jian ce 	車據檢測	c=1 d=0.985112 t=2003
+che wei 	車位	c=1 d=0.66034 t=2003
+chen 	沉	c=0 d=0.0737123 t=2003
+chen zhou ce pan qian fan guo 	沉舟側畔千帆過	c=2 d=1.48908 t=2003
+cheng 	乘	c=1 d=0.618783 t=2003
+cheng 	成	c=2 d=0.509156 t=2003
+cheng 	撐	c=0 d=0.00536647 t=2003
+cheng jiu 	成就	c=1 d=0.946485 t=2003
+cheng le 	成了	c=0 d=0.00343896 t=2003
+cheng xu 	程序	c=2 d=0.69435 t=2003
+chi bu 	吃不	c=0 d=0.00536647 t=2003
+chi bu cheng 	吃不撐	c=1 d=0.0539337 t=2003
+chong 	充	c=1 d=0.360595 t=2003
+chong he 	重合	c=0 d=0.0501576 t=2003
+chong he le 	重合了	c=1 d=0.50409 t=2003
+chong qian 	衝錢	c=1 d=0.353455 t=2003
+chong zhi 	充值	c=2 d=0.635431 t=2003
+chu fa qi 	觸發器	c=4 d=1.48536 t=2003
+chu hao 	除號	c=1 d=0.774916 t=2003
+chu kou 	出口	c=1 d=0.83527 t=2003
+chu shi hua 	初始化	c=3 d=2.90727 t=906
+chuan 	傳	c=1 d=0.840683 t=2003
+chuan liu 	串流	c=1 d=0.433874 t=2003
+chuan shu 	傳輸	c=4 d=2.85205 t=2003
+chuan song 	傳送	c=0 d=0.141291 t=2003
+chuan song men 	傳送們	c=1 d=0.70822 t=2003
+chuan song men 	傳送門	c=1 d=0.71177 t=2003
+chuan wen jian 	傳文件	c=1 d=0.67032 t=2003
+chuan xi lu 	傳習錄	c=1 d=0.0652193 t=2003
+chuang jian 	創建	c=2 d=1.0722 t=2003
+chuang kou 	窗口	c=6 d=2.93435 t=2003
+chuang kou cao zuo 	窗口操作	c=2 d=1.69156 t=2003
+chuang yi 	創意	c=1 d=0.0295289 t=2003
+chuang yi bian cheng 	創意編程	c=5 d=0.228481 t=2003
+chui 	垂	c=1 d=0.937067 t=2003
+chui zhi 	垂直	c=1 d=0.873716 t=2003
+chun 	春	c=0 d=0.0740818 t=2003
+ci 	次	c=1 d=0.640824 t=2003
+ci dian 	詞典	c=6 d=3.85772 t=2003
+ci hui 	詞彙	c=3 d=1.05029 t=2003
+ci shu 	次數	c=1 d=1 t=841
+ci tiao 	詞條	c=2 d=0.98091 t=2003
+cong 	從	c=3 d=1.16361 t=2003
+cong guo jia an quan 	從國家安全	c=1 d=0.0222592 t=2003
+cun chu 	存儲	c=1 d=0.410656 t=2003
+cun chu guo cheng 	存儲過程	c=4 d=1.51058 t=2003
+da 	噠	c=1 d=0.0500366 t=2003
+da 	打	c=0 d=0.0790571 t=2003
+da an 	答案	c=5 d=2.54934 t=2003
+da ge 	大哥	c=0 d=0.0634448 t=2003
+da kai 	打開	c=2 d=0.265803 t=2003
+da luan 	打亂	c=1 d=1 t=792
+da sai 	大賽	c=1 d=0.0464212 t=2003
+da shang 	打賞	c=0 d=0.0112478 t=2003
+da shang yi ge 	打賞一個	c=1 d=0.113042 t=2003
+da ti 	大題	c=1 d=0.427415 t=2003
+da wan 	打完	c=1 d=0.822835 t=2003
+da xiao 	大小	c=1 d=1 t=797
+da xiao xie 	大小寫	c=1 d=0.298197 t=2003
+da xue 	大學	c=0 d=0.0918512 t=2003
+da yin 	打印	c=1 d=0.0513033 t=2003
+da zi 	打字	c=2 d=1.1545 t=2003
+da zi ji 	打字機	c=3 d=1.7746 t=2003
+dai 	戴	c=0 d=0.0951229 t=2003
+dai ban 	代辦	c=0 d=0.0970446 t=2003
+dai ban shi xiang 	代辦事項	c=1 d=0.97531 t=2003
+dai kou zhao 	戴口罩	c=2 d=1.91678 t=2003
+dai li 	代理	c=2 d=0.709538 t=2003
+dai li fu wu 	代理服務	c=1 d=0.588605 t=2003
+dai ma 	代碼	c=1 d=0.546074 t=2003
+dan 	但	c=4 d=1.94688 t=2003
+dan shi 	但是	c=1 d=0.946485 t=2003
+dan yu dao 	但遇到	c=1 d=1 t=746
+dang 	當	c=0 d=0.0222017 t=2003
+dang 	黨	c=0 d=0.00437178 t=2003
+dang qian 	當前	c=1 d=0.822835 t=2003
+dang ran 	當然	c=0 d=0.00948935 t=2003
+dang ran la 	當然啦	c=2 d=0.191216 t=2003
+dang shi 	當時	c=1 d=0.343009 t=2003
+dang shi ling dao yi qie de 	黨是領導一切的	c=1 d=0.0439369 t=2003
+dang zheng jun 	黨政軍	c=0 d=0.00432828 t=2003
+dang zheng jun min xue 	黨政軍民學	c=1 d=0.0434998 t=2003
+dang zhong 	當中	c=1 d=0.878095 t=2003
+dang zhong de 	當中的	c=1 d=0.22313 t=2003
+dao 	到	c=1 d=0.265182 t=2003
+dao de jing 	道德經	c=2 d=0.129464 t=2003
+dao le 	到了	c=1 d=0.398519 t=2003
+dao ru 	導入	c=1 d=1 t=914
+de 	的	c=56 d=6.90127 t=2003
+dei 	得	c=1 d=0.0488012 t=2003
+den 	㩐	c=1 d=0.951229 t=2003
+deng 	等	c=2 d=0.941765 t=2003
+deng jia 	等價	c=1 d=0.818731 t=2003
+deng xin rong 	燈芯絨	c=2 d=1.51159 t=2003
+di 	低	c=0 d=0.0189191 t=2003
+di san fang 	第三方	c=1 d=0.585669 t=2003
+di wei 	地位	c=0 d=0.00193512 t=2003
+di xin zao 	低信噪	c=1 d=0.210531 t=2003
+di xin zao bi 	低信噪比	c=1 d=0.204948 t=2003
+di yi ge 	第一個	c=1 d=0.603506 t=2003
+di yi ti 	第一題	c=1 d=0.839457 t=2003
+di zhi 	地址	c=1 d=0.790571 t=2003
+dian ji 	點擊	c=1 d=0.386741 t=2003
+dian nao 	電腦	c=1 d=0.315058 t=2003
+dian ying 	電影	c=1 d=0.440432 t=2003
+dian zi xin xi 	電子信息	c=2 d=0.250192 t=2003
+die dai 	迭代	c=3 d=1.34856 t=2003
+ding yi 	定義	c=2 d=1.2213 t=2003
+ding yue 	訂閱	c=2 d=0.714334 t=2003
+dong xi nan bei 	東西南北	c=0 d=0.00434998 t=2003
+dong xi nan bei zhong 	東西南北中	c=1 d=0.0437178 t=2003
+dou 	都	c=0 d=0.00368832 t=2003
+dou jiang 	豆漿	c=1 d=0.647265 t=2003
+dou jiang 	都將	c=1 d=0.644036 t=2003
+dou ju you 	都具有	c=1 d=0.037068 t=2003
+dou shi 	都是	c=1 d=0.0361528 t=2003
+dou xing 	都行	c=1 d=0.522046 t=2003
+dou you 	都有	c=2 d=0.581674 t=2003
+dou zheng xing 	鬥爭性	c=1 d=0.0376283 t=2003
+du 	毒	c=0 d=0.1 t=865
+du shi 	毒師	c=2 d=1.90737 t=2003
+du shi 	督師	c=0 d=0.1 t=728
+duan 	短	c=1 d=0.199888 t=2003
+duan kou 	端口	c=1 d=0.657047 t=2003
+duan zheng 	端正	c=0 d=0.0640824 t=2003
+duan zheng ji ji 	端正積極	c=1 d=0.644036 t=2003
+dui 	對	c=1 d=0.955997 t=2003
+dui jiao 	對角	c=1 d=0.535261 t=2003
+dui shu 	對數	c=0 d=0.0588605 t=2003
+dui shu yun suan 	對數運算	c=1 d=0.591555 t=2003
+dui yu 	對於	c=3 d=1.11868 t=2003
+duo 	多	c=1 d=0.193698 t=2003
+duo ge 	多個	c=1 d=0.543351 t=2003
+duo he shui 	多喝水	c=0 d=0.00502874 t=2003
+duo he shui shui 	多喝水水	c=1 d=0.0505395 t=2003
+duo shao 	多少	c=1 d=0.250324 t=2003
+duo shao ren 	多少人	c=1 d=0.102284 t=2003
+duo wei 	多維	c=1 d=1 t=835
+duo wen jian 	多文件	c=2 d=0.366282 t=2003
+duo xiang shi 	多項式	c=0 d=0.0818731 t=2003
+en 	嗯	c=2 d=1.72616 t=2003
+en 	恩	c=1 d=0.839457 t=2003
+er 	二	c=1 d=0.283654 t=2003
+er 	而	c=1 d=0.50409 t=2003
+er lai 	而來	c=1 d=0.701173 t=2003
+er shi 	而是	c=1 d=0.251796 t=2003
+er shi shi yong 	而是使用	c=1 d=0.219808 t=2003
+fa 	法	c=3 d=0.751637 t=2003
+fa 	發	c=1 d=0.516851 t=2003
+fa xing ban 	發行版	c=2 d=0.97531 t=2003
+fa yan 	發言	c=1 d=0.67368 t=2003
+fa zhan 	發展	c=3 d=0.101697 t=2003
+fa zhan jie duan 	發展階段	c=1 d=0.0290133 t=2003
+fa zhan shi qi 	發展時期	c=1 d=0.0413782 t=2003
+fa zhan wen ti de guan jian 	發展問題的關鍵	c=1 d=0.0422141 t=2003
+fan 	范	c=1 d=0.878095 t=2003
+fan qiang 	翻牆	c=0 d=0.0726149 t=2003
+fan qiang ruan jian 	翻牆軟件	c=1 d=0.729789 t=2003
+fan ti zi 	繁體字	c=1 d=0.814647 t=2003
+fan yi 	翻譯	c=14 d=5.8521 t=2003
+fan yi de 	翻譯的	c=1 d=0.472367 t=2003
+fan yi guo 	翻譯過	c=1 d=0.467666 t=2003
+fan ying 	反應	c=1 d=0.302704 t=2003
+fang cha 	方差	c=1 d=1 t=903
+fang fa 	方法	c=4 d=2.1637 t=2003
+fang fa lun 	方法論	c=2 d=0.98538 t=2003
+fang fang mian mian 	方方面面	c=0 d=0.00186856 t=2003
+fang fang mian mian de 	方方面面的	c=1 d=0.0187793 t=2003
+fang kuai 	方塊	c=2 d=1.59309 t=2003
+fang mian 	方面	c=1 d=0.0430669 t=2003
+fang ru 	放入	c=1 d=1 t=920
+fang shi 	方式	c=1 d=0.474734 t=2003
+fei 	非	c=0 d=0.099005 t=2003
+fei chang 	非常	c=1 d=0.792288 t=2003
+fei chang yuan yi 	非常願意	c=1 d=0.0963276 t=2003
+fei qi yi 	非奇異	c=1 d=0.995012 t=2003
+fen bie 	分別	c=1 d=0.418952 t=2003
+fen bu 	分佈	c=2 d=1.92283 t=901
+fen ge 	分割	c=1 d=0.25924 t=2003
+fen jie 	分解	c=1 d=0.99005 t=2003
+fen lei 	分類	c=3 d=0.778801 t=2003
+fen ping 	分屏	c=3 d=1.80517 t=2003
+fen xi 	分析	c=1 d=0.847894 t=2003
+fu 	付	c=1 d=0.704688 t=2003
+fu 	符	c=1 d=0.168065 t=2003
+fu chou zhe 	復仇者	c=1 d=0.980199 t=2003
+fu hao 	符號	c=1 d=0.869358 t=2003
+fu li ye bian huan 	傅立葉變換	c=1 d=0.0837432 t=2003
+fu wu 	服務	c=0 d=0.0585669 t=2003
+fu wu qi 	服務器	c=2 d=0.713451 t=2003
+fu yang 	福洋	c=1 d=0.778801 t=2003
+fu zhi 	複製	c=1 d=0.718924 t=2003
+gai lun 	概論	c=1 d=0.2334 t=2003
+gai nian 	概念	c=2 d=0.980199 t=2003
+gan 	感	c=0 d=0.0546074 t=2003
+gan shen me 	幹什麼	c=0 d=0.0687289 t=2003
+gan shen me de 	幹什麼的	c=1 d=0.690734 t=2003
+gan xie 	感謝	c=1 d=0.740818 t=2003
+gang kan 	剛看	c=1 d=0.239309 t=2003
+gang qu 	港區	c=1 d=0.690734 t=2003
+gao bu dong 	搞不懂	c=0 d=0.1 t=757
+gao liang 	高亮	c=0 d=0.0891366 t=2003
+gao qing 	高清	c=2 d=1.87416 t=2003
+gao si 	高斯	c=0 d=0.1 t=901
+gao si fen bu 	高斯分佈	c=1 d=1 t=902
+gao su 	高速	c=0 d=0.0210136 t=2003
+gao su tu fa tong xin 	高速突發通信	c=1 d=0.211189 t=2003
+ge 	個	c=3 d=0.899538 t=2003
+ge bie 	個別	c=0 d=0.0778801 t=2003
+ge bie de 	個別的	c=1 d=0.782705 t=2003
+ge bu xiang tong 	各不相同	c=1 d=0.522046 t=2003
+ge ge 	各個	c=1 d=0.0411719 t=2003
+ge shi 	格式	c=2 d=1.30632 t=2003
+ge shi hua 	格式化	c=1 d=0.752014 t=2003
+gei ni 	給你	c=0 d=0.0715338 t=2003
+gen 	跟	c=1 d=0.499074 t=2003
+gen ben 	根本	c=2 d=1.80988 t=2003
+gen ju 	根據	c=0 d=0.0839457 t=2003
+gen ju yi shang shu ju 	根據以上數據	c=1 d=0.843665 t=2003
+gen ni 	跟你	c=1 d=0.631284 t=2003
+gen ni zou 	跟你走	c=0 d=0.0591555 t=2003
+gen wo zou 	跟我走	c=1 d=0.582748 t=2003
+geng 	耿	c=1 d=0.293758 t=2003
+geng gai 	更改	c=1 d=0.65377 t=2003
+geng xin 	更新	c=1 d=0.202909 t=2003
+gong cheng 	工程	c=1 d=0.0685632 t=2003
+gong ju 	工具	c=1 d=0.519442 t=2003
+gong shang 	工商	c=1 d=0.835278 t=2003
+gong shi 	公式	c=2 d=1.78433 t=2003
+gong zuo 	工作	c=1 d=0.565525 t=2003
+gong zuo shang 	工作上	c=1 d=0.66034 t=2003
+gou mai 	購買	c=0 d=0.029523 t=2003
+gu ge 	谷歌	c=4 d=1.26082 t=2003
+gu ge fan yi 	谷歌翻譯	c=1 d=0.26054 t=2003
+gu ge xue shu 	谷歌學術	c=1 d=0.0614212 t=2003
+gu ji 	估計	c=11 d=6.09925 t=2003
+gu ji wang luo 	估計網絡	c=2 d=0.756294 t=2003
+guan hu 	關乎	c=1 d=0.023442 t=2003
+guan jian 	關鍵	c=0 d=0.00823602 t=2003
+guan yu 	關於	c=1 d=0.109701 t=2003
+guang 	光	c=1 d=0.548812 t=2003
+guang gao 	廣告	c=1 d=0.597501 t=2003
+guang liu 	光流	c=11 d=6.86261 t=2003
+guang liu fa 	光流法	c=2 d=1.41794 t=2003
+guang liu gu ji 	光流估計	c=1 d=0.955997 t=2003
+gui 	貴	c=1 d=0.458406 t=2003
+gui dang 	歸檔	c=1 d=0.111917 t=2003
+gui yi 	歸一	c=1 d=0.412714 t=2003
+guo 	過	c=2 d=0.813364 t=2003
+guo cheng 	過程	c=1 d=0.414783 t=2003
+guo fang 	國防	c=1 d=0.0323869 t=2003
+guo jia 	國家	c=1 d=0.923116 t=2003
+guo jia an quan 	國家安全	c=3 d=1.1222 t=2003
+guo jia an quan de 	國家安全的	c=2 d=1.80086 t=2003
+guo qi 	過期	c=1 d=0.351455 t=2003
+guo qi le 	過期了	c=1 d=0.349938 t=2003
+guo qiang 	國強	c=0 d=0.0044601 t=2003
+guo qiang bi ba 	國強必霸	c=1 d=0.0448245 t=2003
+ha 	哈	c=1 d=0.88692 t=2003
+ha ha 	哈哈	c=10 d=6.24263 t=2003
+ha ha ha 	哈哈哈	c=2 d=1.09451 t=2003
+hai 	還	c=0 d=0.0688008 t=2003
+hai bu zhi 	還不知	c=1 d=0.246597 t=2003
+hai shi 	還是	c=2 d=0.688797 t=2003
+hai xu yao 	還需要	c=1 d=0.444858 t=2003
+hai yang 	海洋	c=1 d=0.774916 t=2003
+hai yang 	海陽	c=1 d=0.771052 t=2003
+hai yao 	還要	c=0 d=0.0250324 t=2003
+hai yao kan 	還要看	c=1 d=0.251579 t=2003
+hai you 	還有	c=1 d=0.657047 t=2003
+han shu 	函數	c=2 d=0.965605 t=2003
+han yu pin yin 	漢語拼音	c=1 d=0.637628 t=2003
+hao 	好	c=5 d=3.49147 t=2003
+hao 	號	c=1 d=0.323033 t=2003
+hao ba 	好吧	c=2 d=0.498208 t=2003
+hao chi 	好吃	c=0 d=0.0053397 t=2003
+hao da 	好噠	c=1 d=0.847894 t=2003
+hao de 	好的	c=1 d=0.079659 t=2003
+hao di 	好滴	c=1 d=0.254107 t=2003
+hao le 	好了	c=3 d=1.80468 t=2003
+hao nan 	好難	c=0 d=0.0353455 t=2003
+hao nan ji 	好難記	c=1 d=0.355226 t=2003
+hao wu 	毫無	c=0 d=0.0965605 t=2003
+hao wu bian ji 	毫無邊際	c=1 d=0.970446 t=2003
+hao ya 	好呀	c=1 d=0.557106 t=2003
+hao you 	好友	c=1 d=0.826959 t=2003
+hao you qian 	好有錢	c=1 d=0.802519 t=2003
+he 	和	c=16 d=3.25707 t=2003
+he cheng 	合成	c=1 d=0.582748 t=2003
+he ping 	和平	c=0 d=0.0941765 t=2003
+he ping de nian dai 	和平的年代	c=1 d=0.946485 t=2003
+he xin 	核心	c=1 d=0.161218 t=2003
+hei ke 	黑客	c=1 d=0.425283 t=2003
+hen da de 	很大的	c=0 d=0.0571209 t=2003
+hen da de yi yi 	很大的意義	c=1 d=0.574072 t=2003
+hong xing 	紅星	c=1 d=0.0833256 t=2003
+hou 	後	c=0 d=0.020089 t=2003
+hou tai 	後臺	c=1 d=0.869358 t=2003
+hou xuan ci 	後選詞	c=1 d=0.201897 t=2003
+hu 	虎	c=1 d=0.647265 t=2003
+hua 	化	c=1 d=0.414783 t=2003
+hua ci 	畫詞	c=1 d=0.882497 t=2003
+huan jing 	環境	c=1 d=0.718924 t=2003
+huan kuan 	還款	c=0 d=0.00587185 t=2003
+huan qu 	換區	c=1 d=0.774916 t=2003
+huan qu 	換取	c=1 d=0.771052 t=2003
+hui 	會	c=2 d=0.579842 t=2003
+hui che 	回車	c=1 d=0.185444 t=2003
+hui qu 	回去	c=0 d=0.00930145 t=2003
+hui qu la 	回去啦	c=1 d=0.0934807 t=2003
+hui zhi 	繪製	c=2 d=1.7827 t=909
+huo beng luan tiao 	活蹦亂跳	c=1 d=0.126186 t=2003
+huo de 	獲得	c=1 d=0.557106 t=2003
+huo qu 	獲取	c=1 d=0.873716 t=2003
+ji 	及	c=1 d=1 t=889
+ji 	積	c=0 d=0.0980199 t=2003
+ji 	記	c=0 d=0.0353455 t=2003
+ji ben 	基本	c=0 d=0.0139457 t=2003
+ji ben shi yong 	基本使用	c=1 d=0.140156 t=2003
+ji chu 	基礎	c=2 d=1.30846 t=2003
+ji chu bian ji qi 	基礎編輯器	c=1 d=0.810584 t=2003
+ji chu jie xi 	基礎解析	c=1 d=0.774916 t=2003
+ji fen 	積分	c=2 d=1.1909 t=2003
+ji fen de 	積分的	c=1 d=0.250324 t=2003
+ji he 	幾何	c=1 d=0.287941 t=2003
+ji huo 	激活	c=1 d=0.311923 t=2003
+ji huo han shu 	激活函數	c=1 d=1 t=905
+ji ji 	積極	c=1 d=0.0640824 t=2003
+ji lu 	記錄	c=2 d=1.42711 t=2003
+ji lu sheng huo 	記錄生活	c=1 d=0.109154 t=2003
+ji lu wo de sheng huo 	記錄我的生活	c=1 d=0.12938 t=2003
+ji qi 	機器	c=0 d=0.022091 t=2003
+ji qi xue xi 	機器學習	c=1 d=0.222017 t=2003
+ji qiao 	技巧	c=1 d=0.852144 t=2003
+ji shu 	技術	c=2 d=0.403974 t=2003
+ji suan 	計算	c=5 d=3.86833 t=930
+ji suan ji 	計算機	c=1 d=0.185168 t=2003
+ji suan ji shi jue 	計算機視覺	c=1 d=0.166127 t=2003
+ji tian 	幾天	c=1 d=0.0492917 t=2003
+ji yi 	記憶	c=0 d=0.0071719 t=2003
+ji yi de ben zhi 	記憶的本質	c=1 d=0.0720785 t=2003
+ji yu 	基於	c=1 d=0.970446 t=2003
+ji zhan 	激戰	c=1 d=0.57695 t=2003
+ji zuo 	記作	c=1 d=0.814647 t=2003
+jia 	加	c=1 d=1 t=857
+jia bi 	假幣	c=0 d=0.0932394 t=2003
+jia bi wen ti 	假幣問題	c=4 d=3.90233 t=2003
+jia da long 	佳達隆	c=1 d=0.0808629 t=2003
+jia ge 	價格	c=1 d=0.23457 t=2003
+jia gou 	架構	c=0 d=0.0207008 t=2003
+jia gou tu 	架構圖	c=1 d=0.208045 t=2003
+jia ni 	家你	c=1 d=0.818731 t=2003
+jia quan 	加權	c=2 d=1.21013 t=2003
+jia quan 	甲醛	c=1 d=0.588605 t=2003
+jia ru 	加入	c=1 d=0.697676 t=2003
+jia shang 	加上	c=1 d=0.794534 t=2003
+jia zai 	加載	c=1 d=1.0657 t=916
+jia zai qi 	加載器	c=1 d=1 t=833
+jian 	劍	c=1 d=0.40657 t=2003
+jian 	鍵	c=4 d=2.753 t=2003
+jian biao 	見表	c=1 d=0.244143 t=2003
+jian ce 	檢測	c=1 d=0.225174 t=2003
+jian cha 	檢查	c=1 d=0.748264 t=2003
+jian guo 	堅果	c=3 d=1.66714 t=2003
+jian guo yun 	堅果雲	c=1 d=0.535261 t=2003
+jian jin 	漸進	c=0 d=0.0618783 t=2003
+jian jin biao da shi 	漸進表達式	c=1 d=0.621885 t=2003
+jian qie 	剪切	c=0 d=0.0847894 t=2003
+jian qie ban 	剪切板	c=1 d=0.852144 t=2003
+jian ting 	監聽	c=1 d=0.856415 t=2003
+jian wei 	鍵位	c=3 d=1.86658 t=2003
+jian yi 	建議	c=1 d=0.860708 t=2003
+jian ying 	簡影	c=1 d=0.740818 t=2003
+jian zhi fa 	減治法	c=3 d=2.92688 t=2003
+jiang 	將	c=3 d=1.38537 t=2003
+jiang nan 	江南	c=1 d=0.579842 t=2003
+jiao ben 	腳本	c=2 d=1.04396 t=2003
+jiao cheng 	教程	c=0 d=0.026054 t=2003
+jiao du kan 	角度看	c=1 d=0.0235177 t=2003
+jiao fu 	教父	c=2 d=1.99501 t=2003
+jiao guo 	教過	c=1 d=0.346456 t=2003
+jiao shen me 	叫什麼	c=0 d=0.00765355 t=2003
+jiao yu bu 	教育部	c=1 d=0.0824965 t=2003
+jiao zhu 	校注	c=2 d=0.139704 t=2003
+jie 	傑	c=0 d=0.0562705 t=2003
+jie gou 	結構	c=3 d=0.908014 t=2003
+jie guo 	結果	c=1 d=0.831104 t=2003
+jie he 	結合	c=1 d=0.540641 t=2003
+jie jue 	解決	c=0 d=0.0380983 t=2003
+jie jue le 	解決了	c=1 d=0.382893 t=2003
+jie jue wen ti 	解決問題	c=0 d=0.00403566 t=2003
+jie jue wen ti de guan jian 	解決問題的關鍵	c=1 d=0.0405589 t=2003
+jie mian 	界面	c=1 d=0.960789 t=2003
+jie ping 	截屏	c=1 d=0.895834 t=2003
+jie shao 	介紹	c=2 d=0.743906 t=2003
+jie shu 	結束	c=1 d=1 t=873
+jie tiao qi 	解調器	c=1 d=0.214381 t=2003
+jie xi 	解析	c=1 d=0.746507 t=2003
+jie ya 	解壓	c=3 d=2.40158 t=2003
+jie ya dao 	解壓到	c=1 d=0.88692 t=2003
+jin 	近	c=1 d=0.173774 t=2003
+jin cheng 	進程	c=1 d=0.451581 t=2003
+jin er 	進而	c=1 d=0.0219278 t=2003
+jin guan 	儘管	c=1 d=0.814647 t=2003
+jing 	靜	c=1 d=1 t=2003
+jing chang 	經常	c=1 d=0.70822 t=2003
+jing dian 	經典	c=1 d=1.04404 t=945
+jing dian wang luo 	經典網絡	c=1 d=1 t=782
+jing dong 	京東	c=1 d=0.0642682 t=2003
+jing dong bai tiao 	京東白條	c=1 d=0.0587185 t=2003
+jing du 	精度	c=3 d=2.91202 t=863
+jing hai 	靜海	c=1 d=0.276901 t=2003
+jing hai qu 	靜海區	c=1 d=0.606531 t=2003
+jing hai qu 	靜海去	c=1 d=0.603506 t=2003
+jing hai zhen 	靜海鎮	c=1 d=0.609571 t=2003
+jing ji 	經濟	c=2 d=0.0624057 t=2003
+jing li 	經歷	c=0 d=0.00281559 t=2003
+jing li le 	經歷了	c=1 d=0.028297 t=2003
+jing que du 	精確度	c=2 d=1.89137 t=894
+jing wei du 	經緯度	c=1 d=0.778801 t=2003
+jiu 	就	c=3 d=0.958597 t=2003
+jiu bi ru 	就比如	c=1 d=1 t=768
+jiu gou 	就夠	c=0 d=0.00343896 t=2003
+jiu gou cheng le 	就夠成了	c=1 d=0.034562 t=2003
+jiu hao 	就好	c=1 d=0.927743 t=2003
+jiu shi 	就是	c=0 d=0.0615697 t=2003
+jiu shi zhe ge yang zi 	就是這個樣子	c=1 d=0.618783 t=2003
+jiu xing 	就行	c=1 d=0.951229 t=2003
+jiu zhua zhu le 	就抓住了	c=1 d=0.0403566 t=2003
+ju 	據	c=0 d=0.0980199 t=2003
+ju chi yun 	矩池雲	c=1 d=0.67368 t=2003
+ju jue 	拒絕	c=0 d=0.00977834 t=2003
+ju jue de 	拒絕的	c=1 d=0.0982736 t=2003
+ju lie 	劇烈	c=0 d=0.0831104 t=2003
+ju lie yun dong 	劇烈運動	c=1 d=0.83527 t=2003
+ju shi 	局勢	c=0 d=0.00246002 t=2003
+ju you 	具有	c=0 d=0.00368832 t=2003
+ju yu wang 	局域網	c=1 d=0.554327 t=2003
+ju zhen 	矩陣	c=5 d=3.62951 t=2003
+ju zhen lun 	矩陣論	c=2 d=1.79176 t=2003
+ju zi 	句子	c=1 d=0.860708 t=2003
+juan 	卷	c=0 d=0.0980199 t=2003
+juan ji 	卷積	c=2 d=0.788933 t=2003
+juan ji wang luo 	卷積網絡	c=1 d=0.985112 t=2003
+jue bu 	絕不	c=0 d=0.00441572 t=2003
+jue de 	覺得	c=0 d=0.0111917 t=2003
+jue de bu cuo 	覺得不錯	c=1 d=0.112478 t=2003
+jue ding 	決定	c=2 d=0.0535196 t=2003
+jue ding zhe 	決定着	c=1 d=0.0395575 t=2003
+jue ming 	絕命	c=1 d=1.05402 t=2003
+jue ming du shi 	絕命毒師	c=1 d=1 t=866
+jue ming du shi 	絕命督師	c=1 d=1 t=729
+jue ming yong 	絕命用	c=1 d=0.937067 t=2003
+jun heng 	均衡	c=1 d=0.194952 t=2003
+jun yun 	均勻	c=1 d=1 t=900
+kai fa 	開發	c=1 d=0.697676 t=2003
+kai fa zhe 	開發者	c=1 d=0.99005 t=2003
+kai shi 	開始	c=1 d=1.00168 t=2003
+kai shi fu zhi 	開始複製	c=1 d=0.927743 t=2003
+kan 	看	c=0 d=0.0487253 t=2003
+kan dai 	看待	c=0 d=0.00417941 t=2003
+kan kan 	看看	c=0 d=0.0102797 t=2003
+kao kao 	考考	c=0 d=0.0995012 t=2003
+kao kao kao kao kao kao kao kao kao kao 	考考考考考考考考考考	c=1 d=1 t=2003
+ke guan 	客觀	c=0 d=0.00333733 t=2003
+ke guan yin su 	客觀因素	c=1 d=0.0335406 t=2003
+ke hu duan 	客戶端	c=1 d=0.690734 t=2003
+ke ku zuan yan 	刻苦鑽研	c=1 d=0.65377 t=2003
+ke shi hua 	可視化	c=0 d=0.00466538 t=2003
+ke wei 	可謂	c=0 d=0.0722527 t=2003
+ke wei shi 	可謂是	c=1 d=0.726149 t=2003
+ke yan gong zuo 	科研工作	c=1 d=0.56836 t=2003
+ke yi 	可以	c=3 d=0.822526 t=2003
+ke yi an zhuang 	可以安裝	c=1 d=1 t=761
+ke yi kan chu 	可以看出	c=0 d=0.00211736 t=2003
+ke yi yong 	可以用	c=1 d=0.748264 t=2003
+ke yi zai 	可以在	c=1 d=0.554327 t=2003
+ke yi zai na 	可以在那	c=1 d=0.105399 t=2003
+kong ge 	空格	c=1 d=0.771052 t=2003
+kong jian 	空間	c=1 d=0.786628 t=2003
+kong jian de 	空間的	c=1 d=0.421052 t=2003
+kong zhi tai 	控制檯	c=1 d=1 t=943
+kou zhao 	口罩	c=0 d=0.0951229 t=2003
+ku 	庫	c=2 d=1.00905 t=2003
+ku 	褲	c=2 d=1.51916 t=2003
+kuai 	塊	c=1 d=0.726149 t=2003
+kuai 	快	c=1 d=0.348192 t=2003
+kuai jie 	快捷	c=1 d=0.470011 t=2003
+kuai jie jian 	快捷鍵	c=4 d=1.63561 t=2003
+kuang jia 	框架	c=1 d=0.729789 t=2003
+kun chi yan 	昆池岩	c=3 d=2.60809 t=2003
+kuo rong 	擴容	c=1 d=0.529935 t=2003
+kuo zhan 	擴展	c=1 d=0.572745 t=2003
+kuo zhan dao le 	擴展到了	c=1 d=0.937067 t=2003
+la 	啦	c=2 d=1.03069 t=2003
+la bi xiao xin 	蠟筆小新	c=2 d=0.264649 t=2003
+la mu 	拉姆	c=0 d=0.0790571 t=2003
+la mu da 	拉姆打	c=1 d=0.794534 t=2003
+lai 	來	c=1 d=0.0526021 t=2003
+lai shan 	萊山	c=1 d=0.519442 t=2003
+lai shuo 	來說	c=1 d=0.722527 t=2003
+lan jie 	攔截	c=1 d=0.600496 t=2003
+lan qiu chang 	籃球場	c=1 d=0.10383 t=2003
+lan yu 	藍羽	c=1 d=0.637628 t=2003
+lao peng you 	老朋友	c=1 d=0.913931 t=2003
+lao wang 	老王	c=1 d=0.32628 t=2003
+lao zi 	老子	c=5 d=0.337086 t=2003
+le 	了	c=11 d=2.96601 t=2003
+lei ji 	累計	c=1 d=1 t=856
+leng 	冷	c=0 d=0.099005 t=2003
+li 	李	c=1 d=1 t=934
+li 	裏	c=0 d=0.0955997 t=2003
+li 	離	c=1 d=0.965605 t=2003
+li da zhao 	李大釗	c=1 d=0.0692522 t=2003
+li hai 	厲害	c=0 d=0.0522046 t=2003
+li hai ya 	厲害呀	c=1 d=0.524663 t=2003
+li jie 	理解	c=0 d=0.00430669 t=2003
+li mian 	裏面	c=1 d=0.491644 t=2003
+li ru 	例如	c=1 d=0.609571 t=2003
+li shi ren wu 	歷史人物	c=1 d=0.0295994 t=2003
+li shi shang 	歷史上	c=1 d=0.0280154 t=2003
+li shi shi qi 	歷史時期	c=1 d=0.031626 t=2003
+li shi tiao jian 	歷史條件	c=0 d=0.083527 t=2003
+li ti 	立體	c=0 d=0.120775 t=2003
+li ti pi pei 	立體匹配	c=1 d=0.628135 t=2003
+li ti shi pin 	立體視頻	c=1 d=0.585669 t=2003
+li wo men fei chang yao yuan 	裏我們非常遙遠	c=1 d=0.960789 t=2003
+li yong 	利用	c=1 d=0.579842 t=2003
+li zhi 	李志	c=0 d=0.0562705 t=2003
+li zhi jie 	李志傑	c=1 d=0.565525 t=2003
+lian bu shang 	連不上	c=1 d=0.501576 t=2003
+lian he 	聯合	c=0 d=0.0384812 t=2003
+lian he xun lian 	聯合訓練	c=1 d=0.386741 t=2003
+lian jie 	連接	c=2 d=0.540641 t=2003
+lian jie 	鏈接	c=1 d=0.798516 t=2003
+lian meng 	聯盟	c=1 d=0.410656 t=2003
+lian xi 	練習	c=3 d=1.31542 t=2003
+liang ge 	兩個	c=2 d=0.492613 t=2003
+liang zhe 	兩者	c=1 d=1 t=820
+liao 	聊	c=1 d=0.332871 t=2003
+liao jie 	瞭解	c=1 d=0.99005 t=2003
+lie bao 	獵豹	c=1 d=0.0466538 t=2003
+lie chu 	列出	c=1 d=0.802519 t=2003
+ling dao 	領導	c=0 d=0.00437178 t=2003
+liu 	劉	c=3 d=0.612065 t=2003
+liu 	流	c=2 d=0.646686 t=2003
+liu chang lin 	劉長林	c=4 d=2.207 t=2003
+liu chang lin tong zhi 	劉長林同志	c=1 d=0.690734 t=2003
+liu lan qi 	瀏覽器	c=1 d=0.759572 t=2003
+lou 	樓	c=0 d=0.0609571 t=2003
+lu 	路	c=2 d=1.24669 t=2003
+lu jing 	路徑	c=1 d=1 t=803
+lu zi 	路子	c=1 d=0.045275 t=2003
+lun 	論	c=1 d=0.496842 t=2003
+lun tan 	論壇	c=1 d=0.427415 t=2003
+lun wen 	論文	c=15 d=3.32282 t=2003
+lun wen fan yi 	論文翻譯	c=1 d=0.272532 t=2003
+luo fei 	洛斐	c=2 d=0.0780864 t=2003
+ma 	嗎	c=4 d=2.28994 t=2003
+ma le 	馬勒	c=1 d=0.0804596 t=2003
+mai le 	買了	c=1 d=0.341269 t=2003
+mai le yi ci 	買了一次	c=1 d=0.357007 t=2003
+man 	曼	c=1 d=0.927743 t=2003
+mao 	貓	c=1 d=0.66365 t=2003
+mao dun 	矛盾	c=1 d=0.0503268 t=2003
+mao dun 	茅盾	c=1 d=0.0349094 t=2003
+mao dun de xing zhi 	矛盾的性質	c=1 d=0.0368832 t=2003
+mao shu you xi 	貓鼠遊戲	c=2 d=1.3746 t=2003
+mao zhua 	毛抓	c=1 d=0.66034 t=2003
+mei ci 	每次	c=1 d=1 t=790
+mei ge 	每個	c=0 d=0.0064628 t=2003
+mei ge li shi shi qi 	每個歷史時期	c=1 d=0.0291588 t=2003
+mei ge mao dun 	每個矛盾	c=1 d=0.0357931 t=2003
+mei hua 	美化	c=1 d=0.477114 t=2003
+mei nian 	每年	c=1 d=0.814647 t=2003
+mei nv 	美女	c=1 d=0.0968105 t=2003
+mei qu 	美區	c=1 d=0.786628 t=2003
+mei ren 	沒人	c=1 d=0.104874 t=2003
+mei yao 	沒要	c=1 d=0.339596 t=2003
+mei you 	沒有	c=5 d=1.33767 t=2003
+men 	們	c=0 d=0.0704688 t=2003
+men 	門	c=0 d=0.070822 t=2003
+men zhen 	門診	c=1 d=0.873716 t=2003
+mian fei xia zai 	免費下載	c=1 d=0.224249 t=2003
+min 	民	c=0 d=0.00432828 t=2003
+ming ling 	命令	c=4 d=1.90643 t=2003
+ming zi 	名字	c=1 d=1 t=728
+mo ji 	莫急	c=1 d=0.240508 t=2003
+mo kuai 	模塊	c=1 d=0.625002 t=2003
+mo ren 	默認	c=1 d=0.085435 t=2003
+mo shi 	模式	c=0 d=0.00816756 t=2003
+mo xing 	模型	c=4 d=2.93299 t=2003
+mu 	木	c=0 d=0.0740818 t=2003
+mu 	沐	c=1 d=1 t=935
+mu biao 	目標	c=1 d=0.172573 t=2003
+mu biao jian ce 	目標檢測	c=4 d=0.625862 t=2003
+na 	拿	c=1 d=0.274613 t=2003
+na 	那	c=1 d=0.591555 t=2003
+na ge 	那個	c=0 d=0.0524663 t=2003
+na ji fen 	拿積分	c=1 d=0.256661 t=2003
+nai niu 	奶牛	c=1 d=0.83527 t=2003
+nan 	男	c=2 d=0.879122 t=2003
+nao cuo 	鬧錯	c=1 d=0.130029 t=2003
+ne 	呢	c=1 d=0.429557 t=2003
+nei 	內	c=0 d=0.0449329 t=2003
+nei lian jie 	內連接	c=1 d=0.451581 t=2003
+nei rong 	內容	c=1 d=0.900325 t=2003
+nei wang 	內網	c=1 d=0.429557 t=2003
+neng 	能	c=1 d=0.683861 t=2003
+ni 	你	c=0 d=0.00765355 t=2003
+ni de 	你的	c=2 d=0.686436 t=2003
+ni hao 	你好	c=11 d=3.24321 t=2003
+ni he 	擬合	c=1 d=0.621885 t=2003
+ni jiao shen me 	你叫什麼	c=1 d=0.0769192 t=2003
+ni ke 	你可	c=0 d=0.0102797 t=2003
+ni ke yi kan kan 	你可一看看	c=1 d=0.103312 t=2003
+ni shi shui 	你是誰	c=1 d=0.0761538 t=2003
+ni ya 	你呀	c=1 d=0.0784731 t=2003
+nian 	年	c=16 d=4.57842 t=2003
+nian dai 	年代	c=0 d=0.0941765 t=2003
+nin de 	您的	c=1 d=0.327915 t=2003
+nin hao 	您好	c=2 d=0.403253 t=2003
+ning 	檸	c=1 d=0.364219 t=2003
+ou 	偶	c=1 d=0.794534 t=2003
+ou 	歐	c=1 d=0.694197 t=2003
+ou lu 	歐陸	c=2 d=1.06214 t=2003
+pa 	怕	c=0 d=0.0212248 t=2003
+pai 	牌	c=1 d=0.763379 t=2003
+pai hang 	排行	c=1 d=0.900325 t=2003
+pai xu 	排序	c=1 d=0.663856 t=2003
+pan 	畔	c=0 d=0.0737123 t=2003
+pan 	盤	c=1 d=0.873716 t=2003
+pan duan 	判斷	c=2 d=1.50979 t=2003
+pan duan wen jian 	判斷文件	c=1 d=0.680451 t=2003
+pao lu 	跑路	c=1 d=0.229925 t=2003
+pei zhi 	配置	c=14 d=3.46874 t=2003
+pei zhi wen jian 	配置文件	c=2 d=1.07609 t=2003
+pi chu li 	批處理	c=1 d=1 t=795
+pi fu 	皮膚	c=1 d=0.701173 t=2003
+pi liang 	批量	c=1 d=1 t=794
+pi pei 	匹配	c=0 d=0.0625002 t=2003
+pi zhu 	批註	c=1 d=0.941765 t=2003
+pin 	拼	c=0 d=0.0351692 t=2003
+pin xie 	拼寫	c=1 d=0.744532 t=2003
+ping 	屏	c=1 d=0.1764 t=2003
+ping fang 	平方	c=1 d=0.460704 t=2003
+ping guo 	蘋果	c=6 d=4.7522 t=2003
+ping guo chan liang 	蘋果產量	c=2 d=1.54537 t=2003
+ping shi 	平時	c=0 d=0.0965605 t=2003
+ping shi wo men suo zhu yi dao de 	平時我們所注意到的	c=1 d=0.970446 t=2003
+ping tai 	平臺	c=0 d=0.0327915 t=2003
+ping tai shang 	平臺上	c=1 d=0.329559 t=2003
+qi 	其	c=3 d=0.595445 t=2003
+qi 	器	c=2 d=1.25682 t=2003
+qi di wei 	其地位	c=1 d=0.0194482 t=2003
+qi kan 	期刊	c=1 d=0.162838 t=2003
+qi lu 	齊魯	c=1 d=0.147342 t=2003
+qi shi bu ran 	其實不然	c=1 d=0.985112 t=2003
+qi ta 	其他	c=1 d=0.412307 t=2003
+qi ta an quan 	其他安全	c=1 d=0.0198411 t=2003
+qi ta fa xing ban 	其他發行版	c=1 d=1 t=760
+qi yi 	奇異	c=0 d=0.099005 t=2003
+qian 	前	c=1 d=1 t=791
+qian fan 	千帆	c=0 d=0.0737123 t=2003
+qian tou 	前頭	c=0 d=0.0740818 t=2003
+qin 	勤	c=0 d=0.0960789 t=2003
+qin xiao du 	勤消毒	c=1 d=0.965605 t=2003
+qing 	請	c=0 d=0.0802519 t=2003
+qing 	青	c=1 d=0.362402 t=2003
+qing fen xi 	請分析	c=1 d=0.806541 t=2003
+qing li 	清理	c=1 d=0.878095 t=2003
+qing liang ji 	輕量級	c=2 d=0.904837 t=2003
+qing ping 	清屏	c=1 d=0.144424 t=2003
+qing pu 	青浦	c=1 d=0.143704 t=2003
+qing tian 	晴天	c=2 d=0.136245 t=2003
+qing wen 	請問	c=1 d=0.65377 t=2003
+qiu 	求	c=3 d=2.66896 t=2003
+qiu 	球	c=0 d=0.0822835 t=2003
+qiu te zheng zhi 	球特徵值	c=1 d=0.826959 t=2003
+qu 	區	c=1 d=0.523158 t=2003
+qu 	去	c=0 d=0.0600496 t=2003
+qu xiao 	取消	c=0 d=0.0891366 t=2003
+qu xiao gao liang 	取消高亮	c=1 d=0.895834 t=2003
+quan 	全	c=0 d=0.0212248 t=2003
+quan ju 	全局	c=1 d=0.179066 t=2003
+quan shu zi 	全數字	c=1 d=0.213312 t=2003
+quan wen 	全文	c=1 d=0.465334 t=2003
+quan zhong 	權重	c=1 d=1 t=899
+que 	卻	c=1 d=1 t=765
+que shao 	缺少	c=1 d=1 t=772
+qun liao 	羣聊	c=1 d=0.336216 t=2003
+ren 	人	c=1 d=0.718924 t=2003
+ren wu 	任務	c=2 d=0.592455 t=2003
+ren zhen fu ze 	認真負責	c=1 d=0.666977 t=2003
+ren zhen xue xi 	認真學習	c=1 d=0.650509 t=2003
+ren zheng 	認證	c=1 d=0.973118 t=2003
+ri 	日	c=1 d=0.0746459 t=2003
+ri cheng biao 	日程表	c=1 d=0.110803 t=2003
+ri zhi 	日誌	c=3 d=2.70448 t=878
+rong 	融	c=1 d=0.319819 t=2003
+ru 	如	c=2 d=1.3918 t=2003
+ru he 	如何	c=1 d=1.00011 t=2003
+ru he li jie 	如何理解	c=1 d=0.0432828 t=2003
+ru he zheng que ren shi 	如何正確認識	c=1 d=0.843665 t=2003
+ru he zhi zuo 	如何製作	c=1 d=0.865022 t=2003
+ru jin 	如今	c=1 d=0.932394 t=2003
+ru men 	入門	c=3 d=2.22836 t=2003
+ru xia 	如下	c=1 d=0.238115 t=2003
+ruan jian 	軟件	c=6 d=0.981718 t=2003
+ruan jian yuan 	軟件源	c=1 d=0.839457 t=2003
+rui ke 	瑞克	c=5 d=3.86787 t=2003
+ruo dang 	若當	c=1 d=0.900325 t=2003
+ruo mei you 	若沒有	c=1 d=0.0196437 t=2003
+sa 	撒	c=1 d=1 t=913
+san 	三	c=1 d=0.828333 t=2003
+san ci 	三次	c=0 d=0.0818731 t=2003
+san ci duo xiang shi 	三次多項式	c=1 d=0.822835 t=2003
+san ci fang 	三次方	c=2 d=1.67106 t=2003
+san ge 	三個	c=3 d=2.44611 t=2003
+san ge ren 	三個人	c=1 d=0.331211 t=2003
+san yuan zu 	三元祖	c=1 d=0.603506 t=2003
+san zhi 	三指	c=1 d=0.826959 t=2003
+sen lin 	森林	c=1 d=0.225373 t=2003
+sha 	啥	c=1 d=0.119433 t=2003
+sha diao 	沙雕	c=1 d=0.323033 t=2003
+sha shou 	殺手	c=1 d=0.99005 t=2003
+shan chu 	刪除	c=4 d=1.81802 t=2003
+shan dong 	山東	c=2 d=0.83134 t=2003
+shan dong gong shang xue yuan 	山東工商學院	c=8 d=2.15217 t=2003
+shan dong sheng 	山東省	c=2 d=1.02343 t=2003
+shan ku 	刪庫	c=1 d=0.227638 t=2003
+shang 	上	c=3 d=0.969818 t=2003
+shang che 	上車	c=2 d=1.45468 t=2003
+shang che le 	上車了	c=1 d=0.873716 t=2003
+shang huo 	上火	c=0 d=0.00500366 t=2003
+shang huo le 	上火了	c=1 d=0.0502874 t=2003
+shang ke 	上課	c=1 d=0.67032 t=2003
+shang mian 	上面	c=0 d=0.00209629 t=2003
+shang mian de 	上面的	c=1 d=0.021068 t=2003
+shang sheng 	上升	c=0 d=0.0822835 t=2003
+shang wang 	上網	c=1 d=0.913931 t=2003
+shang wang ren zheng 	上網認證	c=2 d=0.243083 t=2003
+shang yi ge 	上一個	c=1 d=0.923116 t=2003
+she bei 	設備	c=3 d=1.43585 t=2003
+she hui 	社會	c=0 d=0.167894 t=2003
+she hui de 	社會的	c=1 d=0.933963 t=2003
+she hui ke xue 	社會科學	c=3 d=1.45238 t=2003
+she hui li shi tiao jian 	社會歷史條件	c=1 d=0.839457 t=2003
+she hui wen ding 	社會穩定	c=1 d=0.0248475 t=2003
+she hui zhu yi 	社會主義	c=1 d=0.0428521 t=2003
+she ji 	設計	c=2 d=0.496288 t=2003
+she you 	舍友	c=1 d=0.99005 t=2003
+she zhi 	設置	c=2 d=0.965605 t=2003
+shen ceng 	深層	c=0 d=0.0579842 t=2003
+shen ceng wang luo 	深層網絡	c=1 d=0.582748 t=2003
+shen du 	深度	c=1 d=0.0634448 t=2003
+shen du xue xi 	深度學習	c=6 d=2.462 t=2003
+shen jing 	神經	c=2 d=0.212248 t=2003
+shen jing wang luo 	神經網絡	c=4 d=0.970237 t=2003
+shen me yi si 	什麼意思	c=2 d=0.869358 t=2003
+shen tou 	滲透	c=2 d=0.865584 t=2003
+sheng 	省	c=1 d=0.494109 t=2003
+sheng chan 	生產	c=0 d=0.0995012 t=2003
+sheng chan an quan 	生產安全	c=1 d=1 t=2003
+sheng cheng 	生成	c=1 d=0.585669 t=2003
+sheng ci biao 	生詞表	c=1 d=0.165299 t=2003
+sheng huo 	生活	c=1 d=0.796567 t=2003
+sheng huo an quan 	生活安全	c=1 d=0.0221482 t=2003
+sheng huo zhong 	生活中	c=1 d=0.097531 t=2003
+sheng huo zhong de 	生活中的	c=1 d=0.980199 t=2003
+sheng ji 	升級	c=2 d=1.28486 t=2003
+sheng xiao 	生效	c=1 d=0.38868 t=2003
+shi 	事	c=1 d=0.0497871 t=2003
+shi 	市	c=2 d=1.02637 t=2003
+shi 	師	c=0 d=0.1 t=865
+shi 	式	c=0 d=0.097531 t=2003
+shi 	是	c=11 d=2.39237 t=2003
+shi 	視	c=0 d=0.0125011 t=2003
+shi ba 	是吧	c=2 d=0.845694 t=2003
+shi cha 	視差	c=3 d=1.13016 t=2003
+shi cha gu ji 	視差估計	c=1 d=0.941765 t=2003
+shi fou 	是否	c=1 d=0.66365 t=2003
+shi ge 	是個	c=1 d=0.321422 t=2003
+shi jie 	師姐	c=1 d=0.481909 t=2003
+shi jue 	視覺	c=1 d=0.186862 t=2003
+shi li 	實例	c=3 d=1.12036 t=2003
+shi ma 	是嗎	c=2 d=0.2313 t=2003
+shi pin 	視頻	c=4 d=1.03373 t=2003
+shi qi 	時期	c=0 d=0.00411719 t=2003
+shi shi 	實時	c=2 d=0.99005 t=2003
+shi wu 	事務	c=3 d=1.17189 t=2003
+shi xi bao 	視細胞	c=1 d=0.0629761 t=2003
+shi xian 	實現	c=1 d=0.198891 t=2003
+shi xiang 	事項	c=0 d=0.0970446 t=2003
+shi xiao 	失效	c=1 d=0.41398 t=2003
+shi xiao le 	失效了	c=1 d=0.369723 t=2003
+shi xue 	嗜血	c=1 d=0.169483 t=2003
+shi ya 	是呀	c=1 d=0.241714 t=2003
+shi yan jie guo 	試驗結果	c=1 d=0.242926 t=2003
+shi yong 	使用	c=7 d=2.61819 t=2003
+shi yong le 	使用了	c=1 d=0.231078 t=2003
+shi you 	是由	c=0 d=0.00238732 t=2003
+shi you ta de 	是由他的	c=1 d=0.0239928 t=2003
+shi zhui xi bao 	視錐細胞	c=1 d=0.062662 t=2003
+shou wei 	首位	c=1 d=0.0193512 t=2003
+shou xian 	首先	c=1 d=0.909373 t=2003
+shu 	樹	c=0 d=0.0740818 t=2003
+shu chu 	輸出	c=5 d=4.32002 t=944
+shu ju 	數據	c=7 d=3.69177 t=2003
+shu ju ji 	數據集	c=1 d=0.588605 t=2003
+shu ju ke shi hua 	數據可視化	c=1 d=0.0468877 t=2003
+shu ju ku 	數據庫	c=20 d=4.84244 t=2003
+shu ju zi dian 	數據字典	c=3 d=1.14296 t=2003
+shu liang 	數量	c=1 d=1 t=812
+shu ru 	輸入	c=3 d=1.95303 t=2003
+shu ru fa 	輸入法	c=6 d=1.97468 t=2003
+shu ru fa su du 	輸入法速度	c=1 d=0.839457 t=2003
+shu zi 	數字	c=0 d=0.0212248 t=2003
+shuang pin 	雙拼	c=0 d=0.0904837 t=2003
+shuang pin shu ru fa 	雙拼輸入法	c=1 d=0.909373 t=2003
+shui 	水	c=0 d=0.00502874 t=2003
+shui guo 	水果	c=1 d=0.0523397 t=2003
+shui ping 	水平	c=1 d=0.882497 t=2003
+shun xu 	順序	c=0 d=0.194575 t=2003
+shun xu zhu zi shi 	順序主子式	c=1 d=0.980199 t=2003
+shun xu zhu zi shi 	順序竹子是	c=1 d=0.97531 t=2003
+shuo 	說	c=1 d=0.98726 t=2003
+shuo ming shu 	說明書	c=1 d=0.0599047 t=2003
+shuo shi 	碩士	c=1 d=0.115325 t=2003
+si hu 	似乎	c=1 d=1.14029 t=2003
+si hu bian cheng le 	似乎變成了	c=1 d=0.960789 t=2003
+si hu guo jia an quan 	似乎國家安全	c=1 d=0.955997 t=2003
+si liu ji 	四六級	c=2 d=0.612626 t=2003
+si lu 	思路	c=1 d=0.207008 t=2003
+si xiang 	思想	c=2 d=1.26769 t=2003
+si yao 	私鑰	c=2 d=1.47432 t=2003
+si yuan 	思源	c=2 d=0.0963902 t=2003
+si zheng ke 	思政課	c=2 d=1.51916 t=2003
+song ti 	宋體	c=1 d=0.704688 t=2003
+su du 	速度	c=0 d=0.083527 t=2003
+su duo 	素多	c=2 d=0.657047 t=2003
+su she 	宿舍	c=0 d=0.0932394 t=2003
+su she an quan 	宿舍安全	c=1 d=0.937067 t=2003
+suan fa 	算法	c=4 d=2.13779 t=2003
+sui shuo 	雖說	c=2 d=1.04188 t=2003
+sun shi 	損失	c=3 d=2.74821 t=879
+sun you 	損友	c=1 d=0.524663 t=2003
+suo 	所	c=1 d=0.0965605 t=2003
+suo jin 	縮進	c=3 d=2.1161 t=2003
+suo shu 	所述	c=1 d=0.794534 t=2003
+suo yi 	所以	c=0 d=0.0251579 t=2003
+suo yi bu pa 	所以不怕	c=1 d=0.25284 t=2003
+suo yin 	索引	c=2 d=1.9802 t=891
+suo you 	所有	c=0 d=0.0119746 t=2003
+suo you an quan 	所有安全	c=2 d=0.0380321 t=2003
+suo you de 	所有的	c=1 d=0.0342181 t=2003
+suo you zhe xie yin su dang zhong 	所有這些因素當中	c=1 d=0.0340475 t=2003
+ta 	它	c=3 d=0.574072 t=2003
+ta de 	他的	c=0 d=0.00238732 t=2003
+ta guan hu dao 	它關乎到	c=1 d=0.0184997 t=2003
+ta ying gai 	它應該	c=1 d=0.57695 t=2003
+tai di 	太低	c=1 d=0.631284 t=2003
+tai le 	泰勒	c=1 d=1.05591 t=2003
+tai le zhan kai 	泰勒展開	c=1 d=0.955997 t=2003
+tan qi 	談起	c=0 d=0.00199405 t=2003
+tao can 	套餐	c=3 d=0.965769 t=2003
+tao hua 	桃花	c=1 d=0.763379 t=2003
+te bie 	特別	c=0 d=0.0053397 t=2003
+te bie hao chi 	特別好吃	c=1 d=0.0536647 t=2003
+te shu 	特殊	c=0 d=0.0790571 t=2003
+te shu pei zhi 	特殊配置	c=1 d=0.794534 t=2003
+te zheng 	特徵	c=1 d=0.806541 t=2003
+te zheng zhi 	特徵值	c=2 d=1.38057 t=2003
+teng xun 	騰訊	c=1 d=0.710975 t=2003
+teng xun yun 	騰訊雲	c=4 d=2.84041 t=2003
+ti 	題	c=1 d=0.946485 t=2003
+ti 	體	c=2 d=0.0706989 t=2003
+ti chu 	提出	c=1 d=0.662765 t=2003
+ti chu le 	提出了	c=3 d=2.83228 t=2003
+ti qian 	提前	c=0 d=0.00587185 t=2003
+ti qian huan kuan 	提前還款	c=1 d=0.0590129 t=2003
+ti qu 	提取	c=2 d=1.13844 t=2003
+ti shi 	提示	c=0 d=0.00884781 t=2003
+ti zi 	提子	c=1 d=0.053397 t=2003
+tian jia 	添加	c=4 d=3.46369 t=877
+tian jin 	天津	c=1 d=0.19398 t=2003
+tian jin shi 	天津市	c=1 d=0.600496 t=2003
+tian qi 	天氣	c=3 d=2.03895 t=2003
+tiao jian 	條件	c=1 d=0.895834 t=2003
+tong bu 	同步	c=2 d=0.970446 t=2003
+tong dao 	通道	c=2 d=1.99501 t=817
+tong xin 	通信	c=2 d=0.415922 t=2003
+tong yi xing 	同一性	c=1 d=0.0372538 t=2003
+tong yong 	通用	c=1 d=0.771052 t=2003
+tong zhi 	同志	c=2 d=1.38704 t=2003
+tou xiang 	頭像	c=3 d=0.752014 t=2003
+tu 	凸	c=1 d=0.822835 t=2003
+tu 	圖	c=0 d=0.0207008 t=2003
+tu biao 	圖標	c=1 d=0.657047 t=2003
+tu ceng 	圖層	c=1 d=1 t=838
+tu chuang 	圖牀	c=2 d=1.35754 t=2003
+tu chuang 	禿瘡	c=1 d=0.67032 t=2003
+tu fa 	突發	c=2 d=0.413953 t=2003
+tu pian 	圖片	c=1 d=0.496585 t=2003
+tu xiang 	圖像	c=1 d=0.644036 t=2003
+tui chu 	退出	c=1 d=0.818731 t=2003
+tui jian 	推薦	c=1 d=0.0231676 t=2003
+tui liu 	推流	c=1 d=0.442639 t=2003
+wa ao 	凹凹	c=0 d=0.065377 t=2003
+wai jian 	外鍵	c=3 d=1.02232 t=2003
+wai ke 	外科	c=1 d=0.865022 t=2003
+wan 	萬	c=0 d=0.0740818 t=2003
+wan de 	玩的	c=1 d=0.120032 t=2003
+wan hui 	玩會	c=1 d=0.106459 t=2003
+wang 	王	c=2 d=0.50409 t=2003
+wang 	網	c=1 d=0.122456 t=2003
+wang chan 	王產	c=1 d=0.621885 t=2003
+wang jia 	王家	c=0 d=0.0609571 t=2003
+wang jia lou 	王家樓	c=1 d=0.612626 t=2003
+wang luo 	網絡	c=6 d=3.42017 t=2003
+wang luo mo xing 	網絡模型	c=1 d=0.628135 t=2003
+wang luo pa 	網絡怕	c=1 d=0.213312 t=2003
+wang pan 	網盤	c=2 d=1.39264 t=2003
+wang shi 	往事	c=1 d=0.472367 t=2003
+wang su 	網速	c=0 d=0.00544757 t=2003
+wang su ce shi 	網速測試	c=1 d=0.0547488 t=2003
+wang xue 	王血	c=1 d=0.318224 t=2003
+wang yi 	網易	c=0 d=0.0348192 t=2003
+wang yi yun 	網易雲	c=1 d=0.349938 t=2003
+wang zhan 	網站	c=4 d=1.48668 t=2003
+wei 	未	c=1 d=0.216536 t=2003
+wei 	爲	c=2 d=0.607429 t=2003
+wei du 	維度	c=2 d=1.55156 t=937
+wei ji 	維基	c=2 d=1.47403 t=2003
+wei ji bai ke 	維基百科	c=2 d=0.976018 t=2003
+wei le 	爲了	c=2 d=1.15963 t=2003
+wei le ji fen 	爲了積分	c=1 d=0.404542 t=2003
+wei shen me 	爲什麼	c=2 d=0.982766 t=2003
+wei shen me shuo 	爲什麼說	c=2 d=0.873716 t=2003
+wei xin 	微信	c=2 d=0.35055 t=2003
+wei xin shang 	微信上	c=1 d=0.311923 t=2003
+wei xing 	衛星	c=0 d=0.00203434 t=2003
+wei xing zhou 	衛星軸	c=2 d=0.077144 t=2003
+wei yu chou mou 	未雨綢繆	c=1 d=0.677057 t=2003
+wen dang 	文檔	c=5 d=0.653675 t=2003
+wen ding 	穩定	c=1 d=0.970446 t=2003
+wen jian 	文件	c=9 d=3.17336 t=2003
+wen jian jia 	文件夾	c=3 d=1.22181 t=2003
+wen ti 	問題	c=2 d=0.852087 t=2003
+wen ti gao bu dong 	問題搞不懂	c=1 d=1 t=758
+wen zi 	文字	c=2 d=0.721002 t=2003
+wo 	我	c=8 d=4.21684 t=2003
+wo cai gan kan 	我才幹看	c=1 d=0.238115 t=2003
+wo cao 	臥糙	c=1 d=0.852144 t=2003
+wo cheng ren 	我承認	c=2 d=0.500705 t=2003
+wo da ge zou le 	我大哥走了	c=1 d=0.637628 t=2003
+wo de 	我的	c=4 d=1.14578 t=2003
+wo gen ni zou 	我跟你走	c=1 d=0.594521 t=2003
+wo gou mai 	我購買	c=1 d=0.29671 t=2003
+wo guo 	我國	c=1 d=0.0860708 t=2003
+wo guo she hui de 	我國社會的	c=1 d=0.865022 t=2003
+wo jiu 	我就	c=1 d=0.351692 t=2003
+wo kan dao 	我看到	c=1 d=0.337902 t=2003
+wo kan le 	我看了	c=1 d=1 t=740
+wo men 	我們	c=1 d=0.2854 t=2003
+wo men de 	我們的	c=0 d=0.099005 t=2003
+wo men ke yi kan chu 	我們可以看出	c=1 d=0.0212797 t=2003
+wo men sheng huo zai 	我們生活在	c=1 d=0.937067 t=2003
+wo rang 	我讓	c=1 d=0.621885 t=2003
+wo shi 	我是	c=3 d=0.715394 t=2003
+wo shi wei le 	我是爲了	c=2 d=0.503215 t=2003
+wo tong yi 	我同意	c=1 d=0.687289 t=2003
+wo xiang 	我想	c=1 d=0.677057 t=2003
+wo yao 	我要	c=1 d=0.666977 t=2003
+wo ye 	我也	c=1 d=0.398519 t=2003
+wo yi ban 	我一般	c=1 d=0.895834 t=2003
+wo yi jing 	我已經	c=1 d=0.869358 t=2003
+wo ying gai 	我應該	c=1 d=1 t=776
+wo you 	我有	c=0 d=0.0018968 t=2003
+wo you an quan 	我有安全	c=1 d=0.0190631 t=2003
+wo you yi ge 	我又一個	c=1 d=1 t=757
+wo zai 	我在	c=1 d=0.218712 t=2003
+wo zhe shi 	我這是	c=1 d=0.244143 t=2003
+wu 	無	c=0 d=0.0546074 t=2003
+wu bi 	五筆	c=16 d=8.10376 t=2003
+wu bi lian xi 	五筆練習	c=1 d=0.625002 t=2003
+wu chi 	無恥	c=1 d=1 t=730
+wu cong 	無從	c=0 d=0.00199405 t=2003
+wu cong tan qi 	無從談起	c=1 d=0.0200405 t=2003
+wu dai 	五代	c=1 d=0.847894 t=2003
+wu fa 	無法	c=5 d=2.1851 t=2003
+wu fa xian shi 	無法顯示	c=2 d=0.718924 t=2003
+wu gan ren zheng 	無感認證	c=1 d=0.548812 t=2003
+wu wu wu 	嗚嗚嗚	c=0 d=0.065377 t=2003
+xi bao 	細胞	c=0 d=0.0125011 t=2003
+xi jin ping 	習近平	c=1 d=0.810584 t=2003
+xi le 	洗了	c=0 d=0.00934807 t=2003
+xi le ge 	洗了個	c=1 d=0.0939493 t=2003
+xi lie 	系列	c=1 d=0.782705 t=2003
+xi tong 	系統	c=9 d=4.03119 t=2003
+xi tong zi ti 	系統字體	c=1 d=0.873716 t=2003
+xi wang 	希望	c=1 d=0.680451 t=2003
+xi xi xi 	嘻嘻嘻	c=1 d=0.251579 t=2003
+xi xi xiang guan 	息息相關	c=1 d=1 t=2003
+xi zao 	洗澡	c=1 d=0.574072 t=2003
+xia 	下	c=2 d=0.759572 t=2003
+xia 	俠	c=1 d=0.985112 t=2003
+xia ci 	下次	c=0 d=0.0582748 t=2003
+xia ci xia ci 	下次下次	c=2 d=1.17427 t=2003
+xia yi ge 	下一個	c=1 d=0.909373 t=2003
+xia zai 	下載	c=33 d=8.87759 t=2003
+xian 	先	c=2 d=0.825051 t=2003
+xian 	線	c=2 d=1.25213 t=2003
+xian cheng de 	現成的	c=1 d=0.423162 t=2003
+xian jin 	先進	c=1 d=0.657047 t=2003
+xian ka 	顯卡	c=2 d=1.33283 t=2003
+xian mu 	羨慕	c=0 d=0.0806541 t=2003
+xian mu le 	羨慕了	c=1 d=0.810584 t=2003
+xian shi 	顯示	c=3 d=1.15616 t=2003
+xian xing dai shu 	線性代數	c=1 d=0.995012 t=2003
+xian xing fang cheng zu 	線性方程組	c=1 d=0.451581 t=2003
+xian zai 	現在	c=1 d=0.373439 t=2003
+xian zhuan gei ni 	先轉給你	c=1 d=0.722527 t=2003
+xian zou 	先走	c=1 d=0.628135 t=2003
+xiang 	向	c=3 d=1.30266 t=2003
+xiang 	相	c=1 d=1 t=824
+xiang gang 	香港	c=2 d=1.60357 t=2003
+xiang guan 	相關	c=1 d=0.562705 t=2003
+xiang hu 	相互	c=1 d=0.0366992 t=2003
+xiang mu 	項目	c=1 d=0.0261214 t=2003
+xiang ni 	想你	c=0 d=0.097531 t=2003
+xiang ni la 	想你啦	c=1 d=0.980199 t=2003
+xiang ri kui 	向日葵	c=1 d=0.506617 t=2003
+xiang si 	相似	c=1 d=0.884034 t=2003
+xiang si ju zhen 	相似矩陣	c=2 d=1.35196 t=2003
+xiang su 	像素	c=1 d=0.591555 t=2003
+xiang ying 	相應	c=1 d=0.941765 t=2003
+xiao 	小	c=2 d=1.37774 t=2003
+xiao 	曉	c=1 d=0.431711 t=2003
+xiao du 	消毒	c=0 d=0.0960789 t=2003
+xiao guo 	效果	c=1 d=0.474734 t=2003
+xiao hui 	校徽	c=1 d=0.0699482 t=2003
+xiao jian 	小間	c=1 d=0.0780817 t=2003
+xiao jie jie 	小姊姊	c=1 d=0.0753961 t=2003
+xiao mei mei 	小妹妹	c=1 d=0.075774 t=2003
+xiao qiao 	小翹	c=2 d=0.0784778 t=2003
+xiao yuan wang 	校園網	c=3 d=1.62477 t=2003
+xiao zu 	小組	c=1 d=0.149569 t=2003
+xie xie 	謝謝	c=2 d=0.880725 t=2003
+xie zai 	卸載	c=1 d=1 t=717
+xin 	心	c=1 d=0.802519 t=2003
+xin hao 	信號	c=1 d=0.211189 t=2003
+xin shi dai 	新時代	c=2 d=0.814647 t=2003
+xin xi 	信息	c=2 d=1.20392 t=2003
+xin xin 	信心	c=1 d=0.242926 t=2003
+xin xin xiang rong 	欣欣向榮	c=3 d=0.3143 t=2003
+xin zao 	信噪	c=0 d=0.0189191 t=2003
+xing 	性	c=1 d=0.798516 t=2003
+xing bu 	行不	c=1 d=0.71177 t=2003
+xing ming 	姓名	c=1 d=0.0672055 t=2003
+xing wei 	行爲	c=1 d=0.83527 t=2003
+xing zhi 	性質	c=1 d=0.0416763 t=2003
+xiu gai 	修改	c=2 d=1.00513 t=2003
+xu lie 	序列	c=1 d=1 t=929
+xu yao 	需要	c=1 d=0.824534 t=2003
+xuan ci 	選詞	c=0 d=0.020089 t=2003
+xuan xiang 	選項	c=1 d=0.650509 t=2003
+xuan ze 	選擇	c=0 d=0.0603506 t=2003
+xuan ze pai xu 	選擇排序	c=1 d=0.606531 t=2003
+xuan zhong 	選中	c=1 d=0.722527 t=2003
+xue 	學	c=1 d=0.188247 t=2003
+xue hao 	學號	c=1 d=0.0735345 t=2003
+xue rong 	血融	c=1 d=0.941765 t=2003
+xue shu 	學術	c=5 d=1.65123 t=2003
+xue shu fang fa lun 	學術方法論	c=1 d=0.548812 t=2003
+xue xi 	學習	c=6 d=1.50525 t=2003
+xue xi de 	學習的	c=1 d=0.474734 t=2003
+xue xi shang 	學習上	c=1 d=0.647265 t=2003
+xue yuan 	學院	c=3 d=0.839242 t=2003
+xue zhong 	雪中	c=1 d=0.431711 t=2003
+xun lian 	訓練	c=3 d=2.23692 t=2003
+xun lian shu ju 	訓練數據	c=1 d=1 t=806
+xun zhang 	勳章	c=2 d=1.89299 t=2003
+ya 	呀	c=2 d=0.984599 t=2003
+yan bu 	眼部	c=1 d=0.0620385 t=2003
+yan jiu 	研究	c=3 d=0.702427 t=2003
+yan jiu fang xiang 	研究方向	c=1 d=0.519442 t=2003
+yan jiu sheng 	研究生	c=3 d=0.644505 t=2003
+yan se 	顏色	c=0 d=0.00816756 t=2003
+yan se mo shi 	顏色模式	c=1 d=0.082085 t=2003
+yan shan 	燕山	c=1 d=1.03833 t=2003
+yan shan da xue 	燕山大學	c=1 d=0.923116 t=2003
+yan tai 	煙臺	c=9 d=3.60185 t=2003
+yan tai ping guo 	煙臺蘋果	c=1 d=0.798516 t=2003
+yan tai shi 	煙臺市	c=4 d=1.52188 t=2003
+yang 	洋	c=1 d=0.767206 t=2003
+yang ben 	樣本	c=1 d=1 t=796
+yang cong 	洋蔥	c=1 d=0.755784 t=2003
+yang zi 	樣子	c=0 d=0.0615697 t=2003
+yao 	要	c=2 d=0.831517 t=2003
+yao you 	要有	c=1 d=0.249075 t=2003
+yao yuan 	遙遠	c=0 d=0.0955997 t=2003
+ye 	也	c=1 d=1 t=742
+yi 	一	c=0 d=0.0102797 t=2003
+yi 	已	c=1 d=1 t=875
+yi ban 	一般	c=0 d=0.0891366 t=2003
+yi ci 	一次	c=0 d=0.0355226 t=2003
+yi dong 	移動	c=2 d=0.0551974 t=2003
+yi ge 	一個	c=3 d=1.8437 t=2003
+yi ge guo jia 	一個國家	c=2 d=0.0479912 t=2003
+yi ge guo jia de 	一個國家的	c=2 d=0.043096 t=2003
+yi hui er 	一會兒	c=1 d=0.618783 t=2003
+yi jing 	已經	c=0 d=0.0865022 t=2003
+yi lai 	依賴	c=1 d=0.946485 t=2003
+yi miao 	疫苗	c=1 d=0.826959 t=2003
+yi qi qu 	一起去	c=1 d=0.571209 t=2003
+yi qie 	一切	c=0 d=0.00437178 t=2003
+yi shang 	以上	c=0 d=0.0839457 t=2003
+yi si 	意思	c=1 d=0.256661 t=2003
+yi si bu gou 	一絲不苟	c=1 d=0.66365 t=2003
+yi tong 	異同	c=1 d=0.463013 t=2003
+yi xia 	一下	c=1 d=0.222017 t=2003
+yi xia 	以下	c=2 d=1.45556 t=2003
+yi xie 	一些	c=1 d=0.853254 t=2003
+yi yi 	意義	c=2 d=1.08031 t=2003
+yi zhi 	一直	c=1 d=1 t=743
+yi zhi 	移至	c=2 d=1.82335 t=2003
+yin ci 	因此	c=1 d=0.239309 t=2003
+yin hao 	引號	c=4 d=2.81111 t=2003
+yin su 	因素	c=1 d=0.0428529 t=2003
+yin wei 	因爲	c=1 d=0.336216 t=2003
+yin yue 	音樂	c=4 d=1.47057 t=2003
+ying 	贏	c=0 d=0.0351692 t=2003
+ying gai 	應該	c=0 d=0.0574072 t=2003
+ying he 	硬核	c=1 d=0.640824 t=2003
+ying hua 	櫻花	c=1 d=0.748264 t=2003
+ying she 	映射	c=1 d=0.416862 t=2003
+ying wen 	英文	c=2 d=1.51446 t=2003
+ying wen ci dian 	英文詞典	c=1 d=0.810584 t=2003
+ying xiang 	影響	c=2 d=0.0669188 t=2003
+ying xiang dao 	影響到	c=0 d=0.00219278 t=2003
+ying xiang dao wo men de 	影響到我們的	c=1 d=0.0220377 t=2003
+ying yong 	應用	c=1 d=0.701173 t=2003
+ying yu 	英語	c=2 d=1.21725 t=2003
+yong 	用	c=3 d=1.96907 t=2003
+yong hu ming 	用戶名	c=1 d=0.499074 t=2003
+yong jiu 	永久	c=1 d=0.339241 t=2003
+yong jiu bao cun 	永久保存	c=2 d=0.673624 t=2003
+yong yu 	用於	c=2 d=1.09507 t=2003
+you 	又	c=1 d=0.12493 t=2003
+you 	有	c=6 d=1.8285 t=2003
+you 	由	c=1 d=0.024972 t=2003
+you 	酉	c=2 d=1.9361 t=2003
+you bang zhu 	有幫助	c=1 d=0.737123 t=2003
+you biao 	遊標	c=2 d=0.815176 t=2003
+you dao 	有道	c=1 d=0.937067 t=2003
+you de 	有的	c=1 d=0.70822 t=2003
+you le 	有了	c=1 d=0.440432 t=2003
+you liang 	優良	c=0 d=0.0634448 t=2003
+you mei you ren 	有沒有人	c=1 d=0.10435 t=2003
+you qian 	有錢	c=0 d=0.0798516 t=2003
+you xi 	遊戲	c=2 d=1.51922 t=2003
+you xiang 	郵箱	c=2 d=1.56992 t=2003
+you yi 	有一	c=0 d=0.00383884 t=2003
+you yi ge 	又一個	c=1 d=1.1 t=756
+you yi ge mao dun 	有一個矛盾	c=1 d=0.0385808 t=2003
+you zheng 	郵政	c=1 d=0.501576 t=2003
+yu 	於	c=3 d=1.4213 t=2003
+yu 	玉	c=1 d=0.339596 t=2003
+yu 	與	c=6 d=1.41667 t=2003
+yu bei dang yuan 	預備黨員	c=1 d=0.67032 t=2003
+yu ce 	預測	c=3 d=2.82497 t=928
+yu ce zhi 	預測值	c=2 d=1.99005 t=888
+yu ce zhi 	預測只	c=1 d=1 t=885
+yu dao 	遇到	c=0 d=0.1 t=745
+yu fa 	語法	c=1 d=0.926774 t=2003
+yu fa ge shi 	語法格式	c=1 d=0.83527 t=2003
+yu fu yang 	於福洋	c=13 d=3.8848 t=2003
+yu hui 	與會	c=1 d=0.677057 t=2003
+yu ju 	語句	c=1 d=0.29523 t=2003
+yu lun 	輿論	c=1 d=0.806541 t=2003
+yu ming 	域名	c=4 d=2.75315 t=2003
+yu wo men de sheng huo 	與我們的生活	c=1 d=0.995012 t=2003
+yu yi 	語義	c=1 d=0.257947 t=2003
+yuan 	元	c=1 d=0.33454 t=2003
+yuan 	源	c=0 d=0.083527 t=2003
+yuan cheng 	遠程	c=3 d=1.44522 t=2003
+yuan cheng lian jie 	遠程鏈接	c=1 d=0.729789 t=2003
+yuan dai ma 	源代碼	c=1 d=0.878095 t=2003
+yuan lai de 	原來的	c=1 d=0.759572 t=2003
+yuan yi 	願意	c=0 d=0.00958472 t=2003
+yuan zu 	元祖	c=1 d=0.660545 t=2003
+yue 	月	c=3 d=0.688873 t=2003
+yue deng yu 	約等於	c=1 d=0.900325 t=2003
+yue du 	閱讀	c=1 d=0.565525 t=2003
+yue du quan wen 	閱讀全文	c=1 d=0.127454 t=2003
+yue shu 	約束	c=3 d=1.02442 t=2003
+yun 	雲	c=2 d=1.17608 t=2003
+yun dong 	運動	c=0 d=0.0831104 t=2003
+yun suan 	運算	c=0 d=0.0588605 t=2003
+yun xing 	運行	c=1 d=0.286505 t=2003
+zai 	在	c=4 d=1.84815 t=2003
+zai du 	在讀	c=2 d=0.253864 t=2003
+zai guo jia 	在國家	c=1 d=0.0407622 t=2003
+zai suo you 	在所有	c=1 d=0.0370075 t=2003
+zai suo you de 	在所有的	c=1 d=0.0381969 t=2003
+zai xian 	在線	c=2 d=0.790571 t=2003
+zai yu 	在於	c=1 d=1 t=755
+zao 	澡	c=1 d=0.0944202 t=2003
+zen me 	怎麼	c=2 d=0.930455 t=2003
+zen me xie 	怎麼寫	c=1 d=0.927743 t=2003
+zen me yang 	怎麼樣	c=1 d=0.120633 t=2003
+zen me yong 	怎麼用	c=1 d=0.878095 t=2003
+zhai yao 	摘要	c=5 d=1.70067 t=2003
+zhan 	佔	c=1 d=0.726149 t=2003
+zhan kai 	展開	c=0 d=0.0951229 t=2003
+zhan ping 	展平	c=2 d=1.59156 t=939
+zhan shi 	展示	c=1 d=0.404542 t=2003
+zhang 	長	c=2 d=0.194922 t=2003
+zhang hao 	帳號	c=1 d=0.836359 t=2003
+zhang hu 	賬戶	c=1 d=0.811577 t=2003
+zhang hu zhi hou 	賬戶之後	c=1 d=0.748264 t=2003
+zhang shang 	掌上	c=0 d=0.0802519 t=2003
+zhang shang bai ke 	掌上百科	c=2 d=1.65021 t=2003
+zhe 	着	c=1 d=0.0347434 t=2003
+zhe 	這	c=2 d=1.27892 t=2003
+zhe ge 	這個	c=5 d=1.81914 t=2003
+zhe ge yue 	這個月	c=1 d=0.71177 t=2003
+zhe ge zhang hao 	這個帳號	c=1 d=0.733447 t=2003
+zhe jiu shi 	這就是	c=2 d=0.834411 t=2003
+zhe shi 	這是	c=0 d=0.0242926 t=2003
+zhe shi wo 	這是我	c=0 d=0.0108067 t=2003
+zhe shi wo de 	這是我的	c=1 d=0.108609 t=2003
+zhe xie 	這些	c=0 d=0.00696265 t=2003
+zhe xie mao dun dang zhong 	這些矛盾當中	c=1 d=0.0383884 t=2003
+zhe xie yin su 	這些因素	c=2 d=0.0693646 t=2003
+zhe yang 	這樣	c=1 d=0.70822 t=2003
+zhe yang zi 	這樣子	c=0 d=0.0509156 t=2003
+zhe yang zi le 	這樣子了	c=1 d=0.511709 t=2003
+zhen 	鎮	c=0 d=0.0606531 t=2003
+zheng ce 	政策	c=1 d=0.0322254 t=2003
+zheng ge 	整個	c=0 d=0.00308074 t=2003
+zheng ge guo jia de 	整個國家的	c=1 d=0.0309618 t=2003
+zheng que 	正確	c=0 d=0.00417941 t=2003
+zheng que kan dai 	正確看待	c=1 d=0.0420036 t=2003
+zheng que lv 	正確率	c=2 d=1.99005 t=933
+zheng que ren shi 	正確認識	c=1 d=0.944653 t=2003
+zheng shi 	正式	c=1 d=0.694197 t=2003
+zheng ti 	整體	c=1 d=1 t=941
+zheng xing 	整形	c=2 d=1.75185 t=2003
+zheng ze 	正則	c=1 d=0.965605 t=2003
+zheng zhi 	政治	c=5 d=0.839386 t=2003
+zheng zhi an quan 	政治安全	c=5 d=1.78294 t=2003
+zheng zhi ju shi 	政治局勢	c=1 d=0.0247235 t=2003
+zhi 	之	c=2 d=1.37908 t=925
+zhi 	值	c=1 d=1.08146 t=926
+zhi 	只	c=3 d=2.13463 t=884
+zhi 	製	c=1 d=0.778801 t=2003
+zhi biao 	製表	c=0 d=0.0995012 t=2003
+zhi biao fu 	製表符	c=1 d=1 t=2003
+zhi ding 	制定	c=1 d=0.904837 t=2003
+zhi fu bao 	支付寶	c=1 d=0.822835 t=2003
+zhi guan zhong yao 	至關重要	c=0 d=0.0447088 t=2003
+zhi guan zhong yao de 	至關重要的	c=1 d=0.449329 t=2003
+zhi hou 	之後	c=2 d=0.680394 t=2003
+zhi hu 	知乎	c=1 d=0.045502 t=2003
+zhi jian 	之間	c=1 d=0.0359725 t=2003
+zhi jiao 	直角	c=1 d=1.00578 t=2003
+zhi jiao yin hao 	直角引號	c=1 d=0.923116 t=2003
+zhi jie 	志傑	c=1 d=0.625002 t=2003
+zhi jin 	至今	c=2 d=0.248944 t=2003
+zhi nan 	指南	c=4 d=0.759572 t=2003
+zhi qian de 	之前的	c=1 d=0.344728 t=2003
+zhi shi 	只是	c=0 d=0.0970446 t=2003
+zhi shi yi xie 	只是一些	c=1 d=0.97531 t=2003
+zhi wang 	知網	c=3 d=0.68837 t=2003
+zhi yue 	制約	c=1 d=0.036334 t=2003
+zhi zai 	只在	c=1 d=0.900325 t=2003
+zhi zuo 	製作	c=0 d=0.0860708 t=2003
+zhong 	中	c=3 d=1.26857 t=2003
+zhong de 	中的	c=0 d=0.0222017 t=2003
+zhong duan 	終端	c=1 d=0.0318999 t=2003
+zhong duan ti shi 	終端提示	c=1 d=0.0889216 t=2003
+zhong guo 	中國	c=2 d=1.57744 t=2003
+zhong guo gong chan dang 	中國共產黨	c=1 d=0.701173 t=2003
+zhong guo jue bu zou 	中國絕不走	c=1 d=0.0443785 t=2003
+zhong guo ren 	中國人	c=1 d=0.680451 t=2003
+zhong guo te se 	中國特色	c=1 d=0.0426384 t=2003
+zhong guo te se she hui zhu yi 	中國特色社會主義	c=1 d=0.818731 t=2003
+zhong hua shu ju 	中華書局	c=2 d=0.126901 t=2003
+zhong wen 	中文	c=5 d=2.0933 t=2003
+zhong wen jiao cheng 	中文教程	c=1 d=0.261846 t=2003
+zhong xin 	中心	c=1 d=0.421052 t=2003
+zhong xue sheng 	中學生	c=4 d=0.125117 t=2003
+zhong zhong zhi zhong 	重中之重	c=1 d=0.0195457 t=2003
+zhou 	舟	c=1 d=0.934419 t=2003
+zhou 	軸	c=0 d=0.00203434 t=2003
+zhou jie lun 	周杰倫	c=3 d=0.192552 t=2003
+zhu ce 	註冊	c=1 d=0.767206 t=2003
+zhu ce le yi ge 	註冊了一個	c=1 d=0.771052 t=2003
+zhu duo 	諸多	c=1 d=0.0401006 t=2003
+zhu duo de 	諸多的	c=1 d=0.0347353 t=2003
+zhu duo yin su 	諸多因素	c=1 d=0.0328764 t=2003
+zhu ji ming 	主機名	c=1 d=0.514274 t=2003
+zhu nian 	逐年	c=0 d=0.0822835 t=2003
+zhu nian shang sheng 	逐年上升	c=1 d=0.826959 t=2003
+zhu yao 	主要	c=0 d=0.00389686 t=2003
+zhu yao de 	主要的	c=1 d=0.0391639 t=2003
+zhu yao mao dun 	主要矛盾	c=4 d=1.7215 t=2003
+zhu yi dao 	注意到	c=0 d=0.0965605 t=2003
+zhu zi 	主子	c=0 d=0.097531 t=2003
+zhu zi 	竹子	c=0 d=0.0970446 t=2003
+zhua 	抓	c=1 d=0.666977 t=2003
+zhua zhu 	抓住	c=0 d=0.00815338 t=2003
+zhua zhu zhu yao mao dun 	抓住主要矛盾	c=1 d=0.0415857 t=2003
+zhuan 	轉	c=1 d=0.690734 t=2003
+zhuan gei ni 	轉給你	c=1 d=0.790816 t=2003
+zhuan guo qu 	轉過去	c=0 d=0.0778801 t=2003
+zhuan guo qu le 	轉過去了	c=1 d=0.782705 t=2003
+zhuan hua 	轉化	c=1 d=0.774916 t=2003
+zhuan huan 	轉換	c=1 d=0.271173 t=2003
+zhuan ye 	專業	c=2 d=0.182631 t=2003
+zhuan zhang 	轉賬	c=1 d=0.865022 t=2003
+zhuang kuang 	狀況	c=1 d=0.0303487 t=2003
+zhui 	錐	c=0 d=0.00623495 t=2003
+zhun kao zheng 	准考證	c=1 d=0.0510474 t=2003
+zhuo zhu 	捉住	c=0 d=0.00397558 t=2003
+zhuo zhu le 	捉住了	c=1 d=0.0399551 t=2003
+zi dian 	字典	c=1 d=0.803458 t=2003
+zi dong 	自動	c=2 d=0.977893 t=2003
+zi dong bu quan 	自動補全	c=1 d=0.433874 t=2003
+zi dong jia shi 	自動駕駛	c=3 d=1.78476 t=2003
+zi dong yun xing 	自動運行	c=1 d=0.197899 t=2003
+zi gen 	字根	c=1 d=0.951229 t=2003
+zi ji 	自己	c=2 d=0.919495 t=2003
+zi ji de 	自己的	c=1 d=0.755784 t=2003
+zi mu 	字幕	c=1 d=0.932394 t=2003
+zi mu 	字母	c=1 d=0.923116 t=2003
+zi qi qi ren 	自欺欺人	c=1 d=0.12307 t=2003
+zi ran huan jing 	自然環境	c=1 d=0.0325493 t=2003
+zi ran ke xue 	自然科學	c=4 d=1.95978 t=2003
+zi ti 	字體	c=10 d=5.90293 t=2003
+zi ti xia zai 	字體下載	c=1 d=0.860708 t=2003
+zong liang 	總量	c=1 d=0.748264 t=2003
+zong shang 	綜上	c=1 d=0.790571 t=2003
+zong shu 	綜述	c=4 d=0.526206 t=2003
+zou 	走	c=2 d=1.28171 t=2003
+zou le 	走了	c=0 d=0.0634448 t=2003
+zou shen 	揍甚	c=1 d=0.344728 t=2003
+zu he 	組合	c=0 d=0.025924 t=2003
+zu he jian 	組合鍵	c=1 d=0.26054 t=2003
+zu yong 	租用	c=1 d=0.70822 t=2003
+zui 	最	c=1 d=0.0389686 t=2003
+zui jia 	最佳	c=1 d=0.522046 t=2003
+zui xiao 	最小	c=2 d=0.897939 t=2003
+zui xiao er cheng 	最小二乘	c=1 d=0.514274 t=2003
+zuo 	做	c=1 d=0.687289 t=2003
+zuo biao 	坐標	c=4 d=2.1091 t=2003
+zuo feng 	作風	c=0 d=0.0634448 t=2003
+zuo feng you liang 	作風優良	c=1 d=0.637628 t=2003
+zuo tian 	昨天	c=1 d=0.321422 t=2003
+zuo ye 	作業	c=1 d=0.767206 t=2003
+zuo yong 	作用	c=2 d=0.182807 t=2003

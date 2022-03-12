@@ -1,9 +1,0 @@
-var:
-  last_build_time: 1643406787
-  option:
-    simplification: true
-  previously_selected_schema: double_pinyin
-  schema_access_time:
-    double_pinyin: 1643728530
-    luna_pinyin: 1643716439
-    wubi_pinyin: 1643718252

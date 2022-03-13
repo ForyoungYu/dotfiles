@@ -1,12 +1,10 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export GOPATH=$HOME/go
-export GOROOT=/usr/lib64/go
-export PATH=/usr/local/bin:$PATH
+export GOROOT=/usr/lib/golang
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$HOME/anaconda3/bin:$PATH
-export PATH=$HOME/.cargo/env:$PATH
 export TERM=xterm-256color
 export EDITOR=nvim

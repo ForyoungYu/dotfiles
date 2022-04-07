@@ -8,7 +8,7 @@ Installl Rime based-on IBUS:
 sudo dnf install ibus-rime
 ```
 
-Clone Rime-\* repositories in `$HOME/.config/ibus/rime`:
+Clone rime-\* repositories in `$HOME/.config/ibus/rime`:
 
 ```bash
 # rime-double-pinyin

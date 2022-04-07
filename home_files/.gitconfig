@@ -6,8 +6,9 @@
 [alias]
 	ci = commit
 	co = checkout
-    br = branch
-    st = status
+	br = branch
+	st = status
+	adog = log --all --decorate --oneline --graph
 [color]
 	ui = auto
 [http]

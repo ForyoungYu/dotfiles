@@ -1,0 +1,7 @@
+# Rime user dictionary
+#@/db_name	emoji
+#@/db_type	userdb
+#@/rime_version	1.7.2
+#@/tick	1
+#@/user_id	salt-linux
+laugh,happy;biao'qing 	😂	c=1 d=1 t=1

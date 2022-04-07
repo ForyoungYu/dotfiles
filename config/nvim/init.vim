@@ -130,7 +130,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
 Plug 'plasticboy/vim-markdown'
-" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 " Plug 'puremourning/vimspector'
 
 " Complete
@@ -147,6 +147,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'itchyny/lightline.vim'
 
 " Themes/Icons
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'joshdick/onedark.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tomasr/molokai'
@@ -161,12 +162,17 @@ Plug 'yianwillis/vimcdoc'
 Plug 'sbdchd/neoformat'
 
 " Other tools
+Plug 'https://github.com/lilydjwg/colorizer'
+" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'Yggdroot/indentLine'
+Plug 'ZSaberLv0/ZFVimIM'
+Plug 'ZSaberLv0/ZFVimJob' " 可选, 用于提升词库加载性能
+Plug 'voldikss/vim-floaterm'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'kevinhwang91/rnvimr'
-Plug 'kdheepak/lazygit.vim'
-Plug 'akinsho/toggleterm.nvim'
+Plug 'kdheepak/lazygit.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -346,7 +352,11 @@ let g:onedark_termcolors='256'
 let g:onedark_terminal_italics='1'
 let g:molokai_original = 1
 let g:rehash256 = 1
-" Options: snazzy, gruvbox, molokai, onehalfdark, onehalflight, onedark
+let g:lightline = {'colorscheme': 'tokyonight'}
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+" Options: snazzy, tokyonight, gruvbox, molokai, onehalfdark, onehalflight, onedark
 colorscheme gruvbox
 
 
@@ -374,10 +384,19 @@ let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_quickfix_mode = 0
 let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
-let g:vimtex_compiler_latexrun_engines={'_':'xelatex'}
 let maplocalleader = ","
 let g:tex_conceal='abdmg'
 
+
+" ===
+" === indentLine
+" ===
+let g:indentLine_enabled = 0
+let g:indentLine_setColors = 0
+let g:indentLine_char = 'c'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:markdown_syntax_conceal=0
+let g:vim_json_conceal=0
 
 " ===
 " === airline
@@ -411,13 +430,13 @@ let g:vim_markdown_math = 1
 " ===
 " === vim-instant-markdown
 " ===
-" let g:instant_markdown_slow = 0
-" let g:instant_markdown_autostart = 0
-" let g:instant_markdown_open_to_the_world = 1
-" let g:instant_markdown_allow_unsafe_content = 1
-" let g:instant_markdown_allow_external_content = 0
-" let g:instant_markdown_mathjax = 1
-" let g:instant_markdown_autoscroll = 1
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_open_to_the_world = 1
+let g:instant_markdown_allow_unsafe_content = 1
+let g:instant_markdown_allow_external_content = 0
+let g:instant_markdown_mathjax = 1
+let g:instant_markdown_autoscroll = 1
 
 
 " ===
@@ -434,18 +453,39 @@ nnoremap H :GitGutterPreviewHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
 nnoremap ]h :GitGutterNextHunk<CR>
 
+" ===
+" === vim-hexokinase
+" ===
+let g:Hexokinase_highlighters = [ 'virtual' ]
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 
 " ===
 " === neoformat
 " ===
 nnoremap <leader>f :Neoformat<CR>
 let g:shfmt_opt="-ci"
-let g:neoformat_enabled_python = ['yapf', 'autopep8', 'docformatter']
+let g:neoformat_enabled_python = ['yapf']
 let g:neoformat_python_yapf = {
         \ 'exe': 'yapf',
-        \ 'args': ["--style", "{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"]
+        \ 'args': ["--style='{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}'"]
         \ }
 
+" ===
+" === ZSVimIM
+" ===
+" function! s:myLocalDb()
+"     let db = ZFVimIM_dbInit({
+"                 \   'name' : 'YourDb',
+"                 \ })
+"     call ZFVimIM_cloudRegister({
+"                 \   'mode' : 'local',
+"                 \   'dbId' : db['dbId'],
+"                 \   'repoPath' : '~/.config/ibus/rime/', " 词库路径
+"                 \   'dbFile' : '/', " 词库文件, 相对 repoPath 的路径
+"                 \   'dbCountFile' : '/YourDbCountFile', " 非必须, 词频文件, 相对 repoPath 的路径
+"                 \ })
+" endfunction
+" autocmd User ZFVimIM_event_OnDbInit call s:myLocalDb()
 
 " ===
 " === lazygit.nvim
@@ -460,10 +500,12 @@ let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not inst
 
 
 " ===
-" === toggleterm
+" === Vim-floaterm
 " ===
-nnoremap <leader>tt :ToggleTerm<CR>
-let g:toggleterm_terminal_mapping = '<C-t>'
+let g:floaterm_keymap_new    = '<leader>tt'
+let g:floaterm_keymap_prev   = '<leader>th'
+let g:floaterm_keymap_next   = '<leader>tl'
+let g:floaterm_keymap_toggle = '<F12>'
 
 
 " ===
@@ -575,20 +617,21 @@ noremap <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 	exec "w"
 	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "!time ./%<"
+		" exec "!g++ % -o %<"
+		" exec "!time ./%<"
+    :term g++ % -o %<
 	elseif &filetype == 'cpp'
 		set splitbelow
 		exec "!g++ -std=c++11 % -Wall -o %<"
 		exec "!time ./%<"
-		" :sp
-		" :res -15
-		" :term ./%<
+    " :sp
+    " :res -15
+    " :term g++ % -o %<
 	elseif &filetype == 'python'
 		set splitbelow
-		exec "!python3 %"
-		" :sp
-		" :term python3 %
+		" exec "!python3 %"
+    :sp
+    :term python %
 	elseif &filetype == 'lua'
 		set splitbelow
 		exec "!lua %"
@@ -618,8 +661,9 @@ func! CompileRunGcc()
 	elseif &filetype == 'javascript'
 		set splitbelow
 		:sp
-		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
-	elseif &filetype == 'go'
+    " :term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+    :term node %
+  elseif &filetype == 'go'
 		set splitbelow
 		:sp
 		:term go run .

@@ -1,0 +1,25 @@
+# Rime user dictionary
+#@/db_name	cangjie5
+#@/db_type	userdb
+#@/rime_version	1.7.2
+#@/tick	12
+#@/user_id	salt-linux
+eee 	淼	c=1 d=0.985112 t=12
+kj 	夲	c=1 d=0.965605 t=12
+lkj 	數十	c=1 d=0.960789 t=12
+o 	人	c=1 d=0.970446 t=12
+oiuu 	付出	c=1 d=0.97531 t=12
+qq 	抙	c=1 d=0.980199 t=12
+rrr 	品	c=1 d=0.99005 t=12
+tttt 	井井	c=1 d=0.995012 t=12
+yy 	卞	c=1 d=1 t=12
+enceerrr 	淼品	c=0 d=0.099005 t=12
+encerttt 	淼品井井	c=0 d=0.0995012 t=12
+encertty 	淼品井井卞	c=0 d=0.1 t=12
+enckjo 	夲人	c=0 d=0.0970446 t=12
+encqertt 	抙淼品井井	c=0 d=0.0995012 t=12
+encqqeee 	抙淼	c=0 d=0.0985112 t=12
+encqqeer 	抙淼品	c=0 d=0.099005 t=12
+encrrttt 	品井井	c=0 d=0.0995012 t=12
+encrttty 	品井井卞	c=0 d=0.1 t=12
+enctttty 	井井卞	c=0 d=0.1 t=12

@@ -1,15 +1,16 @@
 var:
-  last_build_time: 1649334080
+  last_build_time: 1651737059
   option:
+    extended_charset: false
     full_shape: false
     simplification: true
-  previously_selected_schema: double_pinyin
+  previously_selected_schema: wubi_pinyin
   schema_access_time:
     bopomofo: 1647565204
     cangjie5: 1647565238
-    double_pinyin: 1649071043
+    double_pinyin: 1651717872
     double_pinyin_flypy: 1647698876
-    emoji: 1647699825
+    emoji: 1649997455
     luna_pinyin: 1649071012
     pinyin_simp: 1649071036
-    wubi_pinyin: 1648624803
+    wubi_pinyin: 1651718118

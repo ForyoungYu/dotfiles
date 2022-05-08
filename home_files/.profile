@@ -5,7 +5,6 @@ export DENO_INSTALL="/home/salt/.deno"
 export CUDA_HOME="/usr/local/cuda"
 
 export PATH="$DENO_INSTALL/bin:$PATH"
-# export PATH=$HOME/.local/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$HOME/anaconda3/bin:$PATH

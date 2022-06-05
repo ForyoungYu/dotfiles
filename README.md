@@ -1,6 +1,6 @@
 # dotfiles
 
-My Fedora config
+My Fedora config.
 
 ## Specifications
 
@@ -10,10 +10,19 @@ My Fedora config
 - SIT: [neofetch](https://github.com/dylanaraps/neofetch)
 - File Manager: [ranger](https://ranger.github.io/)
 
-## Neovim Config
+## Configurations
 
-See [here](./config/nvim/)
+Here are all of my configuration tutorials:
+
+- [Alacritty](config/alacritty/README.md)
+- [Kitty](config/kitty/README.md)
+- [NeoVim](config/nvim/README.md)
+- [Ranger](config/ranger/README.md)
+- [RIME](config/rime/README.md)
+- [ZSH](config/zsh/README.md)
 
 ## Neovim Screenshots
-
+![nvim](imgs/nvim.png)
 ## Screenshots
+![neofetch](imgs/s1.png)
+![ranger](imgs/s2.png)

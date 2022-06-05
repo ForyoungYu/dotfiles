@@ -6,6 +6,8 @@
 
 patch:  
   menu/page_size: 6
+  switcher/hotkeys:
+    - Control+F1
   schema_list:
     - schema: pinyin_simp          # 袖珍简化字拼音
     - schema: luna_pinyin          # 朙月拼音
@@ -13,9 +15,9 @@ patch:
     # - schema: luna_pinyin_tw       # 朙月拼音 臺灣正體模式
     # - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
     - schema: double_pinyin        # 自然碼雙拼
+    - schema: double_pinyin_flypy  # 小鶴雙拼
     # - schema: double_pinyin_mspy   # 微軟雙拼
     # - schema: double_pinyin_abc    # 智能 ABC 雙拼
-    - schema: double_pinyin_flypy  # 小鶴雙拼
     # - schema: wubi86               # 五笔 86
     - schema: wubi_pinyin          # 五笔拼音混合輸入
     # - schema: bopomofo             # 注音

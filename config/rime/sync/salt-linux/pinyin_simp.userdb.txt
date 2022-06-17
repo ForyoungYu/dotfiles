@@ -1,7 +1,7 @@
 # Rime user dictionary
 #@/db_name	pinyin_simp
 #@/db_type	userdb
-#@/rime_version	1.7.2
+#@/rime_version	1.7.3
 #@/tick	26
 #@/user_id	salt-linux
 a 	啊	c=1 d=0.970446 t=26

@@ -4,7 +4,7 @@
 #   ~/Library/Rime       (macos)
 #   %APPDATA%\Rime       (windows)
 
-patch:  
+patch:
   menu/page_size: 6
   switcher/hotkeys:
     - Control+F1
@@ -31,4 +31,4 @@ patch:
     # - schema: sampheng      # 中古漢語三拼
     # - schema: zyenpheng     # 中古漢語全拼
     # - schema: ipa_xsampa    # X-SAMPA 國際音標
-    # - schema: emoji         # emoji 表情
+    - schema: emoji         # emoji 表情

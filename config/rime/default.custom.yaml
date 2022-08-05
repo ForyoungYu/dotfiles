@@ -4,8 +4,11 @@
 #   ~/Library/Rime       (macos)
 #   %APPDATA%\Rime       (windows)
 
-patch:  
+patch:
   menu/page_size: 6
+  switcher/hotkeys:
+    - Control+F1
+    - F4
   schema_list:
     - schema: pinyin_simp          # 袖珍简化字拼音
     - schema: luna_pinyin          # 朙月拼音

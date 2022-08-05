@@ -19,3 +19,5 @@ alias ll='lsd -l'
 alias l='lsd -al'
 alias pa='source activate'
 alias pd='conda deactivate'
+
+alias fzfcd='cd $(find * -type d | fzf)'

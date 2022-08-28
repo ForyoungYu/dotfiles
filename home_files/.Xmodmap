@@ -1,3 +1,0 @@
-clear lock
-keycode 66 = Escape Caps_Lock Escape
-!add lock = Caps_Lock

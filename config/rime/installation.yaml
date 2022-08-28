@@ -4,4 +4,4 @@ distribution_version: 1.5.0
 install_time: "Sun Mar 13 16:00:23 2022"
 installation_id: "salt-linux"
 rime_version: 1.7.2
-sync_dir: 'WorkSpace/dotfiles/config/rime/sync'
+sync_dir: 'workspace/dotfiles/config/rime/sync'

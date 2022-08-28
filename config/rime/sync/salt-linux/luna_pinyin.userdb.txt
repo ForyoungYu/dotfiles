@@ -1,7 +1,7 @@
 # Rime user dictionary
 #@/db_name	luna_pinyin
 #@/db_type	userdb
-#@/rime_version	1.7.2
+#@/rime_version	1.7.3
 #@/tick	7482
 #@/user_id	salt-linux
 a 	啊	c=5 d=2.59854 t=7482
@@ -9,7 +9,7 @@ a a 	啊啊	c=1 d=0.666977 t=7482
 a a a 	啊啊啊	c=1 d=0.67368 t=7482
 a a a a 	啊啊啊啊	c=0 d=0.065377 t=7482
 a li 	阿里	c=4 d=1.205 t=7482
-a li yun 	阿里雲	c=1 d=0.00504176 t=7482
+a li yun 	阿里雲	c=2 d=1.98012 t=7482
 a li yun pan 	阿里雲盤	c=1 d=0.474734 t=7482
 a wu wu wu wa ao a a a a a a a a a a a a a a a a a a a a 	啊嗚嗚嗚凹凹啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊	c=1 d=0.657047 t=7482
 ai 	愛	c=1 d=0.826959 t=7482
@@ -2848,6 +2848,7 @@ yi zhong 	一種	c=2 d=0.923116 t=7482
 yi zhong zhi ye 	一種職業	c=1 d=0.017163 t=7482
 yin ce 	隱惻	c=1 d=0.0266491 t=7482
 yin ci 	因此	c=2 d=0.239309 t=7482
+yin dao 	引導	c=1 d=5.71987e-17 t=7482
 yin hao 	引號	c=4 d=2.81111 t=7482
 yin qing 	引擎	c=1 d=0.247833 t=7482
 yin ru 	引入	c=5 d=1.6002 t=7482

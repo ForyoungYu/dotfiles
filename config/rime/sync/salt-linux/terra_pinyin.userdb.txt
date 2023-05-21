@@ -1,6 +1,0 @@
-# Rime user dictionary
-#@/db_name	terra_pinyin
-#@/db_type	userdb
-#@/rime_version	1.7.2
-#@/tick	0
-#@/user_id	salt-linux

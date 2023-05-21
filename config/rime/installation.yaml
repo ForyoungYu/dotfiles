@@ -2,6 +2,6 @@ distribution_code_name: "ibus-rime"
 distribution_name: Rime
 distribution_version: 1.5.0
 install_time: "Sun Mar 13 16:00:23 2022"
-installation_id: "salt-linux"
+installation_id: "salt-rime"
 rime_version: 1.7.2
-sync_dir: 'workspace/dotfiles/config/rime/sync'
+sync_dir: 'Workspace/dotfiles/config/rime/sync'

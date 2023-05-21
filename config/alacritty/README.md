@@ -8,30 +8,28 @@
 
 ## Themes
 
-[alacritty-theme](https://github.com/eendroroy/alacritty-theme)
+[Alacritty Themes](https://github.com/alacritty/alacritty-theme)
 
-[alacritty-colorscheme](https://github.com/eendroroy/alacritty-theme)
+[Catppuccin Alacritty Themes](https://github.com/catppuccin/alacritty)
 
-### Installation
+## Installation
 
-```bash
-pip install --user alacritty-colorscheme
-```
-
-### Getting colorschemes
+### Import
 
 ```bash
-REPO=https://github.com/eendroroy/alacritty-theme.git
-DEST="$HOME/.eendroroy-colorschemes"
-# Get colorschemes
-git clone $REPO $DEST
-# Create symlink at default colors location (optional)
-ln -s "$DEST/themes" "$HOME/.config/alacritty/colors"
+# We use Alacritty's default Linux config directory as our storage location here.
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme/themes ~/.config/alacritty/themes
+git clone https://github.com/catppuccin/alacritty.git
 ```
 
-### Usage
+Add an import to your alacritty.yml (Replace {theme} with your desired colorscheme):
 
 ```bash
-usage: alacritty-colorscheme [-c configuration file] [-C colorscheme directory] [-V] [-h]
-                             {list,status,toggle,apply} ...
+import:
+ - ~/.config/alacritty/themes/themes/{theme}.yaml
 ```
+
+### Manual
+
+To manually include a colorscheme in an existing `alacritty.yml`, you just need to copy the entire content of the theme into the root level of your configuration file.

@@ -1,22 +1,30 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export XDG_CONFIG_HOME=$HOME/.config
-export GOPATH=$HOME/go
-export GOROOT=/usr/lib/golang
-# export DENO_INSTALL="/home/salt/.deno"
-export CUDA_HOME="/usr/local/cuda"
-export TERM=xterm-256color
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# export PATH=$HOME/.local/bin:$PATH
-# export PATH=$HOME/bin:$PATH
-# export PATH=$DENO_INSTALL/bin:$PATH
+# Setting evironment variables
+export TERM=xterm-256color
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+
+export WORKSPACE=$HOME/Workspace
+export GOPATH=$WORKSPACE/GolangProjects
+export GOROOT=/usr/lib/golang
+
+export CUDA_VERSION="cuda-11.1" # default: cuda
+export CUDA_HOME="/usr/local/$CUDA_VERSION"
+export CUDA_PATH="$CUDA_HOME/bin"
+export LD_LIBRARY_PATH="$CUDA_HOME/lib64"
+
+# If you come from bash you might have to change your $PATH.
 export PATH=$GOPATH/bin:$PATH
 export PATH=$GOROOT/bin:$PATH
-export PATH=$CUDA_HOME/bin:$PATH
-
-# DING
-export DING_WEBHOOK="https://oapi.dingtalk.com/robot/send?access_token=b6d79013f2d68e1466e8ea3c1bf18ceaba5fee5ecd2408c101a8e694ffed8a36"
-export DING_SECRET="SECb7338b3e7c42c3b317edea6d150dc3f26530b8db74b38a58e2ebcb77e8fcb8da"
+export PATH=$CUDA_PATH:$PATH
+export PATH=$HOME/.local/bin:$PATH
+# export PATH=$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -125,25 +133,24 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c='clear'
+alias ra='ranger'
 alias lg='lazygit'
 alias pc='proxychains4'
-alias py='python'
-alias ra='ranger'
-alias s='neofetch'
-alias sra='sudo -E ranger'
-# alias sudo='sudo -E'
 alias t='tmux'
 alias ta='tmux a'
 alias nv='nvim'
-alias aca='alacritty-colorscheme apply'
-alias acs='alacritty-colorscheme status'
-alias acl='alacritty-colorscheme list'
-alias act='alacritty-colorscheme toggle'
+alias sra='sudo -E ranger'
+# alias sudo='sudo -E'
+
 alias ls='lsd'
-#alias ll='lsd -l'
-alias l='lsd -l'
+alias ll='lsd -l'
 alias la='lsd -al'
-alias pa='source activate'
-alias pd='conda deactivate'
 alias fzfcd='cd $(find * -type d | fzf)'
+
+alias sourceconda='source  ~/.conda.bashrc'
+alias pa='conda activate'
+alias pd='conda deactivate'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

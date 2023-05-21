@@ -1,0 +1,39 @@
+# Rime user dictionary
+#@/db_name	easy_en
+#@/db_type	userdb
+#@/rime_version	1.7.3
+#@/tick	57
+#@/user_id	sync-rime
+A 	A	c=2 d=1.86013 t=57
+Chrom 	Chrom-	c=2 d=1.99501 t=53
+Clas 	Clas	c=5 d=4.78101 t=57
+D 	D	c=1 d=0.970446 t=57
+Dept 	Dept	c=1 d=1 t=51
+Drive 	Drive	c=1 d=1 t=46
+English 	English	c=1 d=0.97531 t=57
+Eva 	Eva	c=1 d=1 t=47
+Hell 	Hell	c=1 d=1 t=55
+Hello 	Hello	c=1 d=0.937067 t=57
+Kitt 	Kitt	c=2 d=1.99501 t=57
+M 	M	c=1 d=0.960789 t=57
+N 	N	c=1 d=0.97531 t=57
+None 	None	c=1 d=1 t=57
+Nono 	No-no	c=2 d=1.98506 t=57
+S 	S	c=1 d=0.965605 t=57
+Swin 	Swin	c=1 d=1 t=48
+Tube 	Tube	c=1 d=0.985112 t=57
+Type 	Type	c=1 d=0.980199 t=57
+You 	You	c=1 d=0.980199 t=57
+box 	box	c=1 d=0.97531 t=57
+d 	D	c=1 d=0.965605 t=57
+driver 	driver	c=1 d=0.985112 t=57
+english 	English	c=2 d=1.95101 t=57
+google 	google	c=2 d=1.93143 t=57
+i 	I	c=1 d=0.970446 t=57
+k 	K	c=1 d=0.995012 t=57
+kw 	kw	c=1 d=0.99005 t=57
+linux 	linux	c=1 d=0.960789 t=57
+love 	love	c=1 d=0.97531 t=57
+rime 	rime	c=1 d=0.980199 t=57
+row 	row	c=1 d=0.970446 t=57
+verymuch 	very much	c=1 d=0.985112 t=57

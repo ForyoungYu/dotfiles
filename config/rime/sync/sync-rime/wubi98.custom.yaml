@@ -1,0 +1,9 @@
+__patch:
+# Rx: emoji:customize:schema=wubi98 {
+  - patch/+:
+      __include: emoji_suggestion:/patch
+# }
+# Rx: BlindingDark/rime-easy-en:customize:schema=wubi98 {
+  - patch/+:
+      __include: easy_en:/patch
+# }

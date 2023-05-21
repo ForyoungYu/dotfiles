@@ -1,0 +1,21 @@
+# Rime user dictionary
+#@/db_name	pinyin_simp
+#@/db_type	userdb
+#@/rime_version	1.7.3
+#@/tick	16
+#@/user_id	sync-rime
+ha ha 	哈哈	c=1 d=1 t=16
+ni hao 	你好	c=2 d=1.95064 t=16
+ren min 	人民	c=1 d=1 t=16
+shu ru fa 	输入法	c=1 d=1 t=16
+tian qi 	天气	c=1 d=0.995012 t=16
+wo 	我	c=0 d=0.0965605 t=16
+wo kan 	我看	c=1 d=0.985112 t=16
+wo shi 	我是	c=1 d=0.985112 t=16
+wo xi huan 	我喜欢	c=1 d=0.970446 t=16
+xi huan 	喜欢	c=0 d=0.194092 t=16
+xi huan xue xi 	喜欢学习	c=1 d=0.980199 t=16
+xue xi 	学习	c=3 d=3.0579 t=16
+yi ge 	一个	c=1 d=0.99005 t=16
+zhi 	之	c=1 d=1 t=16
+zhong hua 	中华	c=1 d=0.995012 t=16

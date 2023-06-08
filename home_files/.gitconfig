@@ -1,5 +1,5 @@
 [user]
-	email = foryoung_yu@outlook.com
+	email = fuyang_yu@outlook.com
 	name = Foryoung Yu
 [core]
 	editor = nvim
@@ -13,18 +13,10 @@
 	adog = log --all --decorate --oneline --graph
 [color]
 	ui = auto
-[http]
-	proxy = http://127.0.0.1:7890
-[https]
-	proxy = https://127.0.0.1:7890
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[pull]
+	rebase = true

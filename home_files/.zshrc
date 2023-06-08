@@ -1,30 +1,7 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Setting evironment variables
-export TERM=xterm-256color
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_HOME=$HOME/.local/share
-
-export WORKSPACE=$HOME/Workspace
-export GOPATH=$WORKSPACE/GolangProjects
-export GOROOT=/usr/lib/golang
-
-export CUDA_VERSION="cuda-11.1" # default: cuda
-export CUDA_HOME="/usr/local/$CUDA_VERSION"
-export CUDA_PATH="$CUDA_HOME/bin"
-export LD_LIBRARY_PATH="$CUDA_HOME/lib64"
-
 # If you come from bash you might have to change your $PATH.
-export PATH=$GOPATH/bin:$PATH
-export PATH=$GOROOT/bin:$PATH
-export PATH=$CUDA_PATH:$PATH
-export PATH=$HOME/.local/bin:$PATH
-# export PATH=$HOME/bin:$PATH
+if [ -f ~/.zsh_env ]; then
+	. ~/.zsh_env
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -72,7 +49,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -100,25 +77,27 @@ plugins=(
 	sudo
 	tmux
 	autojump
-	zsh-syntax-highlighting
-	zsh-autosuggestions
 	zsh-completions
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=zh_CN.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+	export EDITOR='nvim'
 else
-  export EDITOR='vim'
+	export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -132,25 +111,10 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias c='clear'
-alias ra='ranger'
-alias lg='lazygit'
-alias pc='proxychains4'
-alias t='tmux'
-alias ta='tmux a'
-alias nv='nvim'
-alias sra='sudo -E ranger'
-# alias sudo='sudo -E'
 
-alias ls='lsd'
-alias ll='lsd -l'
-alias la='lsd -al'
-alias fzfcd='cd $(find * -type d | fzf)'
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
 
-alias sourceconda='source  ~/.conda.bashrc'
-alias pa='conda activate'
-alias pd='conda deactivate'
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+if [ -f ~/.zsh_aliases ]; then
+	. ~/.zsh_aliases
+fi

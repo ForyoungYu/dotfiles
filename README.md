@@ -19,7 +19,7 @@ Here are all of my configuration tutorials:
 - [NeoVim](config/nvim/README.md)
 - [Ranger](config/ranger/README.md)
 - [RIME](config/rime/README.md)
-- [ZSH](config/zsh/README.md)
+- [ZSH](doc/zsh.md)
 
 ## Neovim Screenshots
 ![nvim](imgs/nvim.png)

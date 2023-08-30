@@ -2,6 +2,7 @@
 
 alias c='clear'
 alias ra='ranger'
+alias jo='joshuto'
 alias lg='lazygit'
 alias pc='proxychains4'
 alias t='tmux'
@@ -12,7 +13,7 @@ alias sra='sudo -E ranger'
 
 alias ls='lsd'
 alias ll='lsd -l'
-alias la='lsd -al'
+alias la='lsd -lA'
 alias fzfcd='cd $(find * -type d | fzf)'
 
 alias pa='conda activate'

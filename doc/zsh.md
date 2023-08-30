@@ -4,6 +4,8 @@
 
 [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
+[zplug](https://github.com/zplug/zplug)
+
 ## Instllation
 
 Install zsh:
@@ -20,23 +22,25 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 ## Configuration
 
-### Themes
+All ohmyzsh plugins are managed by [zplug](https://github.com/zplug/zplug), you just copy `.zshrc` and `.zsh` directory to `$HOME` and reopen terminal or runing `source ~/.zshrc`.
 
-[powerlever10k](https://github.com/romkatv/powerlevel10k)
+Here are all [ohmyzsh official plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) I used:
 
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-```
+- sudo
+- git
+- tmux
+- autojump
+- docker
+- docker-compose
+- ubuntu
+- dnf
+- archlinux
+- yarn
+- npm
 
-### ohmyzsh pluggin
+Also other plugins:
 
-```bash
-# zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# zsh-completions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-```
+- [powerlever10k](https://github.com/romkatv/powerlevel10k)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)

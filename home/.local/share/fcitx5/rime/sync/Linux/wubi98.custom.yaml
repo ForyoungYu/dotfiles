@@ -1,0 +1,4 @@
+patch:
+  speller/auto_select: true #顶字上屏
+  speller/auto_select_unique_candidate: true #无重码自动上屏
+  translator/enable_user_dict: true

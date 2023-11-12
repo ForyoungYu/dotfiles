@@ -1,0 +1,21 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin
+#@/db_type	userdb
+#@/rime_version	1.8.4
+#@/tick	21
+#@/user_id	Linux
+gu ji 	估計	c=0 d=0.0995012 t=21
+ha ha 	哈哈	c=2 d=1.97025 t=21
+le 	了	c=0 d=0.0995012 t=21
+lin 	林	c=0 d=0.0995012 t=21
+shen du 	深度	c=0 d=0.0995012 t=21
+shen du gu ji 	深度估計	c=1 d=1 t=21
+tian da 	天大	c=0 d=0.0995012 t=21
+wo 	我	c=0 d=0.296032 t=21
+wo tian da le 	喔田達了	c=4 d=3.96526 t=21
+wo tian da le 	我天大了	c=2 d=1 t=21
+wo xi huan ni 	我喜歡你	c=2 d=1.99501 t=21
+xi huan ni 	喜歡你	c=0 d=0.198506 t=21
+yu fu yang 	於福洋	c=6 d=5.85726 t=21
+zhang xiao 	張曉	c=0 d=0.0995012 t=21
+zhang xiao lin 	張曉林	c=5 d=4.86745 t=21

@@ -1,0 +1,62 @@
+# default.`.yaml
+# save it to:
+#   ~/.config/ibus/rime  (linux)
+#   ~/Library/Rime       (macos)
+#   %APPDATA%\Rime       (windows)
+
+patch:
+  menu/page_size: 6
+  switcher/hotkeys:
+    - Control+grave
+    - F4
+  schema_list:
+    - schema: pinyin_simp # 袖珍简化字拼音
+    # - schema: wubi86 # 五笔 86
+    - schema: wubi98 # 五笔 98
+    # - schema: wubi_dz # 五笔 98 单字
+    # - schema: wubi98_ci # 五笔 98 含词
+    # - schema: wubi98_U # 五笔 98 超集
+    # - schema: wubi_pinyin # 五笔拼音混合輸入
+    - schema: double_pinyin # 自然碼雙拼
+    # - schema: double_pinyin_mspy   # 微軟雙拼
+    # - schema: double_pinyin_abc    # 智能 ABC 雙拼
+    # - schema: double_pinyin_flypy  # 小鶴雙拼
+    # - schema: luna_pinyin # 朙月拼音
+    # - schema: luna_pinyin_simp     # 朙月拼音 简化字模式
+    # - schema: luna_pinyin_tw       # 朙月拼音 臺灣正體模式
+    # - schema: emoji         # emoji 表情
+    # - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
+    # - schema: bopomofo             # 注音
+    # - schema: jyutping             # 粵拼
+    # - schema: cangjie5             # 倉頡五代
+    # - schema: cangjie5_express     # 倉頡 快打模式
+    # - schema: quick5               # 速成
+    # - schema: wugniu        # 吳語上海話（新派）
+    # - schema: wugniu_lopha  # 吳語上海話（老派）
+    # - schema: sampheng      # 中古漢語三拼
+    # - schema: zyenpheng     # 中古漢語全拼
+    # - schema: ipa_xsampa    # X-SAMPA 國際音標
+    # - schema: easy_en # 添加英文输入法〔方案選單〕
+  key_binder/bindings:
+    - { accept: "Alt+k", send: Up, when: composing } # 上一个
+    - { accept: "Shift+Tab", send: Up, when: composing }
+    - { accept: "Alt+j", send: Down, when: composing } # 下一个
+    - { accept: "Tab", send: Down, when: composing }
+    - { accept: "Alt+h", send: Page_Up, when: composing } # 上一页
+    - { accept: minus, send: Page_Up, when: has_menu }
+    - { accept: "Alt+l", send: Page_Down, when: composing } # 下一页
+    - { accept: equal, send: Page_Down, when: has_menu }
+    - { accept: "Control+d", send: "Shift+Delete", when: composing } # 删除词条
+    - { accept: "Alt+i", send: Escape, when: composing } # 取消
+    - { accept: semicolon, send: 2, when: has_menu } # 候选2 用分号
+    - { accept: apostrophe, send: 3, when: has_menu } # 候选3 用单引号
+    # - { accept: "Control+Shift+1", select: .next, when: always }
+    # - { accept: "Control+Shift+2", toggle: ascii_mode, when: always }
+    # - { accept: "Control+Shift+3", toggle: full_shape, when: always }
+    # - { accept: "Control+Shift+4", toggle: simplification, when: always }
+    # - { accept: "Control+Shift+5", toggle: extended_charset, when: always }
+    # - { accept: "Control+Shift+exclam", select: .next, when: always }
+    # - { accept: "Control+Shift+at", toggle: ascii_mode, when: always }
+    # - { accept: "Control+Shift+numbersign", toggle: full_shape, when: always }
+    # - { accept: "Control+Shift+dollar", toggle: simplification, when: always }
+    # - { accept: "Control+Shift+percent", toggle: extended_charset, when: always}

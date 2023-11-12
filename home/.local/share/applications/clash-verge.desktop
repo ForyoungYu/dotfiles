@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Clash for Windows
+Type=Application
+Comment=A Clash GUI based on tauri. Supports Windows, macOS and Linux.
+Exec=$HOME/.local/apps/clash-verge.AppImage
+Icon=clash-verge
+Terminal=false
+Categories=Network;Application;
+StartupNotify=true

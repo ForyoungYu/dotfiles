@@ -1,0 +1,7 @@
+patch:
+  "style/font_face": "98WB-V"
+  "style/horizontal": false
+  "style/fullscreen": false
+  "style/inline_preedit": false
+  "style/preedit_type": composition
+  "style/mark_text": ""

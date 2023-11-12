@@ -1,0 +1,15 @@
+var:
+  last_build_time: 1699783006
+  option:
+    simplification: true
+  previously_selected_schema: wubi98
+  schema_access_time:
+    double_pinyin: 1687249574
+    easy_en: 1680348543
+    luna_pinyin: 1680349018
+    pinyin_simp: 1680349297
+    wubi86: 1680346082
+    wubi98: 1695435702
+    wubi98_ci: 1695435587
+    wubi_dz: 1695435579
+    wubi_pinyin: 1690704550

@@ -14,13 +14,13 @@ My Fedora config.
 
 Here are all of my configuration tutorials:
 
-- [Alacritty](config/alacritty/README.md)
-- [Kitty](config/kitty/README.md)
-- [NeoVim](config/nvim/README.md)
-- [Ranger](config/ranger/README.md)
-- [Joshuto](config/joshuto/README.md)
-- [RIME](config/rime/README.md)
-- [ZSH](doc/zsh.md)
+- [Alacritty](home/.config/alacritty/README.md)
+- [Kitty](home/.config/kitty/README.md)
+- [NeoVim](home/.config/nvim/README.md)
+- [Ranger](home/.config/ranger/README.md)
+- [Joshuto](home/.config/joshuto/README.md)
+- [RIME](home/.local/share/fcitx5/rime/README.md)
+- [ZSH](home/.zsh/README.md)
 
 ## Neovim Screenshots
 

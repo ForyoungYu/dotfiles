@@ -2,7 +2,11 @@
 
 ## Themes
 
-[Catppuccin Hyprland Themes](https://github.com/catppuccin/hyprland)
+[catppuccin/hyprland](https://github.com/catppuccin/hyprland)
 
+## Tools
 
-
+- hyprpaper
+- waybar
+- mako
+- rofi

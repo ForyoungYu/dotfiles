@@ -21,6 +21,7 @@ Here are all of my configuration tutorials:
 - [Joshuto](home/.config/joshuto/README.md)
 - [RIME](home/.local/share/fcitx5/rime/README.md)
 - [ZSH](home/.zsh/README.md)
+- [Hyprland](home/.config/hypr/README.txt)
 
 ## Neovim Screenshots
 

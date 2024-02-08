@@ -1,6 +1,12 @@
+# Shell variable
+export TERM=xterm-256color
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-source ~/.zsh/envs.zsh
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -72,7 +78,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-source ~/.zsh/plugins.zsh
+source ~/.zsh_plugins
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,5 +107,10 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh/aliases.zsh
-
+alias c="clear"
+alias jo="joshuto"
+alias ls="lsd"
+alias ll="lsd -l"
+alias la="lsd -lA"
+alias echopath="echo $PATH | sed 's/:/\n/g'"
+alias proxy="source ~/.script/proxy.sh"

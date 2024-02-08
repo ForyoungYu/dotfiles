@@ -1,0 +1,50 @@
+export ZPLUG_HOME=$HOME/.zplug
+
+if [ ! -d $ZPLUG_HOME ]; then
+    echo "Clone ZPLUG from Github ..."
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    echo "Done!"
+    echo
+fi
+
+source $ZPLUG_HOME/init.zsh
+NODENAME=$(cat /etc/os-release | grep -w ID | awk -F= '{print $2}')
+
+# Oh-my-zsh official plugins
+zplug "plugins/dnf", from:oh-my-zsh, if:"[[ $NODENAME = fedora ]]"
+zplug "plugins/archlinux", from:oh-my-zsh, if:"[[ $NODENAME = archlinux ]]"
+zplug "plugins/ubuntu", from:oh-my-zsh, if:"[[ $NODENAME = ubuntu ]]"
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/sudo", from:oh-my-zsh
+zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/web-search", from:oh-my-zsh
+zplug "plugins/copypath", from:oh-my-zsh
+zplug "plugins/copyfile", from:oh-my-zsh
+zplug "plugins/copybuffer", from:oh-my-zsh
+zplug "plugins/zsh-interactive-cd", from:oh-my-zsh
+zplug "plugins/zoxide", from:oh-my-zsh
+# zplug "plugins/autojump", from:oh-my-zsh
+# zplug "plugins/docker", from:oh-my-zsh
+# zplug "plugins/docker-compose", from:oh-my-zsh
+# zplug "plugins/npm", from:oh-my-zsh
+# zplug "plugins/yarn", from:oh-my-zsh
+# zplug "plugins/react-native", from:oh-my-zsh
+# zplug "plugins/genpass", from:oh-my-zsh
+
+# Theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+
+# Others
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug "MichaelAquilina/zsh-you-should-use"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "zsh-users/zsh-history-substring-search", as: plugin
+# zplug "zsh-users/zsh-completions"
+# zplug "chitoku-k/fzf-zsh-completions"
+
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load

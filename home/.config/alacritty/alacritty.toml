@@ -1,0 +1,38 @@
+import = [
+  # uncomment the flavour you want below:
+  "~/.config/alacritty/themes/themes/argonaut.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_latte.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_frappe.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
+]
+
+[colors.cursor]
+text = "#EBEBEB"
+cursor = "#EBEBEB"
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = { columns = 80, lines = 24 }
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+opacity = 0.8
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular"}
+bold = { family = "Hack Nerd Font", style = "Bold"}
+italic = { family = "Hack Nerd Font", style = "Italic"}
+bold_italic = { family = "Hack Nerd Font", style = "Bold Italic"}
+size = 14
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+
+[mouse]
+hide_when_typing = true

@@ -20,7 +20,7 @@ Here are all of my configuration tutorials:
 - [Ranger](home/.config/ranger/README.md)
 - [Joshuto](home/.config/joshuto/README.md)
 - [RIME](home/.local/share/fcitx5/rime/README.md)
-- [ZSH](home/.zsh/README.md)
+- [ZSH](doc/zsh.md)
 - [Hyprland](home/.config/hypr/README.txt)
 
 ## Neovim Screenshots

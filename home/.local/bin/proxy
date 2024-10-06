@@ -1,0 +1,76 @@
+#!/bin/sh
+
+DNS=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+LOCAL_IP=$(hostname -I | awk '{print $1}')
+HOST_IP=127.0.0.1
+PORT=7897
+
+PROXY_HTTP="http://${HOST_IP}:${PORT}"
+PROXY_HTTPS="https://${HOST_IP}:${PORT}"
+PROXY_SOCKS="socks://${HOST_IP}:${PORT}"
+PROXY_SOCKS5="socks5://${HOST_IP}:${PORT}"
+
+set_proxy() {
+  export http_proxy="${PROXY_HTTP}"
+  export HTTP_PROXY="${PROXY_HTTP}"
+
+  export https_proxy="${PROXY_HTTPS}"
+  export HTTPS_PROXY="${PROXY_HTTPS}"
+
+  # export all_proxy=${PROXY_SOCKS5}
+  # export ALL_PROXY="${PROXY_SOCKS5}"
+
+  # git config --global http.https://github.com.proxy ${PROXY_HTTP}
+  # git config --global https.https://github.com.proxy ${PROXY_HTTP}
+  git config --global http.proxy ${PROXY_HTTP}
+  git config --global https.proxy ${PROXY_HTTP}
+  echo "Proxy has been opened."
+}
+
+unset_proxy() {
+  unset http_proxy
+  unset HTTP_PROXY
+  unset https_proxy
+  unset HTTPS_PROXY
+  # unset all_proxy
+  # unset ALL_PROXY
+  # git config --global --unset http.https://github.com.proxy
+  # git config --global --unset https.https://github.com.proxy
+  git config --global --unset http.proxy
+  git config --global --unset https.proxy
+
+  echo "Proxy has been closed."
+}
+
+test_setting() {
+  echo "Try to connect to Google..."
+  resp=$(curl -I -s --connect-timeout 5 -m 5 -w "%{http_code}" -o /dev/null www.google.com)
+  if [ ${resp} = 200 ]; then
+    echo "Proxy setup succeeded!"
+  else
+    echo "Proxy setup failed!"
+  fi
+}
+
+echo_info() {
+  echo "Host IP    :"${HOST_IP}
+  echo "Local IP   :"${LOCAL_IP}
+  echo "HTTP PROXY :"${http_proxy}
+  echo "HTTPS PROXY:"${https_proxy}
+  # echo "ALL PROXY  :"${all_proxy}
+}
+
+case "$1" in
+set)
+  set_proxy
+  ;;
+unset)
+  unset_proxy
+  ;;
+test)
+  test_setting
+  ;;
+info)
+  echo_info
+  ;;
+esac

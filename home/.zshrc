@@ -2,6 +2,11 @@
 export TERM=xterm-256color
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
+export PYTORCH_ROCM_ARCH=gfx1030
+export HCC_AMDGPU_TARGET=gfx1030
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -112,5 +117,4 @@ alias jo="joshuto"
 alias ls="lsd"
 alias ll="lsd -l"
 alias la="lsd -lA"
-alias echopath="echo $PATH | sed 's/:/\n/g'"
-alias proxy="source ~/.script/proxy.sh"
+alias proxy="source proxy"

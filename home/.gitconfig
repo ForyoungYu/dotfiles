@@ -1,22 +1,28 @@
 [user]
-	email = fuyang_yu@outlook.com
-	name = Foryoung Yu
+    email = fuyang_yu@outlook.com
+    name = Foryoung Yu
 [core]
-	editor = nvim
+    editor = nvim
 [alias]
-	ci = commit
-	ca = commit --amend
-	can = commit --amend --no-edit
-	co = checkout
-	br = branch
-	st = status
-	adog = log --all --decorate --oneline --graph
+    ci = commit
+    ca = commit --amend
+    can = commit --amend --no-edit
+    co = checkout
+    br = branch
+    st = status
+    adog = log --all --decorate --oneline --graph
+    pushf = push --force-with-lease
+    pullr = pull --rebase
 [color]
-	ui = auto
+    ui = auto
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 [pull]
-	rebase = true
+    rebase = true
+[http]
+    proxy = http://127.0.0.1:7897
+[https]
+    proxy = http://127.0.0.1:7897

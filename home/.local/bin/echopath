@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+get_PATH(){
+	echo "\$PATH Here:"
+	echo $PATH | sed "s/:/\n/g"
+}
+
+get_PATH
